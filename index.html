@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Respiro Health</title>
+  <title>Respiro Health | AI Triage for Hospitals</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #e6f0fa; /* soft light blue */
+      background: #f4f7fa; /* Slightly more professional gray-blue */
       color: #1a2d4d; /* dark navy */
       display: flex;
       flex-direction: column;
@@ -22,36 +22,67 @@
       margin-bottom: 30px;
     }
     header img {
-      max-width: 160px;
+      max-width: 150px;
       height: auto;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px; /* Slight polish on the logo */
     }
     h1 {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
       margin: 0;
       font-weight: 700;
-      letter-spacing: 1.1px;
+      letter-spacing: -0.5px;
+      color: #0f172a;
     }
     h2 {
       font-weight: 400;
-      margin: 15px 0 25px;
-      font-size: 1.4rem;
-      color: #3b5998; /* subtle brand blue */
+      margin: 15px 0 30px;
+      font-size: 1.25rem;
+      color: #475569; /* Muted professional text */
+      line-height: 1.5;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .highlight {
+      color: #2563eb; /* Trustworthy Medical Blue */
+      font-weight: 600;
+    }
+    main {
+      max-width: 650px;
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     }
     p {
-      max-width: 550px;
-      margin: 0 auto 40px;
-      font-size: 1.1rem;
-      line-height: 1.5;
-      color: #33475b;
+      margin: 0 auto 20px;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: #334155;
+    }
+    .features {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      background: #e0f2fe;
+      color: #0284c7;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
     }
     footer {
-      margin-top: auto;
-      font-size: 1rem;
-      color: #33475b;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #64748b;
     }
     footer a {
-      color: #3b5998;
+      color: #2563eb;
       text-decoration: none;
       font-weight: 600;
     }
@@ -62,28 +93,33 @@
 </head>
 <body>
   <header>
-    <!-- Replace src with your actual logo file path -->
     <img src="WhatsApp Image 2025-05-15 at 20.25.37.jpeg" alt="Respiro Health Logo" />
-    <h1>Smarter Health. Safer Schools.</h1>
-    <h2>AI-powered health screening that fits right into your daily routine — no clinics, no disruptions.</h2>
+    <h1>Smarter Triage. <span class="highlight">Faster Care.</span></h1>
+    <h2>Automating patient intake for India's busiest OPDs. <br>Zero apps. Zero typing. 100% WhatsApp.</h2>
   </header>
 
   <main>
     <p>
-      At Respiro Health, we’re building advanced, non-invasive screening tools to help schools monitor the respiratory health of students — using nothing more than simple, everyday interactions.
+      <strong>Respiro Health</strong> builds AI-powered triage systems that give doctors their time back.
     </p>
     <p>
-      Our technology blends artificial intelligence with intuitive workflows, allowing school staff to carry out quick health screenings without medical training or extra effort.
+      We transform chaotic waiting rooms into streamlined workflows. Patients interact with our AI in their <strong>local language</strong> (Hindi, Marathi, English) via WhatsApp, and doctors receive a structured, medical-grade summary before the patient even enters the room.
     </p>
-    <p><strong>Fast. Private. Disruption-free.</strong></p>
 
-    <p style="font-style: italic; color: #556f94; margin-top: 40px; font-size: 1rem;">
-      ✨ More exciting updates coming soon. Stay tuned!
+    <div class="features">
+      <span class="badge">⚡ Saves 2 Hours/Day</span>
+      <span class="badge">🏥 EMR Integration</span>
+      <span class="badge">🗣️ Multilingual Support</span>
+    </div>
+
+    <p style="font-style: italic; color: #64748b; margin-top: 35px; font-size: 0.95rem; border-top: 1px solid #e2e8f0; padding-top: 20px;">
+      🚀 Currently deploying pilots at premier medical institutions.
     </p>
   </main>
 
   <footer>
-    📬 Reach us at: <a href="mailto:ajay@respirohealth.ai">ajay@respirohealth.ai</a>
+    For pilot inquiries & demos:<br>
+    <a href="mailto:ajay@respirohealth.ai">ajay@respirohealth.ai</a>
   </footer>
 </body>
 </html>
