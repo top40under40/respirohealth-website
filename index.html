@@ -8,8 +8,8 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f7fa; /* Slightly more professional gray-blue */
-      color: #1a2d4d; /* dark navy */
+      background: #f4f7fa; 
+      color: #1a2d4d; 
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -17,15 +17,65 @@
       justify-content: center;
       padding: 20px;
       text-align: center;
+      position: relative; /* Added for absolute positioning of nav */
     }
+    
+    /* 🚀 NEW: Top Navigation Bar for the Velvet Rope Effect */
+    .top-nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 24px 40px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: flex-end;
+      gap: 16px;
+      z-index: 10;
+    }
+
+    .nav-btn {
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .btn-outline {
+      color: #475569;
+      background: transparent;
+      border: 1px solid #cbd5e1;
+    }
+
+    .btn-outline:hover {
+      background: #f1f5f9;
+      color: #0f172a;
+    }
+
+    .btn-primary {
+      color: white;
+      background: #2563eb;
+      border: 1px solid #2563eb;
+      box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+      box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
+    }
+
+    /* Existing Styles Below */
     header {
+      margin-top: 60px; /* Pushed down slightly to account for the nav bar */
       margin-bottom: 30px;
     }
     header img {
       max-width: 150px;
       height: auto;
       margin-bottom: 20px;
-      border-radius: 8px; /* Slight polish on the logo */
+      border-radius: 8px; 
     }
     h1 {
       font-size: 2.5rem;
@@ -38,14 +88,14 @@
       font-weight: 400;
       margin: 15px 0 30px;
       font-size: 1.25rem;
-      color: #475569; /* Muted professional text */
+      color: #475569; 
       line-height: 1.5;
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
     }
     .highlight {
-      color: #2563eb; /* Trustworthy Medical Blue */
+      color: #2563eb; 
       font-weight: 600;
     }
     main {
@@ -89,9 +139,28 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    /* Mobile responsiveness for the nav */
+    @media (max-width: 600px) {
+      .top-nav {
+        justify-content: center;
+        padding: 20px;
+        background: #f4f7fa; /* Prevents overlap issues on scroll */
+      }
+      header {
+        margin-top: 80px;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <nav class="top-nav">
+    <a href="#" class="nav-btn btn-outline">Patient Portal</a>
+    
+    <a href="#" class="nav-btn btn-primary">Clinic Login</a>
+  </nav>
+
   <header>
     <img src="WhatsApp Image 2025-05-15 at 20.25.37.jpeg" alt="Respiro Health Logo" />
     <h1>Smarter Triage. <span class="highlight">Faster Care.</span></h1>
