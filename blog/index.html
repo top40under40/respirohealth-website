@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2N0QFZKYR1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2N0QFZKYR1');
+  </script>
+  
+  <title>Blog | Respiro Health - OPD Management & Healthcare AI</title>
+  <meta name="description" content="Learn how Indian clinics are using AI-powered triage and WhatsApp automation to reduce OPD wait times, improve patient care, and increase efficiency.">
+  <meta name="keywords" content="OPD management blog, healthcare automation India, AI triage articles, clinic efficiency tips">
+  
+  <link rel="canonical" href="https://respirohealth.ai/blog">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f7fa;
+      color: #1a2d4d;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    .top-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 40px;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .nav-btn {
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .btn-outline {
+      color: #475569;
+      background: transparent;
+      border: 1px solid #cbd5e1;
+    }
+
+    .btn-outline:hover {
+      background: #f1f5f9;
+      color: #0f172a;
+    }
+
+    .btn-primary {
+      color: white;
+      background: #2563eb;
+      border: 1px solid #2563eb;
+      box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+      box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
+    }
+
+    /* Header */
+    .blog-header {
+      max-width: 1200px;
+      margin: 120px auto 60px;
+      padding: 0 40px;
+      text-align: center;
+    }
+
+    .blog-header h1 {
+      font-size: 3rem;
+      color: #0f172a;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .blog-header p {
+      font-size: 1.2rem;
+      color: #64748b;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Articles Grid */
+    .articles-container {
+      max-width: 1200px;
+      margin: 0 auto 80px;
+      padding: 0 40px;
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    /* Article Card */
+    .article-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+
+    .article-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .article-content {
+      padding: 25px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 15px;
+      font-size: 0.85rem;
+      color: #94a3b8;
+      margin-bottom: 12px;
+    }
+
+    .article-card h2 {
+      font-size: 1.5rem;
+      color: #0f172a;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .article-excerpt {
+      color: #64748b;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .article-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: auto;
+    }
+
+    .tag {
+      background: #e0f2fe;
+      color: #0284c7;
+      padding: 5px 12px;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #2563eb;
+      font-weight: 600;
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+
+    .read-more:hover {
+      gap: 12px;
+    }
+
+    /* Empty State */
+    .empty-state {
+      text-align: center;
+      padding: 80px 20px;
+      color: #94a3b8;
+    }
+
+    .empty-state h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #64748b;
+    }
+
+    /* Footer */
+    .blog-footer {
+      background: white;
+      border-top: 1px solid #e2e8f0;
+      padding: 40px;
+      text-align: center;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    .blog-footer a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .blog-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .top-nav {
+        padding: 15px 20px;
+      }
+
+      .blog-header {
+        margin: 100px 20px 40px;
+        padding: 0;
+      }
+
+      .blog-header h1 {
+        font-size: 2rem;
+      }
+
+      .blog-header p {
+        font-size: 1rem;
+      }
+
+      .articles-container {
+        padding: 0 20px;
+      }
+
+      .articles-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="top-nav">
+    <a href="/" class="nav-btn btn-outline">← Home</a>
+    <a href="mailto:ajay.sharma@respirohealth.ai" class="nav-btn btn-primary">Contact Us</a>
+  </nav>
+
+  <!-- Header -->
+  <header class="blog-header">
+    <h1>Respiro Health Blog</h1>
+    <p>Insights on OPD management, AI-powered healthcare, and digital transformation for Indian clinics.</p>
+  </header>
+
+  <!-- Articles Grid -->
+  <main class="articles-container">
+    <div class="articles-grid">
+      
+      <!-- Article 1 -->
+      <a href="/blog/reduce-opd-wait-time-india/" class="article-card">
+        <img 
+          src="https://via.placeholder.com/400x200/667eea/ffffff?text=OPD+Wait+Time" 
+          alt="How to reduce OPD wait time" 
+          class="article-image"
+        />
+        <div class="article-content">
+          <div class="article-meta">
+            <span>📅 Feb 13, 2026</span>
+            <span>⏱️ 8 min read</span>
+          </div>
+          <h2>How Indian Clinics Can Reduce OPD Wait Time by 50%</h2>
+          <p class="article-excerpt">
+            Walk into any OPD in Mumbai, Delhi, or Pune at 9 AM, and you'll see the same scene: 50+ patients crammed into a waiting room. Learn 5 proven strategies to cut wait times in half.
+          </p>
+          <div class="article-tags">
+            <span class="tag">OPD Management</span>
+            <span class="tag">AI Triage</span>
+            <span class="tag">Patient Experience</span>
+          </div>
+          <span class="read-more">Read Article →</span>
+        </div>
+      </a>
+
+      <!-- Placeholder for Future Articles -->
+      <!-- Article 2 (Coming Soon) -->
+      <div class="article-card" style="opacity: 0.6; pointer-events: none;">
+        <img 
+          src="https://via.placeholder.com/400x200/764ba2/ffffff?text=Coming+Soon" 
+          alt="Coming soon" 
+          class="article-image"
+        />
+        <div class="article-content">
+          <div class="article-meta">
+            <span>📅 Coming Soon</span>
+          </div>
+          <h2>WhatsApp for Healthcare: Complete Guide for Indian Clinics</h2>
+          <p class="article-excerpt">
+            How to use WhatsApp Business for patient intake, triage, and queue management without downloading apps.
+          </p>
+          <div class="article-tags">
+            <span class="tag">WhatsApp</span>
+            <span class="tag">Digital Health</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 3 (Coming Soon) -->
+      <div class="article-card" style="opacity: 0.6; pointer-events: none;">
+        <img 
+          src="https://via.placeholder.com/400x200/f093fb/ffffff?text=Coming+Soon" 
+          alt="Coming soon" 
+          class="article-image"
+        />
+        <div class="article-content">
+          <div class="article-meta">
+            <span>📅 Coming Soon</span>
+          </div>
+          <h2>AI Patient Triage: The Future of Indian OPD Management</h2>
+          <p class="article-excerpt">
+            How artificial intelligence is helping Indian clinics prioritize urgent cases and improve doctor efficiency.
+          </p>
+          <div class="article-tags">
+            <span class="tag">AI Healthcare</span>
+            <span class="tag">Triage</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="blog-footer">
+    <p>
+      <strong>Want to contribute?</strong> Have questions about OPD automation?<br>
+      Reach out at <a href="mailto:ajay.sharma@respirohealth.ai">ajay.sharma@respirohealth.ai</a>
+    </p>
+    <p style="margin-top: 20px;">
+      © 2026 Respiro Health. All rights reserved. | <a href="/">Back to Home</a>
+    </p>
+  </footer>
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Respiro Health Blog",
+    "description": "Insights on OPD management, AI-powered healthcare, and digital transformation for Indian clinics",
+    "url": "https://respirohealth.ai/blog",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Respiro Health",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://respirohealth.ai/WhatsApp%20Image%202025-05-15%20at%2020.25.37.jpeg"
+      }
+    }
+  }
+  </script>
+</body>
+</html>
