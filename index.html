@@ -17,21 +17,19 @@
   <meta name="description" content="Reduce OPD waiting time by 50%. Respiro Health automates patient intake via WhatsApp in Hindi, Marathi & English. AI-powered triage for Indian hospitals & clinics.">
   <meta name="keywords" content="OPD management software, patient triage system, WhatsApp hospital automation, clinic management India, AI healthcare triage">
 
-  <!-- Open Graph for social sharing -->
   <meta property="og:title" content="AI Patient Triage for Indian Clinics | Respiro Health">
   <meta property="og:description" content="Automate OPD patient intake with AI. Works on WhatsApp in local languages. Save 2 hours/day.">
   <meta property="og:image" content="https://respirohealth.ai/WhatsApp Image 2025-05-15 at 20.25.37.jpeg">
   <meta property="og:url" content="https://respirohealth.ai">
 
-  <!-- For Google's understanding -->
   <link rel="canonical" href="https://respirohealth.ai">
   
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f7fa; 
-      color: #1a2d4d; 
+      background: #f4f7fa;
+      color: #1a2d4d;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -51,6 +49,7 @@
       box-sizing: border-box;
       display: flex;
       justify-content: flex-end;
+      align-items: center;
       gap: 16px;
       z-index: 10;
     }
@@ -87,6 +86,47 @@
       box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
     }
 
+    /* CTA button — larger, more prominent than nav buttons */
+    .btn-cta {
+      display: inline-block;
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: white;
+      background: #2563eb;
+      border: none;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+      transition: all 0.2s ease;
+      cursor: pointer;
+      letter-spacing: 0.01em;
+    }
+
+    .btn-cta:hover {
+      background: #1d4ed8;
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+      transform: translateY(-1px);
+    }
+
+    .btn-cta-secondary {
+      display: inline-block;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #2563eb;
+      background: white;
+      border: 2px solid #2563eb;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-cta-secondary:hover {
+      background: #eff6ff;
+    }
+
     header {
       margin-top: 60px;
       margin-bottom: 30px;
@@ -96,7 +136,7 @@
       max-width: 150px;
       height: auto;
       margin-bottom: 20px;
-      border-radius: 8px; 
+      border-radius: 8px;
     }
     
     h1 {
@@ -109,26 +149,43 @@
     
     h2 {
       font-weight: 400;
-      margin: 15px 0 30px;
+      margin: 15px auto 30px;
       font-size: 1.25rem;
-      color: #475569; 
+      color: #475569;
       line-height: 1.5;
       max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
     }
     
     .highlight {
-      color: #2563eb; 
+      color: #2563eb;
       font-weight: 600;
+    }
+
+    /* Hero CTA block — sits between header and main card */
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .hero-cta-note {
+      font-size: 0.82rem;
+      color: #94a3b8;
+      margin-top: 10px;
+      margin-bottom: 0;
     }
     
     main {
       max-width: 650px;
+      width: 100%;
       background: white;
       padding: 40px;
       border-radius: 16px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+      box-sizing: border-box;
     }
     
     p {
@@ -160,6 +217,24 @@
       transform: translateY(-2px);
       transition: all 0.2s ease;
     }
+
+    /* In-card CTA divider */
+    .card-cta {
+      margin-top: 32px;
+      padding-top: 28px;
+      border-top: 1px solid #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card-cta-headline {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin: 0 0 6px 0;
+    }
     
     footer {
       margin-top: 40px;
@@ -186,6 +261,16 @@
       header {
         margin-top: 80px;
       }
+      h1 {
+        font-size: 1.9rem;
+      }
+      main {
+        padding: 28px 20px;
+      }
+      .btn-cta {
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -203,6 +288,17 @@
     <h2>Automating patient intake for India's busiest OPDs. <br>Zero apps. Zero typing. 100% WhatsApp.</h2>
   </header>
 
+  <!-- PRIMARY CTA — hero level, maximum visibility -->
+  <div class="hero-cta">
+    <a href="mailto:ajay.sharma@respirohealth.ai?subject=Demo Request — Respiro Health&body=Hi Ajay, I'd like to see a demo of Respiro Health for my clinic." class="btn-cta">
+      📅 Book a Free 15-Min Demo
+    </a>
+    <a href="https://main.d2e3s8svu1f9ap.amplifyapp.com" class="btn-cta-secondary">
+      Clinic Login →
+    </a>
+  </div>
+  <p class="hero-cta-note">Free pilot for qualifying Pune clinics. No setup cost. No commitment.</p>
+
   <main>
     <p>
       <strong>Respiro Health</strong> builds AI-powered triage systems that give doctors their time back.
@@ -213,26 +309,34 @@
 
     <div class="features">
       <span class="badge">⚡ Saves 2 Hours/Day</span>
-      <span class="badge">🏥 EMR Integration</span>
-      <span class="badge">🗣️ Multilingual Support</span>
+      <span class="badge">🏥 Works Alongside Any EMR</span>
+      <span class="badge">🗣️ Hindi · Marathi · English</span>
       <a href="/blog" class="badge" style="text-decoration: none; cursor: pointer;">📚 Read Our Blog</a>
     </div>
 
-    <p style="font-style: italic; color: #64748b; margin-top: 35px; font-size: 0.95rem; border-top: 1px solid #e2e8f0; padding-top: 20px;">
-      🚀 Currently deploying pilots at premier medical institutions.
+    <!-- SECONDARY CTA — bottom of card -->
+    <div class="card-cta">
+      <p class="card-cta-headline">Running a pulmonology or general medicine OPD in Pune?</p>
+      <a href="mailto:ajay.sharma@respirohealth.ai?subject=Demo Request — Respiro Health&body=Hi Ajay, I'd like to see a demo of Respiro Health for my clinic." class="btn-cta">
+        Request a Free Demo →
+      </a>
+      <p style="font-size: 0.82rem; color: #94a3b8; margin: 4px 0 0 0;">Reply within 24 hours. No sales pressure.</p>
+    </div>
+
+    <p style="font-style: italic; color: #64748b; margin-top: 24px; margin-bottom: 0; font-size: 0.95rem; border-top: 1px solid #e2e8f0; padding-top: 20px;">
+      🚀 Currently deploying pilots at premier medical institutions in Pune.
     </p>
   </main>
 
   <footer>
-    For pilot inquiries & demos:<br>
+    Questions? Write to us directly:<br>
     <a href="mailto:ajay.sharma@respirohealth.ai">ajay.sharma@respirohealth.ai</a>
     
     <p style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #e2e8f0;">
-      <a href="/blog">📖 Read our blog</a> for tips on OPD management & AI triage
+      <a href="/blog">📖 Read our blog</a> for tips on OPD management & AI in healthcare
     </p>
   </footer>
   
-  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -263,7 +367,7 @@
       "contactType": "Sales"
     },
     "areaServed": "IN",
-    "description": "AI-powered patient triage and OPD management system for Indian hospitals and clinics"
+    "description": "AI-powered patient intake and OPD management system for Indian hospitals and clinics"
   }
   </script>
 </body>
