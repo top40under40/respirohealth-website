@@ -13,12 +13,12 @@
     gtag('config', 'G-2N0QFZKYR1');
   </script>
 
-  <title>Respiro Health | WhatsApp-Native Respiratory Health Screening</title>
-  <meta name="description" content="Respiro Health is building India's first WhatsApp-native respiratory health screening platform — patient-initiated, zero app download, built for India's 500 million WhatsApp users.">
-  <meta name="keywords" content="respiratory health India, WhatsApp health screening, COPD screening, asthma screening, respiratory AI India, digital health WhatsApp, pre-consultation tool">
+  <title>Respiro Health | Pre-Consultation Intelligence for OPDs</title>
+  <meta name="description" content="Respiro Health is building India's pre-consultation intelligence layer — a WhatsApp-native platform that gives doctors a structured patient summary before the visit begins.">
+  <meta name="keywords" content="OPD pre-consultation, WhatsApp health platform, respiratory OPD India, AI triage summary, digital health India, pre-consultation tool, hospital OPD software">
 
-  <meta property="og:title" content="Respiro Health | WhatsApp-Native Respiratory Screening">
-  <meta property="og:description" content="India's first patient-initiated respiratory health screening platform. Anyone with WhatsApp can screen themselves — no app, no health worker required.">
+  <meta property="og:title" content="Respiro Health | Pre-Consultation Intelligence for OPDs">
+  <meta property="og:description" content="The pre-consultation intelligence layer for India's OPDs. WhatsApp-native. Zero friction. Smarter consultations start before the patient walks in.">
   <meta property="og:url" content="https://respirohealth.ai">
 
   <link rel="canonical" href="https://respirohealth.ai">
@@ -53,7 +53,7 @@
       flex-direction: column;
     }
 
-    /* ── NAV ── */
+    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -76,9 +76,7 @@
       letter-spacing: -0.3px;
     }
 
-    .nav-logo span {
-      color: var(--teal-accent);
-    }
+    .nav-logo span { color: var(--teal-accent); }
 
     .nav-links {
       display: flex;
@@ -109,7 +107,7 @@
       color: var(--white);
     }
 
-    /* ── HERO ── */
+    /* HERO */
     .hero {
       padding: 140px 48px 80px;
       max-width: 1100px;
@@ -212,7 +210,7 @@
       background: var(--teal-light);
     }
 
-    /* ── HERO STATS CARD ── */
+    /* HERO CARD */
     .hero-card {
       background: var(--white);
       border: 1px solid var(--border);
@@ -249,15 +247,18 @@
       padding-bottom: 0;
     }
 
-    .stat-icon {
+    .stat-badge {
       width: 40px; height: 40px;
-      background: var(--teal-light);
+      background: var(--teal-dark);
       border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.1rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--amber);
       flex-shrink: 0;
+      font-family: 'Sora', sans-serif;
     }
 
     .stat-num {
@@ -275,10 +276,8 @@
       line-height: 1.4;
     }
 
-    /* ── SECTION SHARED ── */
-    section {
-      padding: 80px 48px;
-    }
+    /* SECTIONS */
+    section { padding: 80px 48px; }
 
     .section-inner {
       max-width: 1100px;
@@ -312,7 +311,7 @@
       margin-bottom: 48px;
     }
 
-    /* ── PROBLEM / INSIGHT ── */
+    /* PROBLEM */
     .insight-section {
       background: var(--teal-dark);
       color: var(--white);
@@ -346,207 +345,219 @@
       color: rgba(255,255,255,0.75);
     }
 
-    .insight-section h2 {
-      color: var(--white);
-    }
+    .insight-section h2 { color: var(--white); }
+    .insight-section .section-intro { color: rgba(255,255,255,0.7); }
 
-    .insight-section .section-intro {
-      color: rgba(255,255,255,0.7);
-    }
-
-    /* ── HOW IT WORKS ── */
-    .how-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: start;
-    }
-
-    .how-steps {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .how-step {
-      display: flex;
-      gap: 20px;
-      position: relative;
-      padding-bottom: 32px;
-    }
-
-    .how-step:last-child { padding-bottom: 0; }
-
-    .step-line {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex-shrink: 0;
-    }
-
-    .step-dot {
-      width: 36px; height: 36px;
-      background: var(--teal-dark);
-      color: var(--white);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Sora', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    .step-connector {
-      width: 2px;
-      flex: 1;
-      background: var(--border);
-      margin: 6px 0;
-      min-height: 24px;
-    }
-
-    .how-step:last-child .step-connector { display: none; }
-
-    .step-content h3 {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--teal-dark);
-      margin-bottom: 6px;
-      margin-top: 6px;
-    }
-
-    .step-content p {
-      font-size: 0.875rem;
-      line-height: 1.6;
-      color: var(--text-muted);
-    }
-
-    .how-visual {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 36px;
-      box-shadow: 0 4px 20px rgba(26,74,71,0.06);
-    }
-
-    .how-visual-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 20px;
-    }
-
-    .vs-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .vs-card {
-      border-radius: 12px;
-      padding: 20px;
-    }
-
-    .vs-card.push {
-      background: #fef3f2;
-      border: 1px solid #fecdca;
-    }
-
-    .vs-card.pull {
-      background: var(--teal-light);
-      border: 1px solid var(--border);
-    }
-
-    .vs-tag {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-
-    .vs-card.push .vs-tag { color: #b91c1c; }
-    .vs-card.pull .vs-tag { color: var(--teal-dark); }
-
-    .vs-title {
-      font-family: 'Sora', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: var(--text-primary);
-    }
-
-    .vs-points {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-    }
-
-    .vs-points li {
-      font-size: 0.78rem;
-      color: var(--text-body);
-      display: flex;
-      gap: 6px;
-      align-items: flex-start;
-      line-height: 1.4;
-    }
-
-    /* ── DATA STRATEGY ── */
-    .data-section { background: var(--teal-light); }
-
-    .data-grid {
+    /* PRODUCT — HOW IT WORKS */
+    .journey-grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 24px;
       margin-top: 48px;
     }
 
-    .data-card {
+    .journey-phase {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .journey-phase-header {
+      background: var(--teal-dark);
+      padding: 14px 20px;
+    }
+
+    .journey-phase-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 4px;
+    }
+
+    .journey-phase-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .journey-phase-body {
+      background: var(--white);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .journey-point {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .journey-point-dot {
+      width: 6px; height: 6px;
+      background: var(--teal-accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    .journey-point p {
+      font-size: 0.83rem;
+      line-height: 1.5;
+      color: var(--text-body);
+    }
+
+    .journey-footer {
+      margin-top: 32px;
+      background: var(--teal-dark);
+      border-radius: 12px;
+      padding: 18px 24px;
+    }
+
+    .journey-footer p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    /* WHY WHATSAPP */
+    .whatsapp-section { background: var(--teal-light); }
+
+    .whatsapp-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .whatsapp-reasons {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 8px;
+    }
+
+    .whatsapp-reason {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
       background: var(--white);
       border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+
+    .reason-dot {
+      width: 8px; height: 8px;
+      background: var(--teal-accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+
+    .whatsapp-reason p {
+      font-size: 0.875rem;
+      line-height: 1.55;
+      color: var(--text-body);
+    }
+
+    .whatsapp-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .whatsapp-stat {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 20px;
+      text-align: center;
+    }
+
+    .whatsapp-stat-num {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--teal-dark);
+      margin-bottom: 6px;
+    }
+
+    .whatsapp-stat-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* VISION */
+    .vision-section { background: var(--teal-dark); }
+    .vision-section h2 { color: var(--white); }
+    .vision-section .section-intro { color: rgba(255,255,255,0.7); }
+
+    .vision-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .vision-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
       border-radius: 16px;
       padding: 28px;
     }
 
-    .data-card-icon {
-      font-size: 1.4rem;
+    .vision-num {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--amber);
       margin-bottom: 12px;
     }
 
-    .data-card h3 {
+    .vision-card h3 {
       font-size: 0.95rem;
       font-weight: 600;
-      color: var(--teal-dark);
-      margin-bottom: 8px;
+      color: var(--white);
+      margin-bottom: 10px;
     }
 
-    .data-card p {
+    .vision-card p {
       font-size: 0.83rem;
       line-height: 1.6;
-      color: var(--text-muted);
+      color: rgba(255,255,255,0.65);
     }
 
-    .data-card .data-highlight {
-      font-family: 'Sora', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--teal-dark);
-      margin-bottom: 4px;
+    .vision-quote {
+      margin-top: 36px;
+      background: rgba(255,255,255,0.06);
+      border-left: 3px solid var(--amber);
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
     }
 
-    /* ── ADVISORS ── */
-    .advisor-grid {
+    .vision-quote p {
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.85);
+      font-style: italic;
+    }
+
+    /* TEAM */
+    .team-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px;
       margin-top: 40px;
     }
 
-    .advisor-card {
+    .team-card {
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: 16px;
@@ -556,45 +567,48 @@
       align-items: flex-start;
     }
 
-    .advisor-avatar {
+    .team-avatar {
       width: 48px; height: 48px;
-      background: var(--teal-light);
+      background: var(--teal-dark);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.3rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--amber);
+      font-family: 'Sora', sans-serif;
       flex-shrink: 0;
     }
 
-    .advisor-name {
+    .team-name {
       font-size: 0.95rem;
       font-weight: 600;
       color: var(--teal-dark);
       margin-bottom: 4px;
     }
 
-    .advisor-role {
+    .team-role {
       font-size: 0.78rem;
       color: var(--teal-accent);
       font-weight: 500;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
-    .advisor-bio {
+    .team-bio {
       font-size: 0.8rem;
-      line-height: 1.5;
+      line-height: 1.55;
       color: var(--text-muted);
     }
 
-    /* ── COLLABORATION ── */
+    /* COLLAB */
     .collab-section { background: var(--teal-dark); }
     .collab-section h2 { color: var(--white); }
     .collab-section .section-intro { color: rgba(255,255,255,0.7); }
 
     .collab-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 20px;
       margin-top: 40px;
     }
@@ -611,18 +625,15 @@
       font-weight: 600;
       color: var(--white);
       margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
     }
 
     .collab-card p {
       font-size: 0.8rem;
-      line-height: 1.5;
+      line-height: 1.55;
       color: rgba(255,255,255,0.6);
     }
 
-    /* ── CTA FOOTER ── */
+    /* CTA */
     .cta-section {
       text-align: center;
       padding: 80px 48px;
@@ -633,10 +644,7 @@
       margin: 0 auto;
     }
 
-    .cta-section h2 {
-      margin-bottom: 16px;
-      text-align: center;
-    }
+    .cta-section h2 { margin-bottom: 16px; text-align: center; }
 
     .cta-section p {
       font-size: 1rem;
@@ -652,7 +660,7 @@
       flex-wrap: wrap;
     }
 
-    /* ── FOOTER ── */
+    /* FOOTER */
     footer {
       border-top: 1px solid var(--border);
       padding: 32px 48px;
@@ -674,14 +682,16 @@
 
     footer a:hover { text-decoration: underline; }
 
-    /* ── RESPONSIVE ── */
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       nav { padding: 14px 24px; }
       .hero { grid-template-columns: 1fr; padding: 120px 24px 60px; gap: 40px; }
       h1 { font-size: 2.2rem; }
-      .insight-grid, .data-grid, .collab-grid { grid-template-columns: 1fr 1fr; }
-      .advisor-grid { grid-template-columns: 1fr; }
-      .how-grid { grid-template-columns: 1fr; }
+      .insight-grid, .vision-grid { grid-template-columns: 1fr 1fr; }
+      .journey-grid { grid-template-columns: 1fr; }
+      .whatsapp-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr; }
+      .collab-grid { grid-template-columns: 1fr; }
       section { padding: 60px 24px; }
       footer { flex-direction: column; gap: 12px; text-align: center; padding: 24px; }
     }
@@ -689,8 +699,8 @@
     @media (max-width: 600px) {
       h1 { font-size: 1.8rem; }
       h2 { font-size: 1.5rem; }
-      .insight-grid, .data-grid, .collab-grid { grid-template-columns: 1fr; }
-      .vs-row { grid-template-columns: 1fr; }
+      .insight-grid, .vision-grid { grid-template-columns: 1fr; }
+      .whatsapp-stats { grid-template-columns: 1fr 1fr; }
       .hero-ctas { flex-direction: column; }
       .btn-primary, .btn-secondary { text-align: center; }
       .nav-links .nav-link:not(.nav-link-primary) { display: none; }
@@ -708,7 +718,6 @@
     <a href="/" class="nav-logo">respiro<span>health</span></a>
     <div class="nav-links">
       <a href="/blog" class="nav-link">Blog</a>
-      <a href="https://clinic.respirohealth.ai" class="nav-link">Patient Portal</a>
       <a href="mailto:ajay.sharma@respirohealth.ai?subject=Collaboration Inquiry — Respiro Health" class="nav-link nav-link-primary">Get in Touch</a>
     </div>
   </nav>
@@ -716,14 +725,14 @@
   <!-- HERO -->
   <div class="hero">
     <div class="hero-left">
-      <div class="hero-eyebrow">Respiratory Health · India</div>
-      <h1>Respiratory screening<br>via <em>WhatsApp.</em><br>No app needed.</h1>
+      <div class="hero-eyebrow">OPD Intelligence · India</div>
+      <h1>Smarter consultations<br>start <em>before</em> the<br>patient walks in.</h1>
       <p class="hero-sub">
-        Respiro Health is building India's first patient-initiated respiratory health screening platform — a pull model where anyone with WhatsApp can screen themselves, without a health worker, without an app download, without leaving home.
+        Respiro Health is building the pre-consultation intelligence layer for India's OPDs — a WhatsApp-native platform that gives doctors a structured patient summary, flags high-risk cases, and closes the care loop automatically. No app. No new infrastructure. Zero friction.
       </p>
       <div class="hero-ctas">
         <a href="mailto:ajay.sharma@respirohealth.ai?subject=Partnership Inquiry — Respiro Health" class="btn-primary">
-          Partner with Us
+          Request a Pilot
         </a>
         <a href="mailto:ajay.sharma@respirohealth.ai?subject=Investor Inquiry — Respiro Health" class="btn-secondary">
           Investor Enquiry
@@ -732,34 +741,34 @@
     </div>
 
     <div class="hero-card">
-      <div class="hero-card-label">Why this matters</div>
+      <div class="hero-card-label">The OPD problem in numbers</div>
       <div class="stat-row">
         <div class="stat-item">
-          <div class="stat-icon">🫁</div>
+          <div class="stat-badge">6B</div>
           <div>
-            <div class="stat-num">70M+</div>
-            <div class="stat-desc">Indians living with COPD and asthma — most undiagnosed, all underserved</div>
+            <div class="stat-num">6 Billion</div>
+            <div class="stat-desc">OPD visits in India annually — less than 5% have any structured pre-visit workflow</div>
           </div>
         </div>
         <div class="stat-item">
-          <div class="stat-icon">📱</div>
+          <div class="stat-badge">40%</div>
           <div>
-            <div class="stat-num">500M+</div>
-            <div class="stat-desc">WhatsApp users in India — already on every phone, zero friction</div>
+            <div class="stat-num">40%</div>
+            <div class="stat-desc">Of consultation time lost to repetitive history-taking — every visit, every patient</div>
           </div>
         </div>
         <div class="stat-item">
-          <div class="stat-icon">⏱</div>
+          <div class="stat-badge">0</div>
           <div>
-            <div class="stat-num">5 min</div>
-            <div class="stat-desc">Average OPD consultation time — doctors need better information faster</div>
+            <div class="stat-num">Zero</div>
+            <div class="stat-desc">Structured patient data exists before the doctor opens the visit</div>
           </div>
         </div>
         <div class="stat-item">
-          <div class="stat-icon">🏥</div>
+          <div class="stat-badge">60%</div>
           <div>
-            <div class="stat-num">₹60,000Cr</div>
-            <div class="stat-desc">Annual economic burden of COPD and asthma in India alone</div>
+            <div class="stat-num">60%+</div>
+            <div class="stat-desc">Of discharged patients receive no structured follow-up — outcomes go unmeasured</div>
           </div>
         </div>
       </div>
@@ -769,165 +778,245 @@
   <!-- PROBLEM -->
   <section class="insight-section">
     <div class="section-inner">
-      <div class="section-eyebrow">The Gap</div>
-      <h2>The system can only see patients who arrive.<br>We are building for the ones who don't.</h2>
+      <div class="section-eyebrow">The Problem</div>
+      <h2>Every consultation starts<br>from a blank page.</h2>
       <p class="section-intro">
-        From TB to COPD to asthma — India's respiratory disease burden is massive, largely undetected, and concentrated in populations that don't reach a doctor in time. Most respiratory diseases go undetected because people don't seek care in time — due to normalising symptoms, stigma, distance, or not knowing their cough is serious. By the time they reach a doctor, the disease has progressed. The gap is pre-diagnostic, and it is enormous.
+        India's OPDs see 6 billion visits a year. In the vast majority, the doctor begins with zero information about the patient sitting in front of them. No structured history. No pre-visit triage. No way to distinguish a routine case from a critical one before the patient walks in. The problem is not the consultation — it is everything that happens before it.
       </p>
       <div class="insight-grid">
         <div class="insight-card">
-          <div class="insight-num">70M+</div>
-          <div class="insight-label">Indians estimated to have COPD or asthma — the majority undiagnosed or undertreated</div>
+          <div class="insight-num">6–10 min</div>
+          <div class="insight-label">Of every consultation spent asking the same history questions — before any clinical decision-making begins</div>
         </div>
         <div class="insight-card">
-          <div class="insight-num">43%</div>
-          <div class="insight-label">Of global asthma deaths occur in India — despite asthma being a manageable condition with early intervention</div>
+          <div class="insight-num">100,000+</div>
+          <div class="insight-label">Private OPD clinics and hospitals in India — almost none have a structured pre-visit patient intake system</div>
         </div>
         <div class="insight-card">
-          <div class="insight-num">37%</div>
-          <div class="insight-label">Of Indian adult smokers have COPD — most don't know it until significant lung damage has occurred</div>
+          <div class="insight-num">60%+</div>
+          <div class="insight-label">Of patients discharged after a consultation receive no structured follow-up — recovery outcomes are invisible</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
+  <!-- PRODUCT -->
   <section>
     <div class="section-inner">
-      <div class="section-eyebrow">The Approach</div>
-      <h2>Push model vs Pull model.<br>A fundamental difference.</h2>
+      <div class="section-eyebrow">The Product</div>
+      <h2>Pre-visit. During. Post-visit.<br>We own the full patient journey.</h2>
       <p class="section-intro">
-        Existing AI screening tools use a push model — a trained health worker goes out to find the patient. Respiro is a pull model — the patient initiates screening themselves, privately, before they've decided to visit a clinic.
+        Respiro sits between appointment booking and consultation — capturing structured patient data before the visit, surfacing it to the doctor in real time, and following up automatically after. One platform. Zero disruption to existing workflows.
       </p>
-      <div class="how-grid">
-        <div class="how-steps">
-          <div class="how-step">
-            <div class="step-line">
-              <div class="step-dot">1</div>
-              <div class="step-connector"></div>
-            </div>
-            <div class="step-content">
-              <h3>Patient opens WhatsApp</h3>
-              <p>No app download. No registration. Works on any phone that already has WhatsApp — 500 million in India.</p>
-            </div>
+
+      <div class="journey-grid">
+        <div class="journey-phase">
+          <div class="journey-phase-header">
+            <div class="journey-phase-tag">Pre-Visit</div>
+            <div class="journey-phase-title">Intelligent Intake</div>
           </div>
-          <div class="how-step">
-            <div class="step-line">
-              <div class="step-dot">2</div>
-              <div class="step-connector"></div>
+          <div class="journey-phase-body">
+            <div class="journey-point">
+              <div class="journey-point-dot"></div>
+              <p>Patient scans a QR code or messages the clinic on WhatsApp — no app download required</p>
             </div>
-            <div class="step-content">
-              <h3>Records a cough</h3>
-              <p>A 30-second guided voice note, in the patient's own language. Private. No health worker present.</p>
+            <div class="journey-point">
+              <div class="journey-point-dot"></div>
+              <p>Answers structured clinical questions in their language in 3–5 minutes</p>
             </div>
-          </div>
-          <div class="how-step">
-            <div class="step-line">
-              <div class="step-dot">3</div>
-              <div class="step-connector"></div>
+            <div class="journey-point">
+              <div class="journey-point-dot"></div>
+              <p>Completed before the patient enters the clinic — doctor is already informed</p>
             </div>
-            <div class="step-content">
-              <h3>AI analyses the recording and symptoms</h3>
-              <p>Respiratory patterns combined with symptom inputs are processed by our AI pipeline. A risk assessment is generated in seconds.</p>
-            </div>
-          </div>
-          <div class="how-step">
-            <div class="step-line">
-              <div class="step-dot">4</div>
-              <div class="step-connector"></div>
-            </div>
-            <div class="step-content">
-              <h3>Guided to the right care</h3>
-              <p>High-risk patients are guided to the nearest appropriate healthcare facility. The system routes people toward care — not around it.</p>
+            <div class="journey-point">
+              <div class="journey-point-dot"></div>
+              <p>Zero friction — works on any phone with WhatsApp already installed</p>
             </div>
           </div>
         </div>
 
-        <div class="how-visual">
-          <div class="how-visual-label">Distribution model comparison</div>
-          <div class="vs-row">
-            <div class="vs-card push">
-              <div class="vs-tag">Push model</div>
-              <div class="vs-title">Existing tools</div>
-              <ul class="vs-points">
-                <li>⚙ Requires trained NTEP health worker</li>
-                <li>⚙ Dedicated app installation</li>
-                <li>⚙ Patient must be found first</li>
-                <li>⚙ Scales with manpower</li>
-                <li>⚙ Public screening — stigma risk</li>
-              </ul>
+        <div class="journey-phase">
+          <div class="journey-phase-header">
+            <div class="journey-phase-tag">During Visit</div>
+            <div class="journey-phase-title">Doctor & COO Intelligence</div>
+          </div>
+          <div class="journey-phase-body">
+            <div class="journey-point">
+              <div class="journey-point-dot"></div>
+              <p>AI-generated triage summary ready on the doctor's dashboard before the patient sits down</p>
             </div>
-            <div class="vs-card pull">
-              <div class="vs-tag">Pull model</div>
-              <div class="vs-title">Respiro</div>
-              <ul class="vs-points">
-                <li>✓ Patient initiates themselves</li>
-                <li>✓ WhatsApp — already installed</li>
-                <li>✓ Works from home, privately</li>
-                <li>✓ Scales with awareness</li>
-                <li>✓ Zero stigma — no one knows</li>
-              </ul>
+            <div class="journey-point">
+              <div class="journey-point-dot"></div>
+              <p>High-risk cases automatically flagged in the queue — critical patients never wait undetected</p>
+            </div>
+            <div class="journey-point">
+              <div class="journey-point-dot"></div>
+              <p>ICD-10 diagnosis and medications logged post-consultation in one workflow</p>
+            </div>
+            <div class="journey-point">
+              <div class="journey-point-dot"></div>
+              <p>COO dashboard shows live queue, funnel, and doctor-efficiency metrics in real time</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-phase">
+          <div class="journey-phase-header">
+            <div class="journey-phase-tag">Post-Visit</div>
+            <div class="journey-phase-title">Adherence & Follow-up</div>
+          </div>
+          <div class="journey-phase-body">
+            <div class="journey-point">
+              <div class="journey-point-dot"></div>
+              <p>Patient automatically contacted at Day 3, 7, 14, and 30 — in their language, on WhatsApp</p>
+            </div>
+            <div class="journey-point">
+              <div class="journey-point-dot"></div>
+              <p>Asked how they are feeling — structured responses captured and logged</p>
+            </div>
+            <div class="journey-point">
+              <div class="journey-point-dot"></div>
+              <p>Non-recovering patients flagged to the doctor immediately — before they deteriorate</p>
+            </div>
+            <div class="journey-point">
+              <div class="journey-point-dot"></div>
+              <p>Builds a longitudinal outcomes record per patient — automatically, over time</p>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="journey-footer">
+        <p>No change to existing infrastructure. No training required for doctors. No app download for patients. The receptionist or patient initiates — the doctor just opens the dashboard.</p>
+      </div>
     </div>
   </section>
 
-  <!-- DATA STRATEGY -->
-  <section class="data-section">
+  <!-- WHY WHATSAPP -->
+  <section class="whatsapp-section">
     <div class="section-inner">
-      <div class="section-eyebrow">The Approach</div>
-      <h2>Confirmed clinical diagnosis.<br>Not symptom guesswork.</h2>
-      <p class="section-intro">
-        We are building a clinically rigorous respiratory dataset — recordings linked to confirmed diagnoses from hospitals and clinics across India. Starting with high-burden infectious respiratory disease and expanding to chronic conditions — our dataset covers the full spectrum of respiratory health.
-      </p>
-      <div class="data-grid">
-        <div class="data-card">
-          <div class="data-card-icon">🏥</div>
-          <div class="data-highlight">Private Clinics</div>
-          <h3>Urban respiratory diseases</h3>
-          <p>Working with private pulmonologists across India to capture confirmed asthma, COPD, and bronchitis cases — linked to spirometry and clinical diagnosis.</p>
+      <div class="section-eyebrow">Why WhatsApp</div>
+      <h2>The infrastructure already exists.<br>In every patient's pocket.</h2>
+
+      <div class="whatsapp-grid">
+        <div>
+          <p class="section-intro">Every health-tech company builds a patient app. Patients don't download it. Respiro is built on the channel patients already use — making adoption a non-issue from day one.</p>
+          <div class="whatsapp-reasons">
+            <div class="whatsapp-reason">
+              <div class="reason-dot"></div>
+              <p>Patients don't download apps — WhatsApp is already on every phone</p>
+            </div>
+            <div class="whatsapp-reason">
+              <div class="reason-dot"></div>
+              <p>Doctors don't change workflows — they simply open a dashboard</p>
+            </div>
+            <div class="whatsapp-reason">
+              <div class="reason-dot"></div>
+              <p>Hospitals don't replace infrastructure — Respiro sits on top</p>
+            </div>
+            <div class="whatsapp-reason">
+              <div class="reason-dot"></div>
+              <p>Every income level, language, and geography in India is already on WhatsApp</p>
+            </div>
+            <div class="whatsapp-reason">
+              <div class="reason-dot"></div>
+              <p>Patient app models have failed at scale in Indian healthcare — WhatsApp sidesteps every adoption barrier</p>
+            </div>
+          </div>
         </div>
-        <div class="data-card">
-          <div class="data-card-icon">📋</div>
-          <div class="data-highlight">Pre-consultation</div>
-          <h3>Structured clinical workflow</h3>
-          <p>Our coordinator captures patient history before the consultation begins. Doctor receives a structured summary. Better information in less time — for both patient and physician.</p>
-        </div>
-        <div class="data-card">
-          <div class="data-card-icon">🔬</div>
-          <div class="data-highlight">Research partnerships</div>
-          <h3>Academic validation</h3>
-          <p>Active academic research collaborations with medical institutions for rigorous clinical validation of our screening approach across respiratory conditions.</p>
+
+        <div class="whatsapp-stats">
+          <div class="whatsapp-stat">
+            <div class="whatsapp-stat-num">500M+</div>
+            <div class="whatsapp-stat-label">WhatsApp users in India across all income levels and geographies</div>
+          </div>
+          <div class="whatsapp-stat">
+            <div class="whatsapp-stat-num">90%+</div>
+            <div class="whatsapp-stat-label">Message open rate — versus under 20% for email or SMS</div>
+          </div>
+          <div class="whatsapp-stat">
+            <div class="whatsapp-stat-num">0</div>
+            <div class="whatsapp-stat-label">App downloads required from patients</div>
+          </div>
+          <div class="whatsapp-stat">
+            <div class="whatsapp-stat-num">3–5 min</div>
+            <div class="whatsapp-stat-label">To complete a full structured clinical intake</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TEAM / ADVISORS -->
+  <!-- VISION -->
+  <section class="vision-section">
+    <div class="section-inner">
+      <div class="section-eyebrow">The Vision</div>
+      <h2>Built for one clinic.<br>Designed for a hundred.</h2>
+      <p class="section-intro">
+        Respiro starts with respiratory OPDs — the highest-complexity intake environment in Indian healthcare. The same platform deploys across specialties, across hospital groups, and across geographies without rebuilding from scratch.
+      </p>
+      <div class="vision-grid">
+        <div class="vision-card">
+          <div class="vision-num">01</div>
+          <h3>Starts with respiratory</h3>
+          <p>Purpose-built for pulmonology OPDs — clinically reviewed symptom architecture, multilingual flows, and a triage model designed for India's respiratory disease burden.</p>
+        </div>
+        <div class="vision-card">
+          <div class="vision-num">02</div>
+          <h3>Expands across specialties</h3>
+          <p>The same infrastructure deploys to Cardiology, General Medicine, and beyond. No rebuilding. No new training. One platform, every department.</p>
+        </div>
+        <div class="vision-card">
+          <div class="vision-num">03</div>
+          <h3>Grows smarter over time</h3>
+          <p>Every patient interaction generates structured, diagnosis-linked clinical data. The more OPDs that run Respiro, the more accurate and clinically relevant the platform becomes.</p>
+        </div>
+      </div>
+      <div class="vision-quote">
+        <p>We are not building a tool for one department. We are building the intelligence layer for the Indian OPD.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
   <section>
     <div class="section-inner">
       <div class="section-eyebrow">The Team</div>
-      <h2>Built by engineers.<br>Guided by clinicians.</h2>
+      <h2>Builders and clinicians.<br>Not just an idea.</h2>
       <p class="section-intro">
         Respiro is a technical founder-led company with clinical advisory from some of India's leading respiratory health and public health experts.
       </p>
-      <div class="advisor-grid">
-        <div class="advisor-card">
-          <div class="advisor-avatar">👨‍💻</div>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">AS</div>
           <div>
-            <div class="advisor-name">Ajay Sharma</div>
-            <div class="advisor-role">Founder & CEO</div>
-            <div class="advisor-bio">Full-stack AI/ML engineer. Built Respiro's entire platform independently — WhatsApp flows, coordinator app, AWS backend, and acoustic AI pipeline.</div>
+            <div class="team-name">Ajay Sharma</div>
+            <div class="team-role">Founder & CEO</div>
+            <div class="team-bio">15+ years of software and technology experience. Built Respiro's entire platform independently — WhatsApp flows, AI triage pipeline, AWS backend, COO analytics dashboard, and follow-up module.</div>
           </div>
         </div>
-        <div class="advisor-card">
-          <div class="advisor-avatar">🩺</div>
+        <div class="team-card">
+          <div class="team-avatar">AS</div>
           <div>
-            <div class="advisor-name">Dr. Geetanjali Kapoor</div>
-            <div class="advisor-role">Medical Advisor</div>
-            <div class="advisor-bio">Oxford Visiting Academic. Former WHO Consultant. Authored India's national infection prevention guidelines. Advising on clinical dataset design and respiratory diagnostic validation.</div>
+            <div class="team-name">Akash Sharma</div>
+            <div class="team-role">COO</div>
+            <div class="team-bio">Strategy and growth. Leads business development, investor relations, and hospital partnerships across India and internationally. Based in Luxembourg.</div>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">DG</div>
+          <div>
+            <div class="team-name">Dr. Geetanjali Kapoor</div>
+            <div class="team-role">Medical Advisor</div>
+            <div class="team-bio">Oxford Visiting Academic. Former WHO Consultant. Authored India's national infection prevention guidelines. Advising on clinical dataset design and respiratory diagnostic validation.</div>
+          </div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">AP</div>
+          <div>
+            <div class="team-name">Dr. Aslam Ali Parvez</div>
+            <div class="team-role">Chief Medical Advisor</div>
+            <div class="team-bio">Extensive clinical experience and network across the Indian medical fraternity. Leading clinical governance and regulatory pathway for Respiro's research program.</div>
           </div>
         </div>
       </div>
@@ -938,26 +1027,26 @@
   <section class="collab-section">
     <div class="section-inner">
       <div class="section-eyebrow">Work With Us</div>
-      <h2>We are actively seeking<br>the right partners.</h2>
+      <h2>We are looking for<br>the right partners.</h2>
       <p class="section-intro">
-        We are building Respiro with partners who understand the clinical reality of respiratory health in India — from private pulmonologists to hospital administrators to public health implementers. If your work touches respiratory health, we want to talk.
+        We are building Respiro with partners who understand the operational and clinical reality of Indian OPDs. If your work touches outpatient care, hospital operations, or healthcare investment — we want to talk.
       </p>
       <div class="collab-grid">
         <div class="collab-card">
-          <h3>🏥 Hospitals & Clinics</h3>
-          <p>Private pulmonology clinics, chest OPDs, and hospitals interested in improving pre-consultation workflow and participating in our clinical data partnership programme.</p>
+          <h3>Hospitals & Clinics</h3>
+          <p>Pulmonology OPDs, chest clinics, and multi-specialty hospitals interested in a 30-day free pilot. We handle everything — setup, deployment, and training. You get full operational and clinical data from day one.</p>
         </div>
         <div class="collab-card">
-          <h3>🔬 Academic & Research</h3>
-          <p>Medical colleges and research institutions interested in co-authorship and joint grant applications for respiratory health AI research.</p>
+          <h3>Network & Introductions</h3>
+          <p>Individuals who can open doors to hospital CMOs, medical directors, or health department decision-makers across India. Warm introductions move faster than cold outreach.</p>
         </div>
         <div class="collab-card">
-          <h3>🏛 Government & Public Health</h3>
-          <p>Government health institutions and public health implementation organisations working on respiratory disease elimination programmes across India.</p>
+          <h3>Academic & Research</h3>
+          <p>Medical institutions and research bodies interested in clinical validation partnerships, co-authorship, or joint grant applications in respiratory health and digital health.</p>
         </div>
         <div class="collab-card">
-          <h3>💼 Strategic Investors</h3>
-          <p>Investors who understand the Indian healthcare market and bring clinical or government relationships alongside capital. We are raising our seed round.</p>
+          <h3>Strategic Investors</h3>
+          <p>Investors who understand the Indian healthcare market and bring clinical or hospital relationships alongside capital. We are raising our pre-seed round.</p>
         </div>
       </div>
     </div>
@@ -967,9 +1056,9 @@
   <section class="cta-section">
     <div class="cta-inner">
       <div class="section-eyebrow" style="text-align:center;">Get Involved</div>
-      <h2>Building the respiratory<br>health layer for India.</h2>
+      <h2>The Indian OPD is ready<br>for this. Are you?</h2>
       <p>
-        Whether you run a clinic, lead a hospital department, work in public health, or invest in health-tech — we want to hear from you.
+        Whether you run a clinic, lead a hospital department, work in health-tech investment, or simply want to understand what we are building — write to us.
       </p>
       <div class="cta-buttons">
         <a href="mailto:ajay.sharma@respirohealth.ai?subject=Partnership Inquiry — Respiro Health" class="btn-primary">
@@ -989,8 +1078,6 @@
       <a href="mailto:ajay.sharma@respirohealth.ai">ajay.sharma@respirohealth.ai</a>
       &nbsp;·&nbsp;
       <a href="/blog">Blog</a>
-      &nbsp;·&nbsp;
-      <a href="https://clinic.respirohealth.ai">Patient Portal</a>
     </span>
   </footer>
 
@@ -1006,7 +1093,7 @@
       "contactType": "Partnerships"
     },
     "areaServed": "IN",
-    "description": "WhatsApp-native respiratory health screening platform. Patient-initiated pull model for India's 500 million WhatsApp users — no app download, no health worker required."
+    "description": "Pre-consultation intelligence platform for India's OPDs. WhatsApp-native patient intake, AI triage summary, and automated follow-up — built for high-volume outpatient departments."
   }
   </script>
 
