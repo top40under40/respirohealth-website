@@ -80,13 +80,13 @@
 
     .nav-links {
       display: flex;
-      gap: 12px;
+      gap: 4px;
       align-items: center;
     }
 
     .nav-link {
       text-decoration: none;
-      padding: 8px 18px;
+      padding: 8px 14px;
       border-radius: 8px;
       font-size: 0.875rem;
       font-weight: 500;
@@ -100,6 +100,7 @@
       background: var(--teal-dark);
       color: var(--white);
       font-weight: 600;
+      margin-left: 8px;
     }
 
     .nav-link-primary:hover {
@@ -152,10 +153,7 @@
       margin-bottom: 20px;
     }
 
-    h1 em {
-      font-style: normal;
-      color: var(--teal-accent);
-    }
+    h1 em { font-style: normal; color: var(--teal-accent); }
 
     .hero-sub {
       font-size: 1.05rem;
@@ -165,11 +163,7 @@
       max-width: 480px;
     }
 
-    .hero-ctas {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+    .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
 
     .btn-primary {
       display: inline-block;
@@ -185,11 +179,7 @@
       cursor: pointer;
     }
 
-    .btn-primary:hover {
-      background: var(--teal-mid);
-      border-color: var(--teal-mid);
-      transform: translateY(-1px);
-    }
+    .btn-primary:hover { background: var(--teal-mid); border-color: var(--teal-mid); transform: translateY(-1px); }
 
     .btn-secondary {
       display: inline-block;
@@ -205,10 +195,7 @@
       cursor: pointer;
     }
 
-    .btn-secondary:hover {
-      border-color: var(--teal-mid);
-      background: var(--teal-light);
-    }
+    .btn-secondary:hover { border-color: var(--teal-mid); background: var(--teal-light); }
 
     /* HERO CARD */
     .hero-card {
@@ -219,467 +206,123 @@
       box-shadow: 0 8px 32px rgba(26, 74, 71, 0.08);
     }
 
-    .hero-card-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 24px;
-    }
+    .hero-card-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 24px; }
 
-    .stat-row {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
+    .stat-row { display: flex; flex-direction: column; gap: 20px; }
 
-    .stat-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid var(--teal-light);
-    }
+    .stat-item { display: flex; align-items: flex-start; gap: 16px; padding-bottom: 20px; border-bottom: 1px solid var(--teal-light); }
+    .stat-item:last-child { border-bottom: none; padding-bottom: 0; }
 
-    .stat-item:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
+    .stat-badge { width: 40px; height: 40px; background: var(--teal-dark); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; color: var(--amber); flex-shrink: 0; font-family: 'Sora', sans-serif; }
 
-    .stat-badge {
-      width: 40px; height: 40px;
-      background: var(--teal-dark);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: var(--amber);
-      flex-shrink: 0;
-      font-family: 'Sora', sans-serif;
-    }
-
-    .stat-num {
-      font-family: 'Sora', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--teal-dark);
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-
-    .stat-desc {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      line-height: 1.4;
-    }
+    .stat-num { font-family: 'Sora', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--teal-dark); line-height: 1; margin-bottom: 4px; }
+    .stat-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.4; }
 
     /* SECTIONS */
     section { padding: 80px 48px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
 
-    .section-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+    .section-eyebrow { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal-accent); margin-bottom: 12px; }
 
-    .section-eyebrow {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--teal-accent);
-      margin-bottom: 12px;
-    }
+    h2 { font-family: 'Sora', sans-serif; font-size: 2rem; font-weight: 700; line-height: 1.2; color: var(--teal-dark); margin-bottom: 16px; letter-spacing: -0.5px; }
 
-    h2 {
-      font-family: 'Sora', sans-serif;
-      font-size: 2rem;
-      font-weight: 700;
-      line-height: 1.2;
-      color: var(--teal-dark);
-      margin-bottom: 16px;
-      letter-spacing: -0.5px;
-    }
-
-    .section-intro {
-      font-size: 1rem;
-      line-height: 1.7;
-      color: var(--text-body);
-      max-width: 600px;
-      margin-bottom: 48px;
-    }
+    .section-intro { font-size: 1rem; line-height: 1.7; color: var(--text-body); max-width: 600px; margin-bottom: 48px; }
 
     /* PROBLEM */
-    .insight-section {
-      background: var(--teal-dark);
-      color: var(--white);
-    }
+    .insight-section { background: var(--teal-dark); color: var(--white); }
 
-    .insight-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 32px;
-      margin-top: 48px;
-    }
+    .insight-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; margin-top: 48px; }
 
-    .insight-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 16px;
-      padding: 28px;
-    }
+    .insight-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 28px; }
 
-    .insight-num {
-      font-family: 'Sora', sans-serif;
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: var(--amber);
-      margin-bottom: 8px;
-    }
-
-    .insight-label {
-      font-size: 0.875rem;
-      line-height: 1.5;
-      color: rgba(255,255,255,0.75);
-    }
+    .insight-num { font-family: 'Sora', sans-serif; font-size: 2.2rem; font-weight: 800; color: var(--amber); margin-bottom: 8px; }
+    .insight-label { font-size: 0.875rem; line-height: 1.5; color: rgba(255,255,255,0.75); }
 
     .insight-section h2 { color: var(--white); }
     .insight-section .section-intro { color: rgba(255,255,255,0.7); }
 
-    /* PRODUCT — HOW IT WORKS */
-    .journey-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 24px;
-      margin-top: 48px;
-    }
+    /* PRODUCT */
+    .journey-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-top: 48px; }
 
-    .journey-phase {
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-    }
+    .journey-phase { border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
 
-    .journey-phase-header {
-      background: var(--teal-dark);
-      padding: 14px 20px;
-    }
+    .journey-phase-header { background: var(--teal-dark); padding: 14px 20px; }
+    .journey-phase-tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--amber); margin-bottom: 4px; }
+    .journey-phase-title { font-family: 'Sora', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--white); }
 
-    .journey-phase-tag {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--amber);
-      margin-bottom: 4px;
-    }
+    .journey-phase-body { background: var(--white); padding: 20px; display: flex; flex-direction: column; gap: 10px; }
 
-    .journey-phase-title {
-      font-family: 'Sora', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--white);
-    }
+    .journey-point { display: flex; gap: 10px; align-items: flex-start; }
+    .journey-point-dot { width: 6px; height: 6px; background: var(--teal-accent); border-radius: 50%; flex-shrink: 0; margin-top: 6px; }
+    .journey-point p { font-size: 0.83rem; line-height: 1.5; color: var(--text-body); }
 
-    .journey-phase-body {
-      background: var(--white);
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .journey-point {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-    }
-
-    .journey-point-dot {
-      width: 6px; height: 6px;
-      background: var(--teal-accent);
-      border-radius: 50%;
-      flex-shrink: 0;
-      margin-top: 6px;
-    }
-
-    .journey-point p {
-      font-size: 0.83rem;
-      line-height: 1.5;
-      color: var(--text-body);
-    }
-
-    .journey-footer {
-      margin-top: 32px;
-      background: var(--teal-dark);
-      border-radius: 12px;
-      padding: 18px 24px;
-    }
-
-    .journey-footer p {
-      font-size: 0.9rem;
-      color: rgba(255,255,255,0.85);
-      line-height: 1.6;
-      font-style: italic;
-    }
+    .journey-footer { margin-top: 32px; background: var(--teal-dark); border-radius: 12px; padding: 18px 24px; }
+    .journey-footer p { font-size: 0.9rem; color: rgba(255,255,255,0.85); line-height: 1.6; font-style: italic; }
 
     /* WHY WHATSAPP */
     .whatsapp-section { background: var(--teal-light); }
 
-    .whatsapp-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 48px;
-      align-items: start;
-    }
+    .whatsapp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
 
-    .whatsapp-reasons {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      margin-top: 8px;
-    }
+    .whatsapp-reasons { display: flex; flex-direction: column; gap: 16px; margin-top: 8px; }
 
-    .whatsapp-reason {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px 18px;
-    }
+    .whatsapp-reason { display: flex; gap: 14px; align-items: flex-start; background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; }
+    .reason-dot { width: 8px; height: 8px; background: var(--teal-accent); border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+    .whatsapp-reason p { font-size: 0.875rem; line-height: 1.55; color: var(--text-body); }
 
-    .reason-dot {
-      width: 8px; height: 8px;
-      background: var(--teal-accent);
-      border-radius: 50%;
-      flex-shrink: 0;
-      margin-top: 5px;
-    }
+    .whatsapp-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
-    .whatsapp-reason p {
-      font-size: 0.875rem;
-      line-height: 1.55;
-      color: var(--text-body);
-    }
-
-    .whatsapp-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .whatsapp-stat {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 24px 20px;
-      text-align: center;
-    }
-
-    .whatsapp-stat-num {
-      font-family: 'Sora', sans-serif;
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--teal-dark);
-      margin-bottom: 6px;
-    }
-
-    .whatsapp-stat-label {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      line-height: 1.4;
-    }
+    .whatsapp-stat { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 24px 20px; text-align: center; }
+    .whatsapp-stat-num { font-family: 'Sora', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--teal-dark); margin-bottom: 6px; }
+    .whatsapp-stat-label { font-size: 0.78rem; color: var(--text-muted); line-height: 1.4; }
 
     /* VISION */
     .vision-section { background: var(--teal-dark); }
     .vision-section h2 { color: var(--white); }
     .vision-section .section-intro { color: rgba(255,255,255,0.7); }
 
-    .vision-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 24px;
-      margin-top: 48px;
-    }
+    .vision-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-top: 48px; }
 
-    .vision-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 16px;
-      padding: 28px;
-    }
+    .vision-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 28px; }
+    .vision-num { font-family: 'Sora', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--amber); margin-bottom: 12px; }
+    .vision-card h3 { font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 10px; }
+    .vision-card p { font-size: 0.83rem; line-height: 1.6; color: rgba(255,255,255,0.65); }
 
-    .vision-num {
-      font-family: 'Sora', sans-serif;
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--amber);
-      margin-bottom: 12px;
-    }
-
-    .vision-card h3 {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 10px;
-    }
-
-    .vision-card p {
-      font-size: 0.83rem;
-      line-height: 1.6;
-      color: rgba(255,255,255,0.65);
-    }
-
-    .vision-quote {
-      margin-top: 36px;
-      background: rgba(255,255,255,0.06);
-      border-left: 3px solid var(--amber);
-      border-radius: 0 12px 12px 0;
-      padding: 20px 24px;
-    }
-
-    .vision-quote p {
-      font-size: 0.95rem;
-      line-height: 1.65;
-      color: rgba(255,255,255,0.85);
-      font-style: italic;
-    }
+    .vision-quote { margin-top: 36px; background: rgba(255,255,255,0.06); border-left: 3px solid var(--amber); border-radius: 0 12px 12px 0; padding: 20px 24px; }
+    .vision-quote p { font-size: 0.95rem; line-height: 1.65; color: rgba(255,255,255,0.85); font-style: italic; }
 
     /* TEAM */
-    .team-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin-top: 40px;
-    }
+    .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
 
-    .team-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      display: flex;
-      gap: 18px;
-      align-items: flex-start;
-    }
+    .team-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 28px; display: flex; gap: 18px; align-items: flex-start; }
 
-    .team-avatar {
-      width: 48px; height: 48px;
-      background: var(--teal-dark);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--amber);
-      font-family: 'Sora', sans-serif;
-      flex-shrink: 0;
-    }
+    .team-avatar { width: 48px; height: 48px; background: var(--teal-dark); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 700; color: var(--amber); font-family: 'Sora', sans-serif; flex-shrink: 0; }
 
-    .team-name {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--teal-dark);
-      margin-bottom: 4px;
-    }
-
-    .team-role {
-      font-size: 0.78rem;
-      color: var(--teal-accent);
-      font-weight: 500;
-      margin-bottom: 8px;
-    }
-
-    .team-bio {
-      font-size: 0.8rem;
-      line-height: 1.55;
-      color: var(--text-muted);
-    }
+    .team-name { font-size: 0.95rem; font-weight: 600; color: var(--teal-dark); margin-bottom: 4px; }
+    .team-role { font-size: 0.78rem; color: var(--teal-accent); font-weight: 500; margin-bottom: 8px; }
+    .team-bio { font-size: 0.8rem; line-height: 1.55; color: var(--text-muted); }
 
     /* COLLAB */
     .collab-section { background: var(--teal-dark); }
     .collab-section h2 { color: var(--white); }
     .collab-section .section-intro { color: rgba(255,255,255,0.7); }
 
-    .collab-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin-top: 40px;
-    }
+    .collab-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
 
-    .collab-card {
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 14px;
-      padding: 24px;
-    }
-
-    .collab-card h3 {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 8px;
-    }
-
-    .collab-card p {
-      font-size: 0.8rem;
-      line-height: 1.55;
-      color: rgba(255,255,255,0.6);
-    }
+    .collab-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 24px; }
+    .collab-card h3 { font-size: 0.9rem; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+    .collab-card p { font-size: 0.8rem; line-height: 1.55; color: rgba(255,255,255,0.6); }
 
     /* CTA */
-    .cta-section {
-      text-align: center;
-      padding: 80px 48px;
-    }
-
-    .cta-inner {
-      max-width: 620px;
-      margin: 0 auto;
-    }
-
+    .cta-section { text-align: center; padding: 80px 48px; }
+    .cta-inner { max-width: 620px; margin: 0 auto; }
     .cta-section h2 { margin-bottom: 16px; text-align: center; }
-
-    .cta-section p {
-      font-size: 1rem;
-      color: var(--text-body);
-      line-height: 1.7;
-      margin-bottom: 32px;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+    .cta-section p { font-size: 1rem; color: var(--text-body); line-height: 1.7; margin-bottom: 32px; }
+    .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
     /* FOOTER */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 32px 48px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.83rem;
-      color: var(--text-muted);
-      max-width: 1100px;
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    footer a {
-      color: var(--teal-mid);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
+    footer { border-top: 1px solid var(--border); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; font-size: 0.83rem; color: var(--text-muted); max-width: 1100px; margin: 0 auto; width: 100%; }
+    footer a { color: var(--teal-mid); text-decoration: none; font-weight: 500; }
     footer a:hover { text-decoration: underline; }
 
     /* RESPONSIVE */
@@ -706,19 +349,19 @@
       .nav-links .nav-link:not(.nav-link-primary) { display: none; }
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      * { transition: none !important; }
-    }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
   </style>
 </head>
 <body>
 
   <!-- NAV -->
   <nav>
-    <a href="/" class="nav-logo">respiro<span>health</span></a>
+    <a href="index.html" class="nav-logo">respiro<span>health</span></a>
     <div class="nav-links">
+      <a href="research.html" class="nav-link">Research</a>
+      <a href="about.html" class="nav-link">About</a>
       <a href="/blog" class="nav-link">Blog</a>
-      <a href="mailto:ajay.sharma@respirohealth.ai?subject=Collaboration Inquiry — Respiro Health" class="nav-link nav-link-primary">Get in Touch</a>
+      <a href="contact.html" class="nav-link nav-link-primary">Contact</a>
     </div>
   </nav>
 
@@ -727,16 +370,10 @@
     <div class="hero-left">
       <div class="hero-eyebrow">OPD Intelligence · India</div>
       <h1>Smarter consultations<br>start <em>before</em> the<br>patient walks in.</h1>
-      <p class="hero-sub">
-        Respiro Health is building the pre-consultation intelligence layer for India's OPDs — a WhatsApp-native platform that gives doctors a structured patient summary, flags high-risk cases, and closes the care loop automatically. No app. No new infrastructure. Zero friction.
-      </p>
+      <p class="hero-sub">Respiro Health is building the pre-consultation intelligence layer for India's OPDs — a WhatsApp-native platform that gives doctors a structured patient summary, flags high-risk cases, and closes the care loop automatically. No app. No new infrastructure. Zero friction.</p>
       <div class="hero-ctas">
-        <a href="mailto:ajay.sharma@respirohealth.ai?subject=Partnership Inquiry — Respiro Health" class="btn-primary">
-          Request a Pilot
-        </a>
-        <a href="mailto:ajay.sharma@respirohealth.ai?subject=Investor Inquiry — Respiro Health" class="btn-secondary">
-          Investor Enquiry
-        </a>
+        <a href="mailto:ajay.sharma@respirohealth.ai?subject=Partnership Inquiry — Respiro Health" class="btn-primary">Request a Pilot</a>
+        <a href="mailto:ajay.sharma@respirohealth.ai?subject=Investor Inquiry — Respiro Health" class="btn-secondary">Investor Enquiry</a>
       </div>
     </div>
 
@@ -780,9 +417,7 @@
     <div class="section-inner">
       <div class="section-eyebrow">The Problem</div>
       <h2>Every consultation starts<br>from a blank page.</h2>
-      <p class="section-intro">
-        India's OPDs see 6 billion visits a year. In the vast majority, the doctor begins with zero information about the patient sitting in front of them. No structured history. No pre-visit triage. No way to distinguish a routine case from a critical one before the patient walks in. The problem is not the consultation — it is everything that happens before it.
-      </p>
+      <p class="section-intro">India's OPDs see 6 billion visits a year. In the vast majority, the doctor begins with zero information about the patient sitting in front of them. No structured history. No pre-visit triage. No way to distinguish a routine case from a critical one before the patient walks in. The problem is not the consultation — it is everything that happens before it.</p>
       <div class="insight-grid">
         <div class="insight-card">
           <div class="insight-num">6–10 min</div>
@@ -805,9 +440,7 @@
     <div class="section-inner">
       <div class="section-eyebrow">The Product</div>
       <h2>Pre-visit. During. Post-visit.<br>We own the full patient journey.</h2>
-      <p class="section-intro">
-        Respiro sits between appointment booking and consultation — capturing structured patient data before the visit, surfacing it to the doctor in real time, and following up automatically after. One platform. Zero disruption to existing workflows.
-      </p>
+      <p class="section-intro">Respiro sits between appointment booking and consultation — capturing structured patient data before the visit, surfacing it to the doctor in real time, and following up automatically after. One platform. Zero disruption to existing workflows.</p>
 
       <div class="journey-grid">
         <div class="journey-phase">
@@ -816,22 +449,10 @@
             <div class="journey-phase-title">Intelligent Intake</div>
           </div>
           <div class="journey-phase-body">
-            <div class="journey-point">
-              <div class="journey-point-dot"></div>
-              <p>Patient scans a QR code or messages the clinic on WhatsApp — no app download required</p>
-            </div>
-            <div class="journey-point">
-              <div class="journey-point-dot"></div>
-              <p>Answers structured clinical questions in their language in 3–5 minutes</p>
-            </div>
-            <div class="journey-point">
-              <div class="journey-point-dot"></div>
-              <p>Completed before the patient enters the clinic — doctor is already informed</p>
-            </div>
-            <div class="journey-point">
-              <div class="journey-point-dot"></div>
-              <p>Zero friction — works on any phone with WhatsApp already installed</p>
-            </div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>Patient scans a QR code or messages the clinic on WhatsApp — no app download required</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>Answers structured clinical questions in their language in 3–5 minutes</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>Completed before the patient enters the clinic — doctor is already informed</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>Zero friction — works on any phone with WhatsApp already installed</p></div>
           </div>
         </div>
 
@@ -841,22 +462,10 @@
             <div class="journey-phase-title">Doctor & COO Intelligence</div>
           </div>
           <div class="journey-phase-body">
-            <div class="journey-point">
-              <div class="journey-point-dot"></div>
-              <p>AI-generated triage summary ready on the doctor's dashboard before the patient sits down</p>
-            </div>
-            <div class="journey-point">
-              <div class="journey-point-dot"></div>
-              <p>High-risk cases automatically flagged in the queue — critical patients never wait undetected</p>
-            </div>
-            <div class="journey-point">
-              <div class="journey-point-dot"></div>
-              <p>ICD-10 diagnosis and medications logged post-consultation in one workflow</p>
-            </div>
-            <div class="journey-point">
-              <div class="journey-point-dot"></div>
-              <p>COO dashboard shows live queue, funnel, and doctor-efficiency metrics in real time</p>
-            </div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>AI-generated triage summary ready on the doctor's dashboard before the patient sits down</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>High-risk cases automatically flagged in the queue — critical patients never wait undetected</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>ICD-10 diagnosis and medications logged post-consultation in one workflow</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>COO dashboard shows live queue, funnel, and doctor-efficiency metrics in real time</p></div>
           </div>
         </div>
 
@@ -866,22 +475,10 @@
             <div class="journey-phase-title">Adherence & Follow-up</div>
           </div>
           <div class="journey-phase-body">
-            <div class="journey-point">
-              <div class="journey-point-dot"></div>
-              <p>Patient automatically contacted at Day 3, 7, 14, and 30 — in their language, on WhatsApp</p>
-            </div>
-            <div class="journey-point">
-              <div class="journey-point-dot"></div>
-              <p>Asked how they are feeling — structured responses captured and logged</p>
-            </div>
-            <div class="journey-point">
-              <div class="journey-point-dot"></div>
-              <p>Non-recovering patients flagged to the doctor immediately — before they deteriorate</p>
-            </div>
-            <div class="journey-point">
-              <div class="journey-point-dot"></div>
-              <p>Builds a longitudinal outcomes record per patient — automatically, over time</p>
-            </div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>Patient automatically contacted at Day 3, 7, 14, and 30 — in their language, on WhatsApp</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>Asked how they are feeling — structured responses captured and logged</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>Non-recovering patients flagged to the doctor immediately — before they deteriorate</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>Builds a longitudinal outcomes record per patient — automatically, over time</p></div>
           </div>
         </div>
       </div>
@@ -897,34 +494,17 @@
     <div class="section-inner">
       <div class="section-eyebrow">Why WhatsApp</div>
       <h2>The infrastructure already exists.<br>In every patient's pocket.</h2>
-
       <div class="whatsapp-grid">
         <div>
           <p class="section-intro">Every health-tech company builds a patient app. Patients don't download it. Respiro is built on the channel patients already use — making adoption a non-issue from day one.</p>
           <div class="whatsapp-reasons">
-            <div class="whatsapp-reason">
-              <div class="reason-dot"></div>
-              <p>Patients don't download apps — WhatsApp is already on every phone</p>
-            </div>
-            <div class="whatsapp-reason">
-              <div class="reason-dot"></div>
-              <p>Doctors don't change workflows — they simply open a dashboard</p>
-            </div>
-            <div class="whatsapp-reason">
-              <div class="reason-dot"></div>
-              <p>Hospitals don't replace infrastructure — Respiro sits on top</p>
-            </div>
-            <div class="whatsapp-reason">
-              <div class="reason-dot"></div>
-              <p>Every income level, language, and geography in India is already on WhatsApp</p>
-            </div>
-            <div class="whatsapp-reason">
-              <div class="reason-dot"></div>
-              <p>Patient app models have failed at scale in Indian healthcare — WhatsApp sidesteps every adoption barrier</p>
-            </div>
+            <div class="whatsapp-reason"><div class="reason-dot"></div><p>Patients don't download apps — WhatsApp is already on every phone</p></div>
+            <div class="whatsapp-reason"><div class="reason-dot"></div><p>Doctors don't change workflows — they simply open a dashboard</p></div>
+            <div class="whatsapp-reason"><div class="reason-dot"></div><p>Hospitals don't replace infrastructure — Respiro sits on top</p></div>
+            <div class="whatsapp-reason"><div class="reason-dot"></div><p>Every income level, language, and geography in India is already on WhatsApp</p></div>
+            <div class="whatsapp-reason"><div class="reason-dot"></div><p>Patient app models have failed at scale in Indian healthcare — WhatsApp sidesteps every adoption barrier</p></div>
           </div>
         </div>
-
         <div class="whatsapp-stats">
           <div class="whatsapp-stat">
             <div class="whatsapp-stat-num">500M+</div>
@@ -952,9 +532,7 @@
     <div class="section-inner">
       <div class="section-eyebrow">The Vision</div>
       <h2>Built for one clinic.<br>Designed for a hundred.</h2>
-      <p class="section-intro">
-        Respiro starts with respiratory OPDs — the highest-complexity intake environment in Indian healthcare. The same platform deploys across specialties, across hospital groups, and across geographies without rebuilding from scratch.
-      </p>
+      <p class="section-intro">Respiro starts with respiratory OPDs — the highest-complexity intake environment in Indian healthcare. The same platform deploys across specialties, across hospital groups, and across geographies without rebuilding from scratch.</p>
       <div class="vision-grid">
         <div class="vision-card">
           <div class="vision-num">01</div>
@@ -983,9 +561,7 @@
     <div class="section-inner">
       <div class="section-eyebrow">The Team</div>
       <h2>Builders and clinicians.<br>Not just an idea.</h2>
-      <p class="section-intro">
-        Respiro is a technical founder-led company with clinical advisory from some of India's leading respiratory health and public health experts.
-      </p>
+      <p class="section-intro">Respiro is a technical founder-led company with clinical advisory from leading respiratory health and public health experts.</p>
       <div class="team-grid">
         <div class="team-card">
           <div class="team-avatar">AS</div>
@@ -999,24 +575,16 @@
           <div class="team-avatar">AS</div>
           <div>
             <div class="team-name">Akash Sharma</div>
-            <div class="team-role">COO</div>
-            <div class="team-bio">Strategy and growth. Leads business development, investor relations, and hospital partnerships across India and internationally. Based in Luxembourg.</div>
+            <div class="team-role">Co-Founder — Business Relations & Operations</div>
+            <div class="team-bio">Leads business relations and operations at Respiro Health, driving hospital partnerships, institutional outreach, and the operational infrastructure needed to scale across multiple geographies.</div>
           </div>
         </div>
         <div class="team-card">
-          <div class="team-avatar">DG</div>
-          <div>
-            <div class="team-name">Dr. Geetanjali Kapoor</div>
-            <div class="team-role">Medical Advisor</div>
-            <div class="team-bio">Oxford Visiting Academic. Former WHO Consultant. Authored India's national infection prevention guidelines. Advising on clinical dataset design and respiratory diagnostic validation.</div>
-          </div>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar">AP</div>
+          <div class="team-avatar">DA</div>
           <div>
             <div class="team-name">Dr. Aslam Ali Parvez</div>
-            <div class="team-role">Chief Medical Advisor</div>
-            <div class="team-bio">Extensive clinical experience and network across the Indian medical fraternity. Leading clinical governance and regulatory pathway for Respiro's research program.</div>
+            <div class="team-role">Medical Advisor</div>
+            <div class="team-bio">Provides clinical oversight across Respiro's research programme, ensuring study design, protocol, and data collection methodology meet the highest standards of clinical rigour and regulatory compliance.</div>
           </div>
         </div>
       </div>
@@ -1028,9 +596,7 @@
     <div class="section-inner">
       <div class="section-eyebrow">Work With Us</div>
       <h2>We are looking for<br>the right partners.</h2>
-      <p class="section-intro">
-        We are building Respiro with partners who understand the operational and clinical reality of Indian OPDs. If your work touches outpatient care, hospital operations, or healthcare investment — we want to talk.
-      </p>
+      <p class="section-intro">We are building Respiro with partners who understand the operational and clinical reality of Indian OPDs. If your work touches outpatient care, hospital operations, or healthcare investment — we want to talk.</p>
       <div class="collab-grid">
         <div class="collab-card">
           <h3>Hospitals & Clinics</h3>
@@ -1057,16 +623,10 @@
     <div class="cta-inner">
       <div class="section-eyebrow" style="text-align:center;">Get Involved</div>
       <h2>The Indian OPD is ready<br>for this. Are you?</h2>
-      <p>
-        Whether you run a clinic, lead a hospital department, work in health-tech investment, or simply want to understand what we are building — write to us.
-      </p>
+      <p>Whether you run a clinic, lead a hospital department, work in health-tech investment, or simply want to understand what we are building — write to us.</p>
       <div class="cta-buttons">
-        <a href="mailto:ajay.sharma@respirohealth.ai?subject=Partnership Inquiry — Respiro Health" class="btn-primary">
-          Write to Us
-        </a>
-        <a href="/blog" class="btn-secondary">
-          Read Our Blog
-        </a>
+        <a href="contact.html" class="btn-primary">Get In Touch</a>
+        <a href="research.html" class="btn-secondary">Our Research</a>
       </div>
     </div>
   </section>
@@ -1075,9 +635,15 @@
   <footer>
     <span>© 2026 Respiro Health Private Limited · Pune, Maharashtra</span>
     <span>
-      <a href="mailto:ajay.sharma@respirohealth.ai">ajay.sharma@respirohealth.ai</a>
+      <a href="research.html">Research</a>
+      &nbsp;·&nbsp;
+      <a href="about.html">About</a>
       &nbsp;·&nbsp;
       <a href="/blog">Blog</a>
+      &nbsp;·&nbsp;
+      <a href="contact.html">Contact</a>
+      &nbsp;·&nbsp;
+      <a href="mailto:ajay.sharma@respirohealth.ai">ajay.sharma@respirohealth.ai</a>
     </span>
   </footer>
 
