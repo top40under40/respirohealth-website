@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Respiro Health — Acoustic Respiratory AI Research</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --teal-dark:   #1a4a47;
+    --teal-mid:    #2d7a74;
+    --teal-light:  #e8f4f3;
+    --teal-border: #a8d5d1;
+    --gold:        #e8a33d;
+    --gold-light:  #fdf3e3;
+    --slate:       #334155;
+    --muted:       #94a3b8;
+    --off-white:   #f8fbfb;
+    --white:       #ffffff;
+    --page-bg:     #0f2e2c;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Georgia', serif;
+    background: var(--page-bg);
+    color: var(--slate);
+    min-height: 100vh;
+  }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--teal-dark);
+    padding: 0 52px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(168,213,209,0.2);
+  }
+  .nav-brand {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+  .nav-brand span {
+    font-size: 9px;
+    font-weight: 400;
+    color: var(--teal-border);
+    letter-spacing: 0.5px;
+    text-transform: none;
+    margin-left: 10px;
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 11px;
+    color: var(--teal-border);
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--white); }
+  .nav-links a.active { color: var(--gold); }
+
+  /* ── PAGE WRAPPER ── */
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--white);
+    min-height: 100vh;
+  }
+
+  /* ── TOP STRIPE ── */
+  .top-stripe { background: var(--teal-dark); height: 6px; }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--off-white);
+    padding: 52px 52px 44px 52px;
+    border-bottom: 3px solid var(--teal-dark);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    right: -40px;
+    top: -40px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(26,74,71,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .eyebrow {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-size: 26px;
+    font-weight: normal;
+    color: var(--teal-dark);
+    line-height: 1.4;
+    margin-bottom: 20px;
+    font-style: italic;
+    max-width: 680px;
+  }
+  .hero h1 strong {
+    font-style: normal;
+    font-weight: 700;
+  }
+  .hero-sub {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+    color: #475569;
+    line-height: 1.8;
+    max-width: 660px;
+    margin-bottom: 32px;
+  }
+
+  /* POC stat bar */
+  .stat-bar {
+    display: flex;
+    gap: 0;
+    border: 1px solid var(--teal-border);
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 560px;
+  }
+  .stat {
+    flex: 1;
+    padding: 14px 20px;
+    background: var(--white);
+    border-right: 1px solid var(--teal-border);
+  }
+  .stat:last-child { border-right: none; }
+  .stat-value {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--teal-dark);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-label {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ── BODY ── */
+  .body { padding: 0 52px; }
+
+  .section {
+    padding: 28px 0;
+    border-bottom: 1px solid #f0f7f6;
+  }
+  .section:last-child { border-bottom: none; }
+
+  .section-label {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 8.5px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #f0f4f4;
+  }
+
+  .section p {
+    font-size: 13px;
+    color: var(--slate);
+    line-height: 1.85;
+    margin-bottom: 10px;
+  }
+  .section p:last-child { margin-bottom: 0; }
+
+  /* gap block — dark teal */
+  .gap-block {
+    background: var(--teal-dark);
+    margin: 0 -52px;
+    padding: 32px 52px;
+  }
+  .gap-block .section-label { color: var(--gold); border-color: rgba(168,213,209,0.2); }
+  .gap-block p {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+    color: #b2dfdb;
+    line-height: 1.85;
+    margin-bottom: 8px;
+  }
+  .gap-block p:last-child { margin-bottom: 0; }
+  .gap-block p strong { color: var(--white); }
+
+  /* differentiators grid */
+  .diff-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 4px;
+  }
+  .diff-item {
+    background: var(--off-white);
+    border: 1px solid var(--teal-border);
+    border-left: 3px solid var(--teal-dark);
+    border-radius: 4px;
+    padding: 16px 18px;
+  }
+  .diff-item strong {
+    display: block;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--teal-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+  .diff-item p {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    color: var(--slate);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  /* study design pills row */
+  .design-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .design-pill {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 10px;
+    padding: 5px 12px;
+    border-radius: 100px;
+    font-weight: 600;
+    background: var(--teal-light);
+    color: var(--teal-dark);
+    border: 1px solid var(--teal-border);
+  }
+
+  /* arrow list */
+  .arrow-list {
+    list-style: none;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .arrow-list li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 13px;
+    color: var(--slate);
+    line-height: 1.7;
+  }
+  .arrow-list li::before {
+    content: '→';
+    color: var(--gold);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+    font-size: 12px;
+  }
+
+  /* outcomes numbered */
+  .outcomes {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 4px;
+  }
+  .outcome-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .outcome-num {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--teal-border);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 28px;
+    padding-top: 2px;
+  }
+  .outcome-body strong {
+    display: block;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--teal-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
+  }
+  .outcome-body p {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    color: var(--slate);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  /* CTA / contact */
+  .contact-block {
+    background: var(--teal-dark);
+    margin: 0 -52px;
+    padding: 32px 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+  }
+  .contact-block p {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 13px;
+    color: #b2dfdb;
+    line-height: 1.7;
+    max-width: 440px;
+  }
+  .contact-block p strong { color: var(--white); display: block; font-size: 15px; margin-bottom: 6px; }
+  .contact-email {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    color: var(--white);
+    background: rgba(168,213,209,0.15);
+    border: 1px solid rgba(168,213,209,0.4);
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s;
+    flex-shrink: 0;
+  }
+  .contact-email:hover { background: rgba(168,213,209,0.25); }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--teal-dark);
+    padding: 20px 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(168,213,209,0.15);
+  }
+  .footer-left strong {
+    display: block;
+    color: var(--white);
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 3px;
+  }
+  .footer-left p {
+    color: var(--teal-border);
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 10.5px;
+    line-height: 1.6;
+  }
+  .footer-right p {
+    color: var(--teal-border);
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 10.5px;
+    line-height: 1.6;
+    text-align: right;
+  }
+  .footer-note {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 8px;
+    color: var(--muted);
+    text-align: center;
+    padding: 7px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: var(--off-white);
+    border-top: 1px solid #e8f4f3;
+  }
+
+  @media (max-width: 640px) {
+    nav { padding: 0 20px; }
+    .hero, .body { padding-left: 24px; padding-right: 24px; }
+    .gap-block, .contact-block { margin: 0 -24px; padding-left: 24px; padding-right: 24px; }
+    .diff-grid { grid-template-columns: 1fr; }
+    .contact-block { flex-direction: column; align-items: flex-start; }
+    .footer { padding: 20px 24px; flex-direction: column; gap: 12px; }
+    .footer-right p { text-align: left; }
+    .stat-bar { flex-direction: column; }
+    .stat { border-right: none; border-bottom: 1px solid var(--teal-border); }
+    .stat:last-child { border-bottom: none; }
+  }
+
+  @media print {
+    nav { display: none; }
+    body { background: white; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">Respiro Health<span>respirohealth.ai</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Product</a></li>
+    <li><a href="#" class="active">Research</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="top-stripe"></div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <p class="eyebrow">Acoustic Respiratory AI — Research Programme</p>
+    <h1>Building India's first <strong>WhatsApp-native acoustic AI screening model</strong> for respiratory disease.</h1>
+    <p class="hero-sub">Peer-reviewed literature confirms that cough acoustics carry clinically significant information about respiratory disease. Every attempt to deploy this at scale has failed — not because the science is wrong, but because models trained on clean, controlled audio degrade in real-world conditions. We train where we deploy — on WhatsApp, from real OPDs, under real acoustic conditions.</p>
+
+    <div class="stat-bar">
+      <div class="stat">
+        <div class="stat-value">0.764</div>
+        <div class="stat-label">AUC — POC Validation</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">1,828</div>
+        <div class="stat-label">Recordings — POC Dataset</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">25,000+</div>
+        <div class="stat-label">Target — Full Study</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- THE GAP -->
+    <div class="gap-block section">
+      <p class="section-label">The Scientific Gap We Are Closing</p>
+      <p>Every published acoustic respiratory AI study was built on <strong>controlled-environment recordings</strong> with limited geographic and demographic diversity. None have been validated under real Indian OPD conditions — ambient noise, diverse patient populations, varying disease severity — that define actual clinical deployment environments.</p>
+      <p>None cover the full spectrum of respiratory disease with <strong>molecularly and objectively confirmed diagnosis labels.</strong> None have been trained on WhatsApp-compressed audio — the codec that 500 million Indians already use daily. This dataset does not exist. <strong>We are building it.</strong></p>
+    </div>
+
+    <!-- WHAT MAKES THIS DIFFERENT -->
+    <div class="section">
+      <p class="section-label">What Makes This Study Different</p>
+      <div class="diff-grid">
+        <div class="diff-item">
+          <strong>Domain-Matched Training</strong>
+          <p>We train on WhatsApp-compressed audio from real OPDs — the same acoustic domain as deployment. Previous models trained on clean audio collapsed in production. Ours will not.</p>
+        </div>
+        <div class="diff-item">
+          <strong>Confirmed Diagnosis Labels</strong>
+          <p>Two-phase protocol separates recording from labelling. Ground truth uses GeneXpert for TB, spirometry for COPD and asthma, radiology for ILD. No provisional impressions.</p>
+        </div>
+        <div class="diff-item">
+          <strong>Multi-Disease Classification</strong>
+          <p>TB, COPD, Asthma, Bronchitis, ILD, Pleural Disease — classified simultaneously. Real OPD clinical reality, not binary TB-vs-healthy models.</p>
+        </div>
+        <div class="diff-item">
+          <strong>Longitudinal Trajectory Data</strong>
+          <p>Repeat recordings from the same patients across their treatment journey. No published acoustic respiratory AI dataset has this. Enables treatment monitoring — a new research frontier.</p>
+        </div>
+        <div class="diff-item">
+          <strong>Geographic Diversity at Scale</strong>
+          <p>Multi-site recruitment across urban, semi-urban, and rural India. Systematic demographic characterisation including occupation, city of residence, and environmental exposure.</p>
+        </div>
+        <div class="diff-item">
+          <strong>Zero Infrastructure Deployment</strong>
+          <p>Once validated, this model reaches every Indian with a respiratory concern through a single WhatsApp message — no app download, no new infrastructure.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- STUDY DESIGN -->
+    <div class="section">
+      <p class="section-label">Study Design</p>
+      <p>A prospective multi-centre observational study collecting cough recordings linked to confirmed clinical diagnoses across participating chest and pulmonary medicine outpatient departments in India. No intervention. No drugs. No disruption to clinical workflow.</p>
+      <div class="design-row">
+        <span class="design-pill">Prospective · Multi-Centre · Observational</span>
+        <span class="design-pill">25,000 – 30,000 Target Recordings</span>
+        <span class="design-pill">18 Months</span>
+        <span class="design-pill">Two-Phase Confirmed Diagnosis Protocol</span>
+        <span class="design-pill">ICMR / CDSCO Compliant</span>
+        <span class="design-pill">Three-Tier Hybrid Consent Framework</span>
+      </div>
+    </div>
+
+    <!-- RESEARCH OUTPUTS -->
+    <div class="section">
+      <p class="section-label">Research Outputs — In Order of Impact</p>
+      <ol class="outcomes">
+        <li class="outcome-item">
+          <span class="outcome-num">1</span>
+          <div class="outcome-body">
+            <strong>A Deployable Screening Model</strong>
+            <p>A validated, WhatsApp-native acoustic respiratory AI screening model — deployable immediately to 500 million Indians without app download, without infrastructure, without clinical staff. No such model exists today.</p>
+          </div>
+        </li>
+        <li class="outcome-item">
+          <span class="outcome-num">2</span>
+          <div class="outcome-body">
+            <strong>India's First Confirmed-Diagnosis Acoustic Dataset</strong>
+            <p>A large-scale, multi-disease, multi-geography acoustic respiratory dataset collected under real OPD conditions — available for future research by the academic community including all co-authoring institutions.</p>
+          </div>
+        </li>
+        <li class="outcome-item">
+          <span class="outcome-num">3</span>
+          <div class="outcome-body">
+            <strong>A Published Collection Methodology</strong>
+            <p>A peer-reviewed methodology for WhatsApp-domain acoustic data collection establishing the standard for future studies globally — including the dual-track longitudinal protocol.</p>
+          </div>
+        </li>
+        <li class="outcome-item">
+          <span class="outcome-num">4</span>
+          <div class="outcome-body">
+            <strong>A Treatment Monitoring Signal</strong>
+            <p>Longitudinal acoustic trajectory data across treatment journeys — enabling a treatment monitoring model for TB and COPD that could supplement expensive spirometry and GeneXpert follow-up in resource-limited settings.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <!-- WHAT PARTICIPATING INSTITUTIONS GAIN -->
+    <div class="section">
+      <p class="section-label">What Participating Institutions Gain</p>
+      <ul class="arrow-list">
+        <li>Named co-authorship for the Respiratory Medicine team on publications targeting leading international peer-reviewed journals in respiratory medicine and AI</li>
+        <li>Institutional recognition as a contributing research site in all publications, presentations, and policy submissions — among a select group of leading hospitals across India</li>
+        <li>Priority deployment of the validated acoustic screening model before public commercialisation — built partly on your own patient data</li>
+        <li>Access to the validated model for non-commercial research use by your Respiratory Medicine team</li>
+        <li>All coordinator salary, PPE, IEC fees, and infrastructure costs funded entirely by Respiro Health — nothing falls on the participating institution</li>
+      </ul>
+    </div>
+
+    <!-- WHERE WE ARE -->
+    <div class="section">
+      <p class="section-label">Where We Are Today</p>
+      <ul class="arrow-list">
+        <li>POC validated — 0.764 AUC on 1,828 recordings across multiple respiratory disease categories</li>
+        <li>ICMR TB Research Accelerator — application submitted</li>
+        <li>Coordinating centre established — ICMR-affiliated institution, Andhra Pradesh</li>
+        <li>First real-world deployment completed — village health camp, Punjab, July 2026</li>
+        <li>Multi-site activation in progress — Maharashtra, Punjab, Chandigarh, Lucknow, Andhra Pradesh</li>
+        <li>Active collaboration conversations with leading chest and pulmonary medicine departments in Pune and across India</li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact-block section">
+      <p>
+        <strong>Research Collaboration Enquiries</strong>
+        We are actively onboarding clinical research sites across India. If your institution is interested in participating as a co-investigator site, we would welcome a conversation.
+      </p>
+      <a class="contact-email" href="mailto:ajay.sharma@respirohealth.ai">ajay.sharma@respirohealth.ai</a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-left">
+      <strong>Ajay Sharma</strong>
+      <p>Founder & CEO, Respiro Health Private Limited</p>
+      <p>ajay.sharma@respirohealth.ai · +91 9953257463</p>
+    </div>
+    <div class="footer-right">
+      <p>respirohealth.ai</p>
+      <p>Pune, Maharashtra</p>
+      <p>© 2026 Respiro Health Private Limited</p>
+    </div>
+  </div>
+
+  <div class="footer-note">Research Programme · Respiro Health Private Limited · All rights reserved</div>
+</div>
+
+</body>
+</html>
