@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Respiro Health — About</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --teal-dark:   #1a4a47;
+    --teal-mid:    #2d7a74;
+    --teal-light:  #e8f4f3;
+    --teal-border: #a8d5d1;
+    --gold:        #e8a33d;
+    --slate:       #334155;
+    --muted:       #94a3b8;
+    --off-white:   #f8fbfb;
+    --white:       #ffffff;
+    --page-bg:     #0f2e2c;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Georgia', serif; background: var(--page-bg); color: var(--slate); min-height: 100vh; }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--teal-dark);
+    padding: 0 52px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(168,213,209,0.2);
+  }
+  .nav-brand { font-family: 'Helvetica Neue', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--white); }
+  .nav-brand span { font-size: 9px; font-weight: 400; color: var(--teal-border); letter-spacing: 0.5px; text-transform: none; margin-left: 10px; }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a { font-family: 'Helvetica Neue', sans-serif; font-size: 11px; color: var(--teal-border); text-decoration: none; letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--white); }
+  .nav-links a.active { color: var(--gold); }
+
+  /* ── PAGE ── */
+  .page { max-width: 860px; margin: 0 auto; background: var(--white); min-height: 100vh; }
+  .top-stripe { background: var(--teal-dark); height: 6px; }
+
+  /* ── HERO ── */
+  .hero { background: var(--off-white); padding: 52px 52px 44px 52px; border-bottom: 3px solid var(--teal-dark); }
+  .eyebrow { font-family: 'Helvetica Neue', sans-serif; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 16px; }
+  .hero h1 { font-size: 26px; font-weight: normal; color: var(--teal-dark); line-height: 1.4; margin-bottom: 20px; font-style: italic; max-width: 680px; }
+  .hero h1 strong { font-style: normal; font-weight: 700; }
+  .hero-sub { font-family: 'Helvetica Neue', sans-serif; font-size: 13px; color: #475569; line-height: 1.8; max-width: 660px; }
+
+  /* ── BODY ── */
+  .body { padding: 0 52px; }
+  .section { padding: 28px 0; border-bottom: 1px solid #f0f7f6; }
+  .section:last-child { border-bottom: none; }
+  .section-label { font-family: 'Helvetica Neue', sans-serif; font-size: 8.5px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 1px solid #f0f4f4; }
+  .section p { font-size: 13px; color: var(--slate); line-height: 1.85; margin-bottom: 10px; }
+  .section p:last-child { margin-bottom: 0; }
+
+  /* ── MISSION BLOCK ── */
+  .mission-block { background: var(--teal-dark); margin: 0 -52px; padding: 36px 52px; }
+  .mission-block .section-label { color: var(--gold); border-color: rgba(168,213,209,0.2); }
+  .mission-block p { font-family: 'Helvetica Neue', sans-serif; font-size: 13px; color: #b2dfdb; line-height: 1.85; margin-bottom: 8px; }
+  .mission-block p:last-child { margin-bottom: 0; }
+  .mission-block p strong { color: var(--white); }
+
+  /* ── WHAT WE BUILD ── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+  .build-item { background: var(--off-white); border: 1px solid var(--teal-border); border-left: 3px solid var(--teal-dark); border-radius: 4px; padding: 16px 18px; }
+  .build-item strong { display: block; font-family: 'Helvetica Neue', sans-serif; font-size: 11px; font-weight: 700; color: var(--teal-dark); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+  .build-item p { font-family: 'Helvetica Neue', sans-serif; font-size: 12px; color: var(--slate); line-height: 1.65; margin: 0; }
+
+  /* ── TEAM ── */
+  .team-grid { display: flex; flex-direction: column; gap: 24px; margin-top: 4px; }
+  .team-member { display: flex; gap: 20px; align-items: flex-start; padding: 20px; background: var(--off-white); border: 1px solid var(--teal-border); border-radius: 4px; }
+  .member-avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--teal-dark); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .member-avatar span { font-family: 'Helvetica Neue', sans-serif; font-size: 16px; font-weight: 700; color: var(--white); }
+  .member-info { flex: 1; }
+  .member-name { font-family: 'Helvetica Neue', sans-serif; font-size: 14px; font-weight: 700; color: var(--teal-dark); margin-bottom: 2px; }
+  .member-role { font-family: 'Helvetica Neue', sans-serif; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+  .member-bio { font-family: 'Helvetica Neue', sans-serif; font-size: 12px; color: var(--slate); line-height: 1.7; }
+  .member-link { display: inline-block; margin-top: 8px; font-family: 'Helvetica Neue', sans-serif; font-size: 10px; color: var(--teal-mid); text-decoration: none; letter-spacing: 0.5px; border-bottom: 1px solid var(--teal-border); padding-bottom: 1px; transition: color 0.2s; }
+  .member-link:hover { color: var(--teal-dark); }
+
+  /* ── FOOTER ── */
+  .footer { background: var(--teal-dark); padding: 20px 52px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(168,213,209,0.15); }
+  .footer-left strong { display: block; color: var(--white); font-family: 'Helvetica Neue', sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 3px; }
+  .footer-left p { color: var(--teal-border); font-family: 'Helvetica Neue', sans-serif; font-size: 10.5px; line-height: 1.6; }
+  .footer-right p { color: var(--teal-border); font-family: 'Helvetica Neue', sans-serif; font-size: 10.5px; line-height: 1.6; text-align: right; }
+  .footer-note { font-family: 'Helvetica Neue', sans-serif; font-size: 8px; color: var(--muted); text-align: center; padding: 7px; letter-spacing: 1px; text-transform: uppercase; background: var(--off-white); border-top: 1px solid #e8f4f3; }
+
+  @media (max-width: 640px) {
+    nav { padding: 0 20px; }
+    .hero, .body { padding-left: 24px; padding-right: 24px; }
+    .mission-block { margin: 0 -24px; padding-left: 24px; padding-right: 24px; }
+    .two-col { grid-template-columns: 1fr; }
+    .footer { padding: 20px 24px; flex-direction: column; gap: 12px; }
+    .footer-right p { text-align: left; }
+    .team-member { flex-direction: column; }
+  }
+
+  @media print { nav { display: none; } body { background: white; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">Respiro Health<span>respirohealth.ai</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Product</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="top-stripe"></div>
+
+  <div class="hero">
+    <p class="eyebrow">About Respiro Health</p>
+    <h1>We are building the respiratory screening infrastructure <strong>India does not yet have.</strong></h1>
+    <p class="hero-sub">Respiro Health is a Pune-based health-technology company developing AI-powered tools for respiratory disease pre-screening — designed from the ground up for India's scale, infrastructure constraints, and disease burden.</p>
+  </div>
+
+  <div class="body">
+
+    <!-- MISSION -->
+    <div class="mission-block section">
+      <p class="section-label">Our Mission</p>
+      <p>Respiratory diseases — tuberculosis, COPD, asthma, bronchitis — are among India's most significant public health challenges. Most patients present at an advanced stage of disease, not because early signs weren't there, but because <strong>the tools to act on them early don't reach where patients are.</strong></p>
+      <p>Respiro's mission is to change that — by building a respiratory AI screening model that works through WhatsApp, reaches 500 million Indians without an app download, and requires no new clinical infrastructure to deploy.</p>
+    </div>
+
+    <!-- WHAT WE BUILD -->
+    <div class="section">
+      <p class="section-label">What We Build</p>
+      <div class="two-col">
+        <div class="build-item">
+          <strong>Acoustic AI Screening Model</strong>
+          <p>A WhatsApp-native model that analyses cough recordings to pre-screen individuals for respiratory disease — trained on confirmed-diagnosis data from real Indian OPDs under real acoustic conditions.</p>
+        </div>
+        <div class="build-item">
+          <strong>Clinical Data Infrastructure</strong>
+          <p>A multi-centre data collection platform capturing 33-item structured clinical intake alongside cough recordings — building India's first confirmed-diagnosis acoustic respiratory dataset.</p>
+        </div>
+        <div class="build-item">
+          <strong>SaaS Platform</strong>
+          <p>A coordinator-facing application and clinical dashboard for participating hospital sites — managing consent, data collection, Phase 2 diagnosis follow-up, and real-time data quality monitoring.</p>
+        </div>
+        <div class="build-item">
+          <strong>Research Programme</strong>
+          <p>A prospective multi-centre observational study targeting 25,000–30,000 confirmed-diagnosis recordings across geographies — in active collaboration with leading chest and pulmonary medicine departments across India.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEAM -->
+    <div class="section">
+      <p class="section-label">The Team</p>
+      <div class="team-grid">
+
+        <div class="team-member">
+          <div class="member-avatar"><span>AS</span></div>
+          <div class="member-info">
+            <p class="member-name">Ajay Sharma</p>
+            <p class="member-role">Founder & CEO</p>
+            <p class="member-bio">Ajay brings 15+ years of software and technology experience to Respiro Health. He has built Respiro's entire technical stack — data pipelines, AWS infrastructure, WhatsApp integration, coordinator application, and clinical dashboard — as a solo technical founder. His focus is on building AI systems that work at India's scale, in India's acoustic and infrastructure reality.</p>
+            <a class="member-link" href="https://www.linkedin.com/in/ajay-sharma-2670ba13/" target="_blank" rel="noopener">LinkedIn →</a>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-avatar"><span>AS</span></div>
+          <div class="member-info">
+            <p class="member-name">Akash Sharma</p>
+            <p class="member-role">Co-Founder — Business Relations & Operations</p>
+            <p class="member-bio">Akash leads business relations and operations at Respiro Health, driving hospital partnerships, institutional outreach, and the operational infrastructure needed to scale the research programme across multiple geographies. He ensures that the clinical and commercial sides of Respiro move in lockstep.</p>
+          </div>
+        </div>
+
+        <div class="team-member">
+          <div class="member-avatar"><span>DA</span></div>
+          <div class="member-info">
+            <p class="member-name">Dr. Aslam Ali Parvez</p>
+            <p class="member-role">Medical Advisor</p>
+            <p class="member-bio">Dr. Parvez serves as Respiro's Medical Advisor, providing clinical oversight across the research programme and ensuring the study design, protocol, and data collection methodology meet the highest standards of clinical rigour and regulatory compliance.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- WHERE WE ARE -->
+    <div class="section">
+      <p class="section-label">Where We Are</p>
+      <p>Respiro Health is incorporated in Pune, Maharashtra. Our research programme spans multiple geographies across India — with sites being activated in Punjab, Chandigarh, Lucknow, and Andhra Pradesh, and active collaboration conversations with leading pulmonary medicine departments in Pune.</p>
+      <p>We are currently in the IEC approval process with participating hospital sites and have completed our first real-world deployment at a village health camp in Punjab in July 2026.</p>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="footer-left">
+      <strong>Respiro Health Private Limited</strong>
+      <p>CIN: U62099PN2026PTC257894</p>
+      <p>Pune, Maharashtra</p>
+    </div>
+    <div class="footer-right">
+      <p>respirohealth.ai</p>
+      <p>ajay.sharma@respirohealth.ai</p>
+      <p>© 2026 Respiro Health Private Limited</p>
+    </div>
+  </div>
+
+  <div class="footer-note">About · Respiro Health Private Limited · All rights reserved</div>
+</div>
+
+</body>
+</html>
