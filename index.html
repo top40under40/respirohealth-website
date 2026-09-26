@@ -13,12 +13,12 @@
     gtag('config', 'G-2N0QFZKYR1');
   </script>
 
-  <title>Respiro Health | Pre-Consultation Intelligence for OPDs</title>
-  <meta name="description" content="Respiro Health is building India's pre-consultation intelligence layer — a WhatsApp-native platform that gives doctors a structured patient summary before the visit begins.">
-  <meta name="keywords" content="OPD pre-consultation, WhatsApp health platform, respiratory OPD India, AI triage summary, digital health India, pre-consultation tool, hospital OPD software">
+  <title>Respiro Health | WhatsApp-Native Acoustic AI for Respiratory Disease Screening</title>
+  <meta name="description" content="Respiro Health is building a WhatsApp-native acoustic AI model that pre-screens for tuberculosis, COPD, and other respiratory diseases from a cough recording - reaching 500 million Indians with zero new infrastructure.">
+  <meta name="keywords" content="acoustic AI respiratory screening, tuberculosis screening India, COPD screening, cough analysis AI, WhatsApp health platform, TB detection India, respiratory disease AI">
 
-  <meta property="og:title" content="Respiro Health | Pre-Consultation Intelligence for OPDs">
-  <meta property="og:description" content="The pre-consultation intelligence layer for India's OPDs. WhatsApp-native. Zero friction. Smarter consultations start before the patient walks in.">
+  <meta property="og:title" content="Respiro Health | WhatsApp-Native Acoustic AI for Respiratory Disease Screening">
+  <meta property="og:description" content="A WhatsApp-native acoustic AI model that screens for tuberculosis, COPD, and other respiratory diseases from a cough recording. No app. No new device. No new infrastructure.">
   <meta property="og:url" content="https://respirohealth.ai">
 
   <link rel="canonical" href="https://respirohealth.ai">
@@ -218,6 +218,47 @@
     .stat-num { font-family: 'Sora', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--teal-dark); line-height: 1; margin-bottom: 4px; }
     .stat-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.4; }
 
+    /* MAP */
+    .map-section { background: var(--bg); }
+    .map-wrap { display: grid; grid-template-columns: 1fr 300px; gap: 48px; align-items: center; }
+    .india-map { position: relative; width: 100%; max-width: 300px; margin: 0 auto; }
+    .india-map svg { width: 100%; height: auto; display: block; }
+    .india-map svg path { fill: var(--teal-light); stroke: var(--teal-border, var(--teal-accent)); stroke-width: 1; }
+    .zone-dot { position: absolute; width: 9px; height: 9px; border-radius: 50%; background: var(--amber); transform: translate(-50%, -50%); box-shadow: 0 0 6px rgba(232, 163, 61, 0.8); }
+    .zone-dot::before {
+      content: '';
+      position: absolute;
+      inset: -7px;
+      border-radius: 50%;
+      background: var(--amber);
+      opacity: 0.55;
+      animation: zone-pulse 2.4s ease-out infinite;
+    }
+    .zone-dot:nth-child(2)::before { animation-delay: 0.4s; }
+    .zone-dot:nth-child(3)::before { animation-delay: 0.8s; }
+    .zone-dot:nth-child(4)::before { animation-delay: 1.2s; }
+    .zone-dot:nth-child(5)::before { animation-delay: 1.6s; }
+    .zone-dot:nth-child(6)::before { animation-delay: 2.0s; }
+    .zone-dot:nth-child(7)::before { animation-delay: 0.6s; }
+    .zone-dot.inactive { background: var(--text-muted); box-shadow: none; }
+    .zone-dot.inactive::before { display: none; }
+    .zone-row.inactive .zone-row-dot { background: var(--text-muted); }
+    .zone-row.inactive .zone-row-name { color: var(--text-muted); }
+    .zone-row.inactive .zone-row-status { color: var(--text-muted); }
+    @keyframes zone-pulse {
+      0% { transform: scale(0.5); opacity: 0.6; }
+      100% { transform: scale(2.8); opacity: 0; }
+    }
+    .zone-list { display: flex; flex-direction: column; gap: 4px; margin-top: 8px; }
+    .zone-row { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid var(--border); }
+    .zone-row:last-child { border-bottom: none; }
+    .zone-row-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--amber); flex-shrink: 0; }
+    .zone-row-name { font-size: 0.85rem; font-weight: 600; color: var(--teal-dark); }
+    .zone-row-status { margin-left: auto; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal-accent); }
+    @media (max-width: 900px) {
+      .map-wrap { grid-template-columns: 1fr; }
+    }
+
     /* SECTIONS */
     section { padding: 80px 48px; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
@@ -292,7 +333,7 @@
     .vision-quote p { font-size: 0.95rem; line-height: 1.65; color: rgba(255,255,255,0.85); font-style: italic; }
 
     /* TEAM */
-    .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
+    .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; max-width: 760px; }
 
     .team-card { background: var(--white); border: 1px solid var(--border); border-radius: 16px; padding: 28px; display: flex; gap: 18px; align-items: flex-start; }
 
@@ -368,68 +409,134 @@
   <!-- HERO -->
   <div class="hero">
     <div class="hero-left">
-      <div class="hero-eyebrow">OPD Intelligence · India</div>
-      <h1>Smarter consultations<br>start <em>before</em> the<br>patient walks in.</h1>
-      <p class="hero-sub">Respiro Health is building the pre-consultation intelligence layer for India's OPDs — a WhatsApp-native platform that gives doctors a structured patient summary, flags high-risk cases, and closes the care loop automatically. No app. No new infrastructure. Zero friction.</p>
+      <div class="hero-eyebrow">Acoustic AI · Respiratory Screening · India</div>
+      <h1>Screening for TB, COPD and<br>other respiratory disease -<br>from a <em>cough</em> on WhatsApp.</h1>
+      <p class="hero-sub">Respiro Health is building a WhatsApp-native acoustic AI model that pre-screens for tuberculosis, COPD, Asthma, and other respiratory diseases from a voice note. No app. No new device. Any smartphone already has what's needed.</p>
       <div class="hero-ctas">
-        <a href="mailto:ajay.sharma@respirohealth.ai?subject=Partnership Inquiry — Respiro Health" class="btn-primary">Request a Pilot</a>
-        <a href="mailto:ajay.sharma@respirohealth.ai?subject=Investor Inquiry — Respiro Health" class="btn-secondary">Investor Enquiry</a>
+        <a href="mailto:ajay.sharma@respirohealth.ai?subject=Research Site Enquiry - Respiro Health" class="btn-primary">Become a Research Site</a>
+        <a href="mailto:ajay.sharma@respirohealth.ai?subject=Investor Inquiry - Respiro Health" class="btn-secondary">Investor Enquiry</a>
       </div>
     </div>
 
     <div class="hero-card">
-      <div class="hero-card-label">The OPD problem in numbers</div>
+      <div class="hero-card-label">Where the research stands</div>
       <div class="stat-row">
         <div class="stat-item">
-          <div class="stat-badge">6B</div>
+          <div class="stat-badge">.76</div>
           <div>
-            <div class="stat-num">6 Billion</div>
-            <div class="stat-desc">OPD visits in India annually — less than 5% have any structured pre-visit workflow</div>
+            <div class="stat-num">0.764 AUC</div>
+            <div class="stat-desc">Proof-of-concept binary classifier on public datasets - general illness vs. healthy, not yet TB-specific</div>
           </div>
         </div>
         <div class="stat-item">
-          <div class="stat-badge">40%</div>
+          <div class="stat-badge">1.8K</div>
           <div>
-            <div class="stat-num">40%</div>
-            <div class="stat-desc">Of consultation time lost to repetitive history-taking — every visit, every patient</div>
+            <div class="stat-num">1,828 Recordings</div>
+            <div class="stat-desc">Proof-of-concept public dataset - the full study targets 30,000+</div>
           </div>
         </div>
         <div class="stat-item">
-          <div class="stat-badge">0</div>
+          <div class="stat-badge">30K</div>
           <div>
-            <div class="stat-num">Zero</div>
-            <div class="stat-desc">Structured patient data exists before the doctor opens the visit</div>
+            <div class="stat-num">30,000+</div>
+            <div class="stat-desc">Target confirmed-diagnosis recordings across geographies, multi-site</div>
           </div>
         </div>
         <div class="stat-item">
-          <div class="stat-badge">60%</div>
+          <div class="stat-badge">500M</div>
           <div>
-            <div class="stat-num">60%+</div>
-            <div class="stat-desc">Of discharged patients receive no structured follow-up — outcomes go unmeasured</div>
+            <div class="stat-num">500 Million+</div>
+            <div class="stat-desc">Indians already on WhatsApp - reachable with zero new infrastructure</div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- MAP -->
+  <section class="map-section">
+    <div class="section-inner">
+      <div class="section-eyebrow">Where We're Building</div>
+      <h2>Building outward across India.<br>One national acoustic dataset.</h2>
+      <p class="section-intro">Multi-site data collection is active or being activated across multiple epidemiological zones - chosen to capture the full acoustic and demographic diversity of Indian respiratory disease, not concentrated in one geography.</p>
+      <div class="map-wrap">
+        <div class="india-map">
+          <svg viewBox="0 0 300 330" xmlns="http://www.w3.org/2000/svg">
+            <path d="M63.4,233.2 L61.3,230.8 L61.1,228.4 L60.0,227.6 L60.9,227.7 L61.1,227.6 L59.8,226.8 L58.8,223.7 L56.8,221.3 L56.3,217.9 L55.4,216.5 L56.2,216.4 L55.4,215.9 L54.8,211.7 L55.2,211.9 L55.5,211.6 L54.2,209.1 L54.7,209.0 L54.0,208.0 L53.6,203.9 L52.6,202.7 L52.8,201.8 L52.2,200.3 L51.7,200.0 L52.0,199.4 L53.2,200.7 L53.2,199.0 L52.7,199.2 L52.6,199.6 L51.5,198.8 L50.9,195.4 L51.0,194.3 L52.2,194.2 L51.4,193.3 L51.9,192.6 L52.1,192.7 L52.5,192.6 L52.6,192.4 L52.6,192.4 L52.0,191.8 L50.4,193.5 L50.3,193.0 L50.7,192.1 L50.7,190.6 L50.3,191.1 L50.2,190.7 L50.3,190.7 L50.3,190.4 L50.8,189.9 L50.8,189.8 L50.2,190.5 L50.2,187.2 L49.6,187.1 L48.9,184.0 L49.3,183.0 L49.9,183.3 L49.5,181.9 L49.9,179.7 L50.6,179.0 L50.7,178.2 L51.2,177.7 L51.2,175.2 L49.6,171.3 L49.2,171.2 L49.1,171.2 L49.0,171.4 L49.0,171.9 L48.7,172.0 L48.9,170.5 L48.3,170.0 L49.8,167.4 L48.7,167.9 L48.7,166.7 L49.4,166.3 L49.6,166.5 L50.2,166.4 L50.7,166.2 L47.8,166.2 L48.1,164.7 L47.4,163.4 L48.2,161.0 L50.0,161.2 L50.4,160.5 L51.1,160.7 L51.5,160.5 L51.5,160.2 L47.8,160.2 L47.3,161.0 L47.4,160.5 L47.1,160.6 L46.8,160.0 L46.3,159.9 L46.6,159.4 L46.4,159.2 L46.1,159.2 L46.6,160.7 L46.0,160.3 L45.9,161.7 L45.6,161.5 L45.6,161.2 L45.4,160.9 L45.6,161.2 L45.6,161.5 L45.7,161.7 L45.2,163.6 L44.9,162.4 L45.4,162.3 L45.5,161.9 L44.2,162.5 L44.7,163.4 L44.0,163.1 L45.0,163.9 L45.1,165.5 L44.9,165.0 L44.5,164.6 L44.4,164.6 L44.4,164.6 L44.3,164.6 L44.3,164.7 L45.5,166.6 L43.3,169.8 L43.6,170.8 L37.8,173.3 L37.0,174.0 L36.4,174.0 L33.4,175.3 L32.3,175.3 L32.7,175.5 L32.5,175.7 L31.5,175.6 L31.9,175.3 L31.5,175.4 L31.4,175.2 L31.3,175.2 L31.5,175.6 L31.0,175.8 L27.2,174.2 L23.9,171.7 L20.1,167.6 L20.6,167.1 L20.3,166.4 L19.9,166.9 L19.9,166.7 L19.3,166.4 L20.0,167.5 L18.8,166.6 L12.4,159.9 L13.7,158.2 L13.7,159.0 L15.0,158.8 L14.6,159.9 L15.3,160.4 L17.9,159.6 L18.0,158.7 L18.7,159.8 L20.2,158.3 L20.9,159.0 L21.3,158.0 L21.6,158.5 L22.6,157.6 L24.5,157.5 L25.3,156.4 L25.4,155.7 L25.9,155.5 L26.4,154.4 L27.0,153.8 L27.5,153.0 L27.7,152.4 L27.2,152.5 L26.8,152.8 L26.3,153.8 L24.1,153.5 L24.1,153.2 L24.3,153.0 L24.4,152.9 L24.4,152.8 L24.4,152.8 L23.8,153.6 L24.2,153.9 L20.9,154.6 L20.0,155.8 L19.3,155.1 L17.7,155.3 L14.9,154.7 L9.7,151.6 L9.0,150.8 L9.1,150.8 L9.2,151.0 L9.4,151.0 L9.8,150.5 L9.4,150.2 L10.4,150.2 L10.6,150.1 L10.7,149.9 L9.6,150.1 L9.6,149.9 L9.4,149.8 L9.5,149.8 L9.5,149.7 L9.5,149.7 L8.2,148.5 L8.3,148.3 L8.0,147.7 L8.4,146.3 L10.7,144.5 L9.2,144.8 L8.4,145.7 L8.3,145.0 L9.8,144.1 L8.6,143.7 L10.6,143.7 L10.8,140.4 L12.0,141.4 L12.5,140.6 L13.1,141.1 L19.0,140.6 L20.2,141.6 L22.7,141.7 L24.1,140.4 L28.4,139.2 L28.9,139.4 L28.5,140.8 L30.0,141.1 L33.9,139.4 L32.8,139.0 L32.7,138.0 L33.7,136.6 L31.7,132.1 L29.5,129.7 L29.4,126.6 L25.6,126.6 L23.8,124.2 L24.5,118.3 L21.1,117.8 L18.0,116.3 L18.7,112.2 L23.0,108.4 L24.4,105.7 L26.5,103.9 L28.4,103.8 L30.3,106.8 L31.6,107.0 L41.5,104.4 L41.9,102.8 L44.3,100.5 L46.3,96.5 L51.8,93.9 L55.0,88.7 L56.2,85.0 L61.7,82.6 L60.9,80.8 L61.5,79.9 L62.9,79.2 L67.6,73.9 L68.9,73.9 L68.8,73.3 L67.7,73.8 L67.1,73.2 L68.4,70.1 L67.7,69.7 L67.2,67.5 L68.0,65.9 L71.1,64.1 L74.3,63.9 L75.5,62.5 L75.2,61.5 L72.8,60.1 L68.9,59.9 L69.0,56.5 L67.4,57.5 L65.3,55.7 L65.6,54.8 L62.3,53.0 L64.0,50.5 L61.7,47.9 L64.3,46.4 L64.7,45.4 L64.3,44.8 L61.0,44.6 L61.9,42.5 L61.2,41.6 L59.8,41.5 L61.6,39.5 L61.8,38.3 L63.5,38.3 L65.8,37.2 L79.3,40.1 L86.4,37.3 L88.5,37.7 L89.1,36.0 L91.6,35.9 L91.8,34.9 L93.1,34.8 L99.7,30.4 L100.5,31.1 L102.4,30.6 L101.3,31.9 L103.8,38.3 L107.0,39.1 L111.1,42.0 L110.7,43.1 L108.3,44.4 L109.1,47.4 L108.6,48.9 L112.0,52.7 L115.3,53.2 L114.7,55.2 L116.8,58.2 L111.0,61.4 L109.1,60.1 L108.7,57.9 L105.5,59.3 L106.5,60.7 L105.7,62.3 L107.2,62.6 L107.3,63.6 L109.0,64.8 L108.2,66.8 L109.6,68.5 L108.4,69.8 L110.3,72.0 L111.7,70.0 L112.5,70.3 L115.3,74.2 L117.0,75.1 L119.6,74.8 L123.2,76.9 L123.2,78.7 L126.8,79.6 L131.1,81.9 L124.7,86.8 L125.1,88.4 L123.4,89.8 L124.0,92.2 L122.5,93.2 L121.8,95.9 L126.1,98.6 L126.0,97.5 L126.6,97.3 L132.9,100.5 L134.0,102.7 L135.2,102.4 L139.6,105.4 L141.4,104.8 L145.1,107.2 L147.6,106.8 L147.9,108.9 L152.4,109.4 L153.6,110.6 L154.3,109.1 L156.5,109.2 L159.0,110.4 L159.0,109.6 L161.8,108.8 L163.2,110.1 L166.4,110.5 L167.1,111.7 L166.6,113.4 L169.8,114.2 L170.4,115.3 L172.1,115.2 L172.2,116.2 L176.4,115.1 L178.5,118.1 L180.2,117.1 L183.2,117.6 L187.1,119.5 L190.5,117.9 L190.7,119.2 L193.1,120.3 L194.4,119.3 L195.7,119.9 L198.5,118.9 L199.9,120.1 L201.4,116.3 L200.9,114.0 L199.5,112.7 L200.0,109.0 L201.5,106.1 L200.8,104.5 L203.4,104.2 L205.7,102.7 L207.8,103.9 L208.3,105.4 L207.1,108.3 L207.5,109.9 L208.6,110.6 L206.9,112.4 L208.1,112.8 L208.2,114.3 L209.6,114.4 L210.7,115.7 L213.1,115.2 L217.0,116.8 L220.5,116.3 L221.3,115.3 L223.2,114.8 L226.2,116.1 L235.8,115.8 L237.7,114.7 L239.4,115.3 L240.0,114.2 L239.1,112.3 L239.2,111.2 L240.0,111.0 L239.0,109.1 L235.4,109.1 L234.5,107.6 L235.3,106.3 L234.4,105.4 L237.1,105.9 L238.0,106.8 L240.9,105.4 L241.9,106.2 L244.3,105.8 L246.1,104.1 L245.6,102.8 L250.8,100.8 L250.5,99.7 L252.0,97.7 L257.8,97.4 L260.6,93.4 L264.0,92.0 L264.6,90.8 L266.3,92.6 L272.7,93.9 L274.2,91.6 L279.0,89.7 L280.5,91.9 L282.0,91.7 L279.2,93.5 L279.7,95.1 L283.3,93.4 L282.8,94.3 L284.2,96.4 L280.7,100.0 L282.0,100.6 L284.6,99.5 L287.9,100.9 L288.8,100.4 L291.9,102.1 L290.9,103.3 L292.0,103.8 L291.7,105.0 L290.4,104.9 L286.9,107.8 L287.1,109.3 L289.4,112.8 L286.7,111.9 L286.8,111.2 L285.1,110.1 L280.4,111.0 L272.5,116.8 L269.8,117.6 L268.9,119.2 L269.6,119.9 L269.5,122.6 L270.1,122.9 L268.5,124.5 L268.8,126.0 L267.4,127.9 L264.7,129.7 L264.2,131.4 L265.8,132.1 L265.5,134.0 L261.7,140.0 L260.1,144.7 L256.7,144.0 L256.1,143.2 L253.7,143.8 L252.1,142.2 L253.0,146.4 L252.5,151.8 L251.6,153.1 L250.0,152.6 L250.3,153.9 L249.6,156.0 L250.7,160.4 L250.2,161.2 L249.1,161.0 L248.7,163.1 L248.2,162.6 L247.8,163.5 L245.9,161.4 L244.8,163.2 L244.1,156.5 L242.5,153.8 L242.9,150.7 L241.6,146.0 L241.0,146.7 L240.5,145.8 L239.5,146.8 L238.5,146.0 L238.6,148.4 L236.6,150.5 L237.2,152.2 L235.1,153.7 L233.1,150.4 L232.7,152.5 L232.2,149.6 L230.7,147.2 L231.3,144.0 L232.7,143.5 L232.7,142.2 L234.9,142.5 L235.6,141.0 L236.5,141.9 L236.3,140.9 L237.9,141.9 L238.1,140.0 L240.5,139.2 L241.8,136.1 L241.2,134.4 L243.7,134.7 L243.1,133.2 L239.5,131.6 L235.4,132.3 L231.7,131.5 L223.7,132.1 L217.6,130.6 L217.5,129.7 L218.1,127.4 L217.4,125.5 L218.1,124.2 L217.5,124.2 L218.0,123.9 L216.1,122.1 L216.1,121.3 L215.2,122.1 L215.8,123.0 L215.1,124.0 L212.9,123.6 L211.0,122.3 L210.4,119.8 L209.0,119.1 L208.6,120.0 L210.1,121.2 L208.3,120.8 L207.9,121.4 L203.5,117.5 L202.9,119.0 L204.3,119.1 L204.7,120.1 L201.3,122.2 L201.4,123.4 L200.4,124.5 L200.7,125.7 L202.2,125.5 L204.9,128.5 L207.5,128.4 L207.9,129.9 L209.5,130.6 L208.6,131.8 L204.0,131.6 L203.5,134.0 L202.8,134.8 L201.8,133.9 L200.9,134.1 L201.3,134.8 L199.7,136.8 L202.8,139.5 L206.8,140.6 L206.4,142.2 L207.1,143.4 L205.2,144.7 L205.1,146.8 L207.4,148.3 L206.6,150.6 L209.3,151.0 L207.9,153.1 L209.1,154.7 L208.9,156.5 L207.5,155.6 L208.8,157.3 L208.4,157.4 L208.1,157.6 L207.9,157.9 L207.9,158.7 L207.1,157.4 L206.8,157.9 L206.2,157.4 L206.4,157.8 L206.5,157.7 L206.8,157.9 L207.2,158.0 L207.2,158.1 L207.5,158.6 L207.6,158.7 L207.9,158.7 L207.9,159.1 L208.0,159.3 L208.2,159.4 L208.2,159.4 L208.1,159.4 L207.9,159.3 L207.6,159.4 L206.8,161.0 L206.5,160.9 L206.1,160.8 L205.8,160.8 L206.0,160.6 L206.3,160.0 L206.4,159.7 L206.1,159.6 L205.8,160.7 L205.9,160.9 L206.2,161.0 L205.7,161.9 L205.5,161.4 L205.2,161.1 L205.5,163.8 L204.9,163.2 L205.2,163.9 L205.1,163.9 L204.9,163.9 L204.9,163.9 L204.8,164.4 L204.4,164.1 L204.7,163.8 L204.7,163.6 L204.7,163.5 L204.4,163.3 L204.7,163.0 L204.8,163.1 L204.9,163.1 L205.0,163.0 L205.0,162.7 L205.0,162.6 L204.4,163.3 L204.7,163.8 L204.5,163.8 L204.3,163.8 L204.3,163.9 L204.2,164.0 L204.2,163.3 L204.1,163.3 L204.0,163.3 L204.1,162.8 L203.6,164.1 L203.4,163.9 L203.6,163.7 L203.4,163.2 L203.3,163.2 L203.4,164.9 L203.1,164.7 L203.2,163.9 L203.2,163.9 L203.1,163.7 L203.0,163.6 L203.0,164.3 L202.2,164.1 L202.1,164.2 L202.7,164.4 L202.6,164.6 L202.3,164.7 L202.2,164.8 L202.1,164.8 L202.1,164.9 L202.2,165.0 L202.3,165.3 L202.0,164.9 L202.4,165.3 L202.2,165.6 L202.3,165.3 L201.2,164.1 L201.8,162.2 L201.6,161.3 L200.3,160.8 L200.6,159.9 L200.1,160.8 L199.4,160.5 L199.1,158.9 L198.8,158.7 L198.4,158.6 L199.0,160.4 L199.4,160.8 L199.7,161.0 L200.9,161.1 L201.4,162.0 L200.2,162.8 L199.9,162.3 L199.5,161.9 L199.2,161.9 L200.1,162.9 L197.7,165.8 L190.8,167.7 L188.9,169.4 L188.0,171.0 L189.4,174.8 L188.6,174.7 L188.1,175.0 L187.4,176.5 L190.2,175.6 L187.6,177.3 L187.1,178.6 L187.6,179.2 L184.5,181.0 L184.8,181.0 L184.5,181.4 L184.5,181.5 L184.6,181.6 L184.5,181.4 L184.7,181.4 L184.9,180.9 L185.4,180.6 L185.1,180.9 L184.7,181.5 L184.2,182.0 L184.0,182.0 L183.8,182.8 L182.8,182.0 L182.8,182.1 L182.6,181.9 L182.5,182.0 L182.4,182.0 L182.3,182.3 L183.3,182.8 L183.1,183.1 L183.5,183.0 L179.0,184.2 L174.2,186.3 L168.0,191.3 L167.4,191.0 L167.2,191.2 L167.2,191.3 L167.3,191.3 L167.3,191.4 L167.4,191.4 L167.4,191.5 L167.8,191.7 L167.6,191.9 L161.5,199.2 L156.1,202.0 L153.1,205.0 L152.6,206.2 L146.6,209.1 L144.3,210.8 L143.1,212.7 L144.2,213.5 L144.2,212.4 L144.3,213.0 L144.0,214.6 L143.1,214.9 L143.3,216.3 L143.7,216.2 L143.7,216.3 L137.9,218.8 L136.2,218.3 L134.8,218.5 L134.6,218.3 L134.4,218.3 L130.3,224.6 L129.1,224.6 L129.0,223.4 L128.6,223.1 L127.8,223.0 L123.7,225.0 L121.8,228.5 L121.9,229.5 L121.5,229.6 L121.5,230.9 L121.6,233.4 L123.0,235.7 L122.2,240.3 L124.1,247.0 L123.6,245.8 L122.5,244.2 L122.4,245.3 L122.1,244.3 L121.5,245.5 L124.3,247.7 L124.2,247.1 L124.2,247.1 L124.2,247.0 L124.2,247.0 L124.2,246.9 L124.4,248.4 L122.6,256.5 L121.2,257.8 L121.7,257.6 L120.5,258.9 L121.1,258.6 L119.3,262.3 L119.1,262.2 L119.0,262.3 L118.7,265.4 L119.5,267.4 L119.1,268.6 L119.6,269.1 L119.3,272.7 L119.6,272.6 L119.9,277.8 L119.4,278.0 L118.5,278.0 L118.9,277.8 L117.4,277.2 L117.3,277.6 L116.6,277.7 L116.7,277.7 L117.7,277.9 L117.8,277.8 L117.9,277.9 L118.5,278.0 L116.4,277.7 L117.0,277.5 L116.6,277.3 L114.0,278.2 L113.9,280.4 L110.2,285.7 L111.6,287.4 L113.1,287.8 L109.6,287.9 L107.9,289.0 L106.2,289.1 L104.0,290.4 L103.1,291.7 L103.0,292.8 L103.4,292.6 L103.7,293.0 L102.4,294.0 L102.1,296.7 L98.9,298.6 L97.2,299.0 L97.0,299.6 L94.7,299.2 L91.3,296.6 L87.1,291.5 L85.1,286.5 L84.1,281.1 L84.6,282.4 L84.9,281.9 L84.9,282.2 L84.9,282.6 L85.2,283.6 L84.9,282.0 L85.2,282.4 L85.4,282.5 L85.3,282.7 L85.3,283.7 L85.7,283.9 L85.4,284.5 L85.3,285.4 L85.5,285.6 L86.7,285.3 L85.9,285.0 L85.7,282.5 L85.3,281.6 L84.9,281.8 L84.9,281.8 L84.9,281.8 L84.9,281.7 L84.9,281.6 L84.9,281.6 L84.8,281.4 L84.8,281.2 L84.7,281.3 L84.8,281.4 L84.8,281.5 L84.4,280.4 L84.2,280.4 L84.4,279.9 L83.8,279.3 L83.8,279.8 L84.0,280.1 L83.9,280.1 L84.1,280.4 L84.0,280.6 L84.1,280.6 L84.1,280.8 L84.1,280.8 L84.2,280.9 L84.2,281.0 L84.0,280.9 L82.4,275.4 L80.9,272.9 L80.4,269.5 L78.0,266.2 L76.9,263.1 L75.1,262.0 L75.9,261.9 L75.6,261.5 L75.0,261.6 L74.7,261.1 L74.6,261.0 L75.2,261.0 L75.3,260.6 L74.6,260.9 L74.5,261.1 L74.9,261.6 L73.9,261.0 L74.1,260.4 L73.8,259.8 L70.2,252.7 L68.4,242.9 L67.1,241.2 L65.9,235.8 L65.2,236.3 L64.8,234.4 L63.1,233.6 L63.4,233.2 Z"/>
+          </svg>
+        <div class="zone-dot" style="left:53.1%; top:60.4%;" title="Southern Zone - MoU in Final Stages"></div>
+        <div class="zone-dot" style="left:43.5%; top:34.9%;" title="North-Central Zone - Institutional Discussions"></div>
+        <div class="zone-dot" style="left:20.3%; top:59.7%;" title="Western Zone - Multiple Sites in Discussion"></div>
+        <div class="zone-dot" style="left:31.2%; top:29.7%;" title="Capital Zone - Proposal Submitted"></div>
+        <div class="zone-dot" style="left:67.7%; top:47.7%;" title="Eastern Zone - Proposal Submitted"></div>
+        <div class="zone-dot" style="left:27.0%; top:12.5%;" title="Western Himalayan Zone - Outreach Active"></div>
+        <div class="zone-dot" style="left:79.2%; top:38.8%;" title="Northeast Zone - Outreach Active"></div>
+        <div class="zone-dot" style="left:39.7%; top:79.3%;" title="Puducherry - Outreach Active"></div>
+        </div>
+        <div class="zone-list">
+        <div class="zone-row">
+          <div class="zone-row-dot"></div>
+          <div class="zone-row-name">Southern Zone</div>
+          <div class="zone-row-status">MoU in Final Stages</div>
+        </div>
+        <div class="zone-row">
+          <div class="zone-row-dot"></div>
+          <div class="zone-row-name">North-Central Zone</div>
+          <div class="zone-row-status">Institutional Discussions</div>
+        </div>
+        <div class="zone-row">
+          <div class="zone-row-dot"></div>
+          <div class="zone-row-name">Western Zone</div>
+          <div class="zone-row-status">Multiple Sites in Discussion</div>
+        </div>
+        <div class="zone-row">
+          <div class="zone-row-dot"></div>
+          <div class="zone-row-name">Capital Zone</div>
+          <div class="zone-row-status">Proposal Submitted</div>
+        </div>
+        <div class="zone-row">
+          <div class="zone-row-dot"></div>
+          <div class="zone-row-name">Eastern Zone</div>
+          <div class="zone-row-status">Proposal Submitted</div>
+        </div>
+        <div class="zone-row">
+          <div class="zone-row-dot"></div>
+          <div class="zone-row-name">Western Himalayan Zone</div>
+          <div class="zone-row-status">Outreach Active</div>
+        </div>
+        <div class="zone-row">
+          <div class="zone-row-dot"></div>
+          <div class="zone-row-name">Northeast Zone</div>
+          <div class="zone-row-status">Outreach Active</div>
+        </div>
+        <div class="zone-row">
+          <div class="zone-row-dot"></div>
+          <div class="zone-row-name">Puducherry</div>
+          <div class="zone-row-status">Outreach Active</div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- PROBLEM -->
   <section class="insight-section">
     <div class="section-inner">
       <div class="section-eyebrow">The Problem</div>
-      <h2>Every consultation starts<br>from a blank page.</h2>
-      <p class="section-intro">India's OPDs see 6 billion visits a year. In the vast majority, the doctor begins with zero information about the patient sitting in front of them. No structured history. No pre-visit triage. No way to distinguish a routine case from a critical one before the patient walks in. The problem is not the consultation — it is everything that happens before it.</p>
+      <h2>Respiratory disease in India<br>is caught too late.</h2>
+      <p class="section-intro">Tuberculosis, COPD, asthma, and bronchitis are among India's most significant public health burdens. Most patients present at an advanced stage of disease - not because early signs weren't there, but because the tools to act on them early don't reach where patients are. Acoustic biomarkers in a cough carry real diagnostic signal, but no model has ever been validated under the real-world conditions - OPD noise, consumer microphones, WhatsApp's audio compression - that actual deployment requires.</p>
       <div class="insight-grid">
         <div class="insight-card">
-          <div class="insight-num">6–10 min</div>
-          <div class="insight-label">Of every consultation spent asking the same history questions — before any clinical decision-making begins</div>
+          <div class="insight-num">2.7M+</div>
+          <div class="insight-label">Estimated new TB cases in India annually - the highest burden of any country in the world</div>
         </div>
         <div class="insight-card">
-          <div class="insight-num">100,000+</div>
-          <div class="insight-label">Private OPD clinics and hospitals in India — almost none have a structured pre-visit patient intake system</div>
+          <div class="insight-num">500M+</div>
+          <div class="insight-label">Indians already on WhatsApp - a screening model deployed here needs zero new infrastructure</div>
         </div>
         <div class="insight-card">
-          <div class="insight-num">60%+</div>
-          <div class="insight-label">Of patients discharged after a consultation receive no structured follow-up — recovery outcomes are invisible</div>
+          <div class="insight-num">0</div>
+          <div class="insight-label">Validated acoustic respiratory AI models trained and tested on real Indian OPD, WhatsApp-compressed audio</div>
         </div>
       </div>
     </div>
@@ -438,53 +545,101 @@
   <!-- PRODUCT -->
   <section>
     <div class="section-inner">
-      <div class="section-eyebrow">The Product</div>
-      <h2>Pre-visit. During. Post-visit.<br>We own the full patient journey.</h2>
-      <p class="section-intro">Respiro sits between appointment booking and consultation — capturing structured patient data before the visit, surfacing it to the doctor in real time, and following up automatically after. One platform. Zero disruption to existing workflows.</p>
+      <div class="section-eyebrow">How It Works</div>
+      <h2>One voice note.<br>An acoustic risk score.</h2>
+      <p class="section-intro">Respiro's screening model works entirely through a cough recording sent over WhatsApp - no app, no device, no clinical infrastructure. Every step is designed to work in the exact conditions it will be deployed in, not a controlled lab.</p>
 
       <div class="journey-grid">
         <div class="journey-phase">
           <div class="journey-phase-header">
-            <div class="journey-phase-tag">Pre-Visit</div>
-            <div class="journey-phase-title">Intelligent Intake</div>
+            <div class="journey-phase-tag">Step 1</div>
+            <div class="journey-phase-title">Cough Capture</div>
           </div>
           <div class="journey-phase-body">
-            <div class="journey-point"><div class="journey-point-dot"></div><p>Patient scans a QR code or messages the clinic on WhatsApp — no app download required</p></div>
-            <div class="journey-point"><div class="journey-point-dot"></div><p>Answers structured clinical questions in their language in 3–5 minutes</p></div>
-            <div class="journey-point"><div class="journey-point-dot"></div><p>Completed before the patient enters the clinic — doctor is already informed</p></div>
-            <div class="journey-point"><div class="journey-point-dot"></div><p>Zero friction — works on any phone with WhatsApp already installed</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>Patient sends a 15–20 second voluntary cough recording to a WhatsApp number - no app download, any smartphone</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>Captured in the same acoustic domain as deployment - WhatsApp's Opus compression, real ambient noise</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>Same protocol whether captured directly by a patient or during structured intake at a partner OPD</p></div>
           </div>
         </div>
 
         <div class="journey-phase">
           <div class="journey-phase-header">
-            <div class="journey-phase-tag">During Visit</div>
-            <div class="journey-phase-title">Doctor & COO Intelligence</div>
+            <div class="journey-phase-tag">Step 2</div>
+            <div class="journey-phase-title">Acoustic Risk Scoring</div>
           </div>
           <div class="journey-phase-body">
-            <div class="journey-point"><div class="journey-point-dot"></div><p>AI-generated triage summary ready on the doctor's dashboard before the patient sits down</p></div>
-            <div class="journey-point"><div class="journey-point-dot"></div><p>High-risk cases automatically flagged in the queue — critical patients never wait undetected</p></div>
-            <div class="journey-point"><div class="journey-point-dot"></div><p>ICD-10 diagnosis and medications logged post-consultation in one workflow</p></div>
-            <div class="journey-point"><div class="journey-point-dot"></div><p>COO dashboard shows live queue, funnel, and doctor-efficiency metrics in real time</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>The model analyses acoustic features of the cough and generates a respiratory-disease risk score</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>The disease-specific model is being trained exclusively on confirmed-diagnosis recordings - GeneXpert for TB, spirometry for COPD/asthma - never provisional impressions</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>A pre-screening signal only, never a diagnostic claim - every clinical decision stays with a treating physician</p></div>
           </div>
         </div>
 
         <div class="journey-phase">
           <div class="journey-phase-header">
-            <div class="journey-phase-tag">Post-Visit</div>
-            <div class="journey-phase-title">Adherence & Follow-up</div>
+            <div class="journey-phase-tag">Step 3</div>
+            <div class="journey-phase-title">Confirmatory Routing</div>
           </div>
           <div class="journey-phase-body">
-            <div class="journey-point"><div class="journey-point-dot"></div><p>Patient automatically contacted at Day 3, 7, 14, and 30 — in their language, on WhatsApp</p></div>
-            <div class="journey-point"><div class="journey-point-dot"></div><p>Asked how they are feeling — structured responses captured and logged</p></div>
-            <div class="journey-point"><div class="journey-point-dot"></div><p>Non-recovering patients flagged to the doctor immediately — before they deteriorate</p></div>
-            <div class="journey-point"><div class="journey-point-dot"></div><p>Builds a longitudinal outcomes record per patient — automatically, over time</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>High-risk individuals are flagged for confirmatory molecular or clinical testing before they would otherwise self-present</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>Enables earlier detection at population scale, with no new clinical infrastructure required</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>Repeat recordings across a patient's treatment journey support longitudinal monitoring research</p></div>
           </div>
         </div>
       </div>
 
       <div class="journey-footer">
-        <p>No change to existing infrastructure. No training required for doctors. No app download for patients. The receptionist or patient initiates — the doctor just opens the dashboard.</p>
+        <p>Reaches every Indian with a respiratory concern through a single WhatsApp message - no app, no clinic visit, no new infrastructure.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLINICAL PARTNERSHIP MODEL -->
+  <section>
+    <div class="section-inner">
+      <div class="section-eyebrow">For Partner Institutions</div>
+      <h2>What participating hospitals gain<br>from the research collaboration.</h2>
+      <p class="section-intro">Respiro's field coordinators run day-to-day data collection at each partner site - and along the way, participating OPDs get real operational value as part of the collaboration, at zero cost. This is not a product for sale; it's what comes with joining the study.</p>
+
+      <div class="journey-grid">
+        <div class="journey-phase">
+          <div class="journey-phase-header">
+            <div class="journey-phase-tag">During Enrolment</div>
+            <div class="journey-phase-title">Structured Pre-Visit Intake</div>
+          </div>
+          <div class="journey-phase-body">
+            <div class="journey-point"><div class="journey-point-dot"></div><p>Coordinators capture structured clinical history, vitals, and symptoms conversationally, in under 2 minutes</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>This structured intake is the foundation for a future point-of-care product - AI risk stratification and an automated physician summary - not yet part of the current research phase</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>Zero disruption to existing OPD workflow - coordinators are Respiro-employed and Respiro-trained</p></div>
+          </div>
+        </div>
+
+        <div class="journey-phase">
+          <div class="journey-phase-header">
+            <div class="journey-phase-tag">Throughout the Study</div>
+            <div class="journey-phase-title">Site Visibility</div>
+          </div>
+          <div class="journey-phase-body">
+            <div class="journey-point"><div class="journey-point-dot"></div><p>Named co-authorship and institutional recognition on every resulting publication — in journals targeted at the international respiratory medicine and AI community</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>Full de-identified sub-cohort access for MD/DNB resident dissertations — postgraduate research output from your own patient data</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>Priority access to the validated screening model once available, ahead of public commercialisation</p></div>
+          </div>
+        </div>
+
+        <div class="journey-phase">
+          <div class="journey-phase-header">
+            <div class="journey-phase-tag">Across Treatment</div>
+            <div class="journey-phase-title">Structured Follow-up</div>
+          </div>
+          <div class="journey-phase-body">
+            <div class="journey-point"><div class="journey-point-dot"></div><p>Enrolled patients are followed up across their treatment journey via longitudinal Track B visits</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>Supports outcome tracking your OPD wouldn't otherwise capture, at no cost to the site</p></div>
+            <div class="journey-point"><div class="journey-point-dot"></div><p>Priority access to the validated screening model once available, ahead of public commercialisation</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="journey-footer">
+        <p>Respiro Health carries no financial burden to any partner institution. Our coordinators, our equipment, our legal framework, our IEC fees — all of it is ours to manage. What we ask of a partner institution is access to patients, access to diagnostic ground truth, and the academic credibility that comes with their name on a landmark national study. <a href="research.html" style="color:var(--amber);">See everything participating institutions gain →</a></p>
       </div>
     </div>
   </section>
@@ -496,13 +651,14 @@
       <h2>The infrastructure already exists.<br>In every patient's pocket.</h2>
       <div class="whatsapp-grid">
         <div>
-          <p class="section-intro">Every health-tech company builds a patient app. Patients don't download it. Respiro is built on the channel patients already use — making adoption a non-issue from day one.</p>
+          <p class="section-intro">Every health-tech company builds a patient app. Patients don't download it. Respiro's acoustic screening model is built on the channel patients already use - making adoption a non-issue from day one.</p>
+          <p class="section-intro" style="margin-top:16px;">Every previous acoustic respiratory AI has been trained on controlled laboratory recordings and validated on the same. Deployed in real-world clinical settings — with background OPD noise, consumer-grade microphones, and WhatsApp's Opus audio compression — accuracy collapses. Respiro trains exclusively on WhatsApp-captured audio from real hospital OPDs, linked to molecularly confirmed diagnoses. The model learns from the same acoustic conditions it will be deployed in.</p>
           <div class="whatsapp-reasons">
-            <div class="whatsapp-reason"><div class="reason-dot"></div><p>Patients don't download apps — WhatsApp is already on every phone</p></div>
-            <div class="whatsapp-reason"><div class="reason-dot"></div><p>Doctors don't change workflows — they simply open a dashboard</p></div>
-            <div class="whatsapp-reason"><div class="reason-dot"></div><p>Hospitals don't replace infrastructure — Respiro sits on top</p></div>
+            <div class="whatsapp-reason"><div class="reason-dot"></div><p>Patients don't download apps - WhatsApp is already on every phone</p></div>
+            <div class="whatsapp-reason"><div class="reason-dot"></div><p>Doctors don't change workflows - they simply open a dashboard</p></div>
+            <div class="whatsapp-reason"><div class="reason-dot"></div><p>Hospitals don't replace infrastructure - Respiro sits on top</p></div>
             <div class="whatsapp-reason"><div class="reason-dot"></div><p>Every income level, language, and geography in India is already on WhatsApp</p></div>
-            <div class="whatsapp-reason"><div class="reason-dot"></div><p>Patient app models have failed at scale in Indian healthcare — WhatsApp sidesteps every adoption barrier</p></div>
+            <div class="whatsapp-reason"><div class="reason-dot"></div><p>Patient app models have failed at scale in Indian healthcare - WhatsApp sidesteps every adoption barrier</p></div>
           </div>
         </div>
         <div class="whatsapp-stats">
@@ -512,15 +668,15 @@
           </div>
           <div class="whatsapp-stat">
             <div class="whatsapp-stat-num">90%+</div>
-            <div class="whatsapp-stat-label">Message open rate — versus under 20% for email or SMS</div>
+            <div class="whatsapp-stat-label">Message open rate - versus under 20% for email or SMS</div>
           </div>
           <div class="whatsapp-stat">
             <div class="whatsapp-stat-num">0</div>
             <div class="whatsapp-stat-label">App downloads required from patients</div>
           </div>
           <div class="whatsapp-stat">
-            <div class="whatsapp-stat-num">3–5 min</div>
-            <div class="whatsapp-stat-label">To complete a full structured clinical intake</div>
+            <div class="whatsapp-stat-num">&lt;2 min</div>
+            <div class="whatsapp-stat-label">To complete full clinical intake before the cough recording</div>
           </div>
         </div>
       </div>
@@ -531,27 +687,27 @@
   <section class="vision-section">
     <div class="section-inner">
       <div class="section-eyebrow">The Vision</div>
-      <h2>Built for one clinic.<br>Designed for a hundred.</h2>
-      <p class="section-intro">Respiro starts with respiratory OPDs — the highest-complexity intake environment in Indian healthcare. The same platform deploys across specialties, across hospital groups, and across geographies without rebuilding from scratch.</p>
+      <h2>Starting with the disease burden<br>India carries the most.</h2>
+      <p class="section-intro">Respiro starts with tuberculosis - India's largest respiratory disease burden - and builds toward a screening model that covers the full spectrum of respiratory disease, at national scale.</p>
       <div class="vision-grid">
         <div class="vision-card">
           <div class="vision-num">01</div>
-          <h3>Starts with respiratory</h3>
-          <p>Purpose-built for pulmonology OPDs — clinically reviewed symptom architecture, multilingual flows, and a triage model designed for India's respiratory disease burden.</p>
+          <h3>Starts with TB</h3>
+          <p>India carries 25% of the world's tuberculosis burden. Our first disease-specific model targets TB screening, trained on molecularly confirmed diagnoses.</p>
         </div>
         <div class="vision-card">
           <div class="vision-num">02</div>
-          <h3>Expands across specialties</h3>
-          <p>The same infrastructure deploys to Cardiology, General Medicine, and beyond. No rebuilding. No new training. One platform, every department.</p>
+          <h3>Expands across respiratory disease</h3>
+          <p>The same acoustic model and dataset extend to COPD, asthma, and other respiratory conditions - multi-disease classification from the same cough recording.</p>
         </div>
         <div class="vision-card">
           <div class="vision-num">03</div>
-          <h3>Grows smarter over time</h3>
-          <p>Every patient interaction generates structured, diagnosis-linked clinical data. The more OPDs that run Respiro, the more accurate and clinically relevant the platform becomes.</p>
+          <h3>Scales geographically</h3>
+          <p>Multi-site data collection across India's diverse geographies and demographics - built for generalisability from day one, not tuned to one hospital's patient population.</p>
         </div>
       </div>
       <div class="vision-quote">
-        <p>We are not building a tool for one department. We are building the intelligence layer for the Indian OPD.</p>
+        <p>We are not building a screening tool for one hospital. We are building the acoustic respiratory AI infrastructure for India.</p>
       </div>
     </div>
   </section>
@@ -568,25 +724,18 @@
           <div>
             <div class="team-name">Ajay Sharma</div>
             <div class="team-role">Founder & CEO</div>
-            <div class="team-bio">15+ years of software and technology experience. Built Respiro's entire platform independently — WhatsApp flows, AI triage pipeline, AWS backend, COO analytics dashboard, and follow-up module.</div>
+            <div class="team-bio">15+ years of software and technology experience. Built Respiro's entire technical stack independently - data pipelines, AWS infrastructure, WhatsApp integration, coordinator application, and clinical dashboard.</div>
           </div>
         </div>
         <div class="team-card">
           <div class="team-avatar">AS</div>
           <div>
             <div class="team-name">Akash Sharma</div>
-            <div class="team-role">Co-Founder — Business Relations & Operations</div>
+            <div class="team-role">Strategic Advisor - Business Relations & Operations</div>
             <div class="team-bio">Leads business relations and operations at Respiro Health, driving hospital partnerships, institutional outreach, and the operational infrastructure needed to scale across multiple geographies.</div>
           </div>
         </div>
-        <div class="team-card">
-          <div class="team-avatar">DA</div>
-          <div>
-            <div class="team-name">Dr. Aslam Ali Parvez</div>
-            <div class="team-role">Medical Advisor</div>
-            <div class="team-bio">Provides clinical oversight across Respiro's research programme, ensuring study design, protocol, and data collection methodology meet the highest standards of clinical rigour and regulatory compliance.</div>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
@@ -596,11 +745,11 @@
     <div class="section-inner">
       <div class="section-eyebrow">Work With Us</div>
       <h2>We are looking for<br>the right partners.</h2>
-      <p class="section-intro">We are building Respiro with partners who understand the operational and clinical reality of Indian OPDs. If your work touches outpatient care, hospital operations, or healthcare investment — we want to talk.</p>
+      <p class="section-intro">We are building Respiro with partners who understand the operational and clinical reality of Indian OPDs. If your work touches outpatient care, hospital operations, or healthcare investment - we want to talk.</p>
       <div class="collab-grid">
         <div class="collab-card">
           <h3>Hospitals & Clinics</h3>
-          <p>Pulmonology OPDs, chest clinics, and multi-specialty hospitals interested in a 30-day free pilot. We handle everything — setup, deployment, and training. You get full operational and clinical data from day one.</p>
+          <p>Chest and pulmonary medicine OPDs interested in joining as a research site. We fund and staff everything - coordinators, equipment, IEC costs - you get named co-authorship and priority access to the model once validated.</p>
         </div>
         <div class="collab-card">
           <h3>Network & Introductions</h3>
@@ -622,8 +771,8 @@
   <section class="cta-section">
     <div class="cta-inner">
       <div class="section-eyebrow" style="text-align:center;">Get Involved</div>
-      <h2>The Indian OPD is ready<br>for this. Are you?</h2>
-      <p>Whether you run a clinic, lead a hospital department, work in health-tech investment, or simply want to understand what we are building — write to us.</p>
+      <h2>India's respiratory disease burden<br>is ready for this. Are you?</h2>
+      <p>Whether you run a chest OPD, lead a hospital department, work in health-tech investment, or simply want to understand the research - write to us.</p>
       <div class="cta-buttons">
         <a href="contact.html" class="btn-primary">Get In Touch</a>
         <a href="research.html" class="btn-secondary">Our Research</a>
@@ -643,6 +792,8 @@
       &nbsp;·&nbsp;
       <a href="contact.html">Contact</a>
       &nbsp;·&nbsp;
+      <a href="privacy.html">Privacy Policy</a>
+      &nbsp;·&nbsp;
       <a href="mailto:ajay.sharma@respirohealth.ai">ajay.sharma@respirohealth.ai</a>
     </span>
   </footer>
@@ -659,7 +810,7 @@
       "contactType": "Partnerships"
     },
     "areaServed": "IN",
-    "description": "Pre-consultation intelligence platform for India's OPDs. WhatsApp-native patient intake, AI triage summary, and automated follow-up — built for high-volume outpatient departments."
+    "description": "WhatsApp-native acoustic AI model that screens for tuberculosis, COPD, and other respiratory diseases from a cough recording - no app, no new device, no new infrastructure."
   }
   </script>
 
