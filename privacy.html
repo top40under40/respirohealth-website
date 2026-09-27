@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a4a47'/%3E%3Ccircle cx='32' cy='32' r='14' fill='%23e8a33d'/%3E%3C/svg%3E" />
+<title>Respiro Health — Privacy Policy</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --teal-dark:   #1a4a47;
+    --teal-accent: #3da89f;
+    --text-body:   #334d4a;
+    --border:      #d1e8e6;
+    --teal-mid:    #2d7a74;
+    --teal-light:  #e8f4f3;
+    --teal-border: #a8d5d1;
+    --gold:        #e8a33d;
+    --slate:       #334155;
+    --muted:       #94a3b8;
+    --off-white:   #f8fbfb;
+    --white:       #ffffff;
+    --page-bg:     #0f2e2c;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Georgia', serif; background: var(--page-bg); color: var(--slate); min-height: 100vh; }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 48px;
+    background: rgba(245, 250, 250, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--teal-dark);
+    text-decoration: none;
+    letter-spacing: -0.3px;
+  }
+  .nav-logo span { color: var(--teal-accent); }
+  .nav-links {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    list-style: none;
+  }
+  .nav-link {
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-body);
+    transition: all 0.15s ease;
+    font-family: 'Inter', sans-serif;
+  }
+  .nav-link:hover { background: var(--teal-light); color: var(--teal-dark); }
+  .nav-link-primary {
+    background: var(--teal-dark);
+    color: var(--white) !important;
+    font-weight: 600;
+    margin-left: 8px;
+  }
+  .nav-link-primary:hover { background: var(--teal-mid); }
+
+  /* ── PAGE ── */
+  .page { max-width: 860px; margin: 0 auto; background: var(--white); min-height: 100vh; }
+  .top-stripe { background: var(--teal-dark); height: 6px; }
+
+  /* ── HERO ── */
+  .hero { background: var(--off-white); padding: 52px 52px 44px 52px; border-bottom: 3px solid var(--teal-dark); }
+  .eyebrow { font-family: 'Helvetica Neue', sans-serif; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 16px; }
+  .hero h1 { font-size: 26px; font-weight: normal; color: var(--teal-dark); line-height: 1.4; margin-bottom: 14px; font-style: italic; max-width: 660px; }
+  .hero h1 strong { font-style: normal; font-weight: 700; }
+  .hero-sub { font-family: 'Helvetica Neue', sans-serif; font-size: 13px; color: #475569; line-height: 1.8; max-width: 620px; }
+  .hero-meta { font-family: 'Helvetica Neue', sans-serif; font-size: 11px; color: var(--muted); margin-top: 14px; }
+
+  /* ── BODY ── */
+  .body { padding: 0 52px; }
+  .section { padding: 26px 0; border-bottom: 1px solid #f0f7f6; }
+  .section:last-child { border-bottom: none; }
+  .section-label { font-family: 'Helvetica Neue', sans-serif; font-size: 8.5px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 14px; padding-bottom: 6px; border-bottom: 1px solid #f0f4f4; }
+  .section p { font-family: 'Helvetica Neue', sans-serif; font-size: 13px; color: var(--slate); line-height: 1.85; margin-bottom: 10px; }
+  .section p:last-child { margin-bottom: 0; }
+  .section h3 { font-family: 'Helvetica Neue', sans-serif; font-size: 12px; font-weight: 700; color: var(--teal-dark); text-transform: uppercase; letter-spacing: 0.5px; margin: 16px 0 8px; }
+
+  /* arrow list */
+  .arrow-list { list-style: none; margin-top: 6px; display: flex; flex-direction: column; gap: 9px; }
+  .arrow-list li { display: flex; gap: 12px; align-items: flex-start; font-family: 'Helvetica Neue', sans-serif; font-size: 13px; color: var(--slate); line-height: 1.7; }
+  .arrow-list li::before { content: '→'; color: var(--gold); font-weight: 700; flex-shrink: 0; margin-top: 1px; font-size: 12px; }
+  .arrow-list strong { color: var(--teal-dark); }
+
+  /* gap block — dark teal highlight */
+  .gap-block { background: var(--teal-dark); margin: 0 -52px; padding: 32px 52px; }
+  .gap-block .section-label { color: var(--gold); border-color: rgba(168,213,209,0.2); }
+  .gap-block p { font-family: 'Helvetica Neue', sans-serif; font-size: 13px; color: #b2dfdb; line-height: 1.85; margin-bottom: 8px; }
+  .gap-block p:last-child { margin-bottom: 0; }
+  .gap-block p strong { color: var(--white); }
+  .gap-block a { color: var(--white); }
+
+  /* ── FOOTER ── */
+  .footer { background: var(--teal-dark); padding: 20px 52px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(168,213,209,0.15); }
+  .footer-left strong { display: block; color: var(--white); font-family: 'Helvetica Neue', sans-serif; font-size: 12px; font-weight: 700; margin-bottom: 3px; }
+  .footer-left p { color: var(--teal-border); font-family: 'Helvetica Neue', sans-serif; font-size: 10.5px; line-height: 1.6; }
+  .footer-right p { color: var(--teal-border); font-family: 'Helvetica Neue', sans-serif; font-size: 10.5px; line-height: 1.6; text-align: right; }
+  .footer-note { font-family: 'Helvetica Neue', sans-serif; font-size: 8px; color: var(--muted); text-align: center; padding: 7px; letter-spacing: 1px; text-transform: uppercase; background: var(--off-white); border-top: 1px solid #e8f4f3; }
+
+  @media (max-width: 640px) {
+    nav { padding: 0 20px; }
+    .hero, .body { padding-left: 24px; padding-right: 24px; }
+    .gap-block { margin: 0 -24px; padding-left: 24px; padding-right: 24px; }
+    .footer { padding: 20px 24px; flex-direction: column; gap: 12px; }
+    .footer-right p { text-align: left; }
+  }
+
+  @media print { nav { display: none; } body { background: white; } }
+</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">respiro<span>health</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="research.html" class="nav-link">Research</a></li>
+    <li><a href="about.html" class="nav-link">About</a></li>
+    <li><a href="contact.html" class="nav-link nav-link-primary">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page" style="padding-top:56px;">
+  <div class="top-stripe"></div>
+
+  <div class="hero">
+    <p class="eyebrow">Privacy Policy</p>
+    <h1>How Respiro Health <strong>collects, uses, and protects</strong> your information.</h1>
+    <p class="hero-sub">This policy covers both our website (respirohealth.ai) and our clinical research programme — cough recordings and clinical data collected through participating hospitals and outpatient departments via our coordinator application and WhatsApp.</p>
+    <p class="hero-meta">Effective date: 27 September 2026 · Last reviewed: 27 September 2026</p>
+  </div>
+
+  <div class="body">
+
+    <!-- SCOPE -->
+    <div class="section">
+      <p class="section-label">Who This Policy Covers</p>
+      <p>This Privacy Policy applies to Respiro Health Private Limited ("Respiro Health", "we", "us"), covering (a) visitors to respirohealth.ai, and (b) participants in our clinical research programme whose cough recordings and clinical information are collected at partner hospitals and outpatient departments ("OPDs"). If you are a research participant, this policy supplements — and does not replace — the informed consent form you sign or verbally agree to at your site of enrolment, which remains the primary, authoritative document governing your participation.</p>
+    </div>
+
+    <!-- WEBSITE DATA -->
+    <div class="section">
+      <p class="section-label">Information We Collect Through This Website</p>
+      <p>If you use the contact form on this site, we collect the name, email address, organisation, and message you provide, solely to respond to your enquiry. We do not sell or share this information with third parties for marketing purposes.</p>
+      <p>This site uses Google Analytics to understand aggregate visitor traffic (pages viewed, general location, device type). This is not linked to your identity as a research participant and does not track you across other websites we don't control.</p>
+    </div>
+
+    <!-- RESEARCH DATA -->
+    <div class="section">
+      <p class="section-label">Information We Collect Through the Research Programme</p>
+      <p>If you are enrolled as a research participant at a partner site, we collect:</p>
+      <h3>Identity Information</h3>
+      <p>Your name, phone number, and (where applicable) a caregiver's name, phone number, and relationship to you — collected only for consent verification and to contact you for follow-up visits.</p>
+      <h3>Clinical &amp; Demographic Information</h3>
+      <p>Structured clinical history, symptoms, vitals, and demographic details (such as age, occupation, and residence) captured by a trained coordinator, plus your confirmed diagnosis once available.</p>
+      <h3>Cough Recordings</h3>
+      <p>A short voice-note recording of your cough, sent via WhatsApp, used to train and evaluate our acoustic screening model.</p>
+      <p>Identity information is stored in a separate, access-restricted database from your clinical and acoustic data. Wherever your data is used for model training, research analysis, or shared with co-authoring institutions, it is de-identified — your name and phone number are not included.</p>
+    </div>
+
+    <!-- LEGAL BASIS & CONSENT -->
+    <div class="section">
+      <p class="section-label">Legal Basis &amp; Your Consent</p>
+      <p>We process personal data under the Digital Personal Data Protection Act, 2023 ("DPDP Act"). For research participants, we rely on your explicit, informed consent — obtained through a documented consent process at your site of enrolment, which explains what is collected, why, and how it may be used before you agree to participate. You may withdraw this consent at any time by contacting us (see below); withdrawal does not affect data already used in aggregate, de-identified research analysis prior to withdrawal.</p>
+    </div>
+
+    <!-- HOW WE USE IT -->
+    <div class="section">
+      <p class="section-label">How We Use Your Information</p>
+      <ul class="arrow-list">
+        <li><strong>Model development:</strong> Training and validating our acoustic respiratory disease screening model.</li>
+        <li><strong>Clinical research:</strong> Academic publication and analysis, always using de-identified, aggregated data.</li>
+        <li><strong>Follow-up care coordination:</strong> Contacting you (or your caregiver) for scheduled follow-up visits as part of the study protocol.</li>
+        <li><strong>Regulatory &amp; institutional compliance:</strong> Meeting requirements of Institutional Ethics Committees, ICMR, and applicable Indian law.</li>
+      </ul>
+      <p style="margin-top:14px;">We do not use your data for advertising, and we do not sell personal data to any third party.</p>
+    </div>
+
+    <!-- STORAGE & SECURITY -->
+    <div class="section">
+      <p class="section-label">Data Storage &amp; Security</p>
+      <p>Data is stored on AWS cloud infrastructure with encryption at rest. Identity data and clinical/research data are held in logically separate databases, so that a system compromise of one does not, by itself, expose the other. Access is restricted to authorised personnel and systems that require it to perform their function.</p>
+      <p>No system is completely immune to risk, and we cannot guarantee absolute security — but we design our infrastructure specifically to minimise what is exposed if any single part of it is compromised.</p>
+    </div>
+
+    <!-- SHARING -->
+    <div class="section">
+      <p class="section-label">Who We Share Data With</p>
+      <ul class="arrow-list">
+        <li><strong>Co-authoring research institutions:</strong> De-identified sub-cohort data, for academic publication and analysis under the terms of our research collaboration agreements.</li>
+        <li><strong>Service providers:</strong> Infrastructure providers (such as AWS) and communication platforms (such as WhatsApp/Meta, for message delivery) that process data on our behalf, under contractual confidentiality obligations.</li>
+        <li><strong>Legal or regulatory bodies:</strong> Only where required by applicable law, or to protect the rights, safety, or property of Respiro Health, our research participants, or the public.</li>
+      </ul>
+      <p style="margin-top:14px;">We do not sell personal data, and we do not share identifiable personal data with any party for their own independent marketing purposes.</p>
+    </div>
+
+    <!-- RETENTION -->
+    <div class="section">
+      <p class="section-label">Data Retention</p>
+      <p>Identity information is retained only as long as needed for consent verification and study follow-up, and is deleted or anonymised once no longer required for these purposes. De-identified clinical and acoustic research data may be retained longer, to support the longitudinal, multi-year nature of the research programme and future academic analysis, consistent with what was disclosed in your consent process.</p>
+    </div>
+
+    <!-- YOUR RIGHTS -->
+    <div class="section">
+      <p class="section-label">Your Rights as a Data Principal</p>
+      <p>Under the DPDP Act, you have the right to:</p>
+      <ul class="arrow-list">
+        <li><strong>Access</strong> a summary of the personal data we hold about you.</li>
+        <li><strong>Correct or update</strong> inaccurate or incomplete personal data.</li>
+        <li><strong>Withdraw consent</strong> and request erasure of your identity information, subject to any data already used in de-identified research analysis.</li>
+        <li><strong>Raise a grievance</strong> regarding how your data has been handled, and receive a response within a reasonable time.</li>
+      </ul>
+      <p style="margin-top:14px;">To exercise any of these rights, contact us using the details below.</p>
+    </div>
+
+    <!-- CHILDREN -->
+    <div class="section">
+      <p class="section-label">Minors</p>
+      <p>Our research programme does not enrol minors. Participation is limited to adult patients who can provide their own informed consent, consistent with our Institutional Ethics Committee-approved study protocol.</p>
+    </div>
+
+    <!-- CHANGES -->
+    <div class="section">
+      <p class="section-label">Changes to This Policy</p>
+      <p>We may update this policy from time to time as our research programme evolves. The "Last reviewed" date at the top of this page reflects the most recent update. Material changes affecting research participants will also be communicated through your site of enrolment where appropriate.</p>
+    </div>
+
+    <!-- GRIEVANCE / CONTACT -->
+    <div class="gap-block section">
+      <p class="section-label">Grievance Officer &amp; Contact</p>
+      <p><strong>For privacy questions, data access requests, or to withdraw consent, contact:</strong></p>
+      <p>Ajay Sharma, Founder &amp; CEO — Grievance Officer</p>
+      <p>Email: <a href="mailto:ajay.sharma@respirohealth.ai">ajay.sharma@respirohealth.ai</a></p>
+      <p>Phone: <a href="tel:+919953257463">+91 9953257463</a></p>
+      <p>Respiro Health Private Limited, Pune, Maharashtra, India</p>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="footer-left">
+      <strong>Respiro Health Private Limited</strong>
+      <p>CIN: U62099PN2026PTC257894</p>
+      <p>Pune, Maharashtra</p>
+    </div>
+    <div class="footer-right">
+      <p>respirohealth.ai</p>
+      <p>ajay.sharma@respirohealth.ai</p>
+      <p>© 2026 Respiro Health Private Limited</p>
+    </div>
+  </div>
+
+  <div class="footer-note">Privacy Policy · Respiro Health Private Limited · All rights reserved</div>
+</div>
+
+</body>
+</html>
