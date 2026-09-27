@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#1a4a47" />
 
-  <!-- Placeholder favicon (teal/amber monogram) -- swap for a real logo mark when one exists -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a4a47'/%3E%3Ccircle cx='32' cy='32' r='14' fill='%23e8a33d'/%3E%3C/svg%3E" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2N0QFZKYR1"></script>
@@ -17,10 +16,10 @@
     gtag('config', 'G-2N0QFZKYR1');
   </script>
 
-  <title>Respiro Health | WhatsApp-Native Acoustic AI for Respiratory Disease Screening</title>
-  <meta name="description" content="Respiro Health is building a WhatsApp-native acoustic AI model that pre-screens for tuberculosis, COPD, and other respiratory diseases from a cough recording.">
-  <meta property="og:title" content="Respiro Health | WhatsApp-Native Acoustic AI for Respiratory Disease Screening">
-  <meta property="og:description" content="A WhatsApp-native acoustic AI model that screens for respiratory disease from a cough recording. No app. No new device. No new infrastructure.">
+  <title>Respiro Health | Acoustic AI for Respiratory Disease Screening</title>
+  <meta name="description" content="Respiro Health is building a zero-infrastructure acoustic AI model that pre-screens for tuberculosis, COPD, and other respiratory diseases from a cough recording.">
+  <meta property="og:title" content="Respiro Health | Acoustic AI for Respiratory Disease Screening">
+  <meta property="og:description" content="An acoustic AI model that screens for respiratory disease from a cough recording. No app download. No specialized hardware. No workflow disruption.">
   <meta property="og:url" content="https://respirohealth.ai">
   <link rel="canonical" href="https://respirohealth.ai">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -121,23 +120,15 @@
 
     .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     .hero-stat { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 18px 16px; }
-    .hero-stat-num { font-family: 'Sora', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--amber); line-height: 1; margin-bottom: 6px; }
-    .hero-stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.45); line-height: 1.45; }
+    .hero-stat-num { font-family: 'Sora', sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--amber); line-height: 1; margin-bottom: 6px; }
+    .hero-stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.52); line-height: 1.45; }
 
     /* ── SECTIONS ── */
     section { padding: 88px 48px; }
     .inner { max-width: 1100px; margin: 0 auto; }
     .eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal-accent); margin-bottom: 12px; }
     h2 { font-family: 'Sora', sans-serif; font-size: 2.1rem; font-weight: 700; line-height: 1.18; color: var(--teal-dark); margin-bottom: 14px; letter-spacing: -0.5px; }
-    .intro { font-size: 0.95rem; line-height: 1.7; color: var(--text-body); max-width: 560px; margin-bottom: 44px; }
-
-    /* ── STAT STRIP ── */
-    .stat-strip { background: var(--teal-dark); padding: 48px; }
-    .stat-strip .inner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
-    .strip-stat { text-align: center; padding: 0 24px; border-right: 1px solid rgba(255,255,255,0.1); }
-    .strip-stat:last-child { border-right: none; }
-    .strip-num { font-family: 'Sora', sans-serif; font-size: 2.4rem; font-weight: 800; color: var(--amber); margin-bottom: 8px; }
-    .strip-label { font-size: 0.8rem; color: rgba(255,255,255,0.55); line-height: 1.5; }
+    .intro { font-size: 0.95rem; line-height: 1.7; color: var(--text-body); max-width: 580px; margin-bottom: 44px; }
 
     /* ── PROBLEM ── */
     .problem-section { background: var(--white); }
@@ -146,10 +137,10 @@
     .problem-card:hover { border-color: var(--teal-accent); transform: translateY(-4px); }
     .problem-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, var(--teal-light) 0%, transparent 60%); opacity: 0; transition: opacity 0.3s; }
     .problem-card:hover::before { opacity: 1; }
-    .problem-num { font-family: 'Sora', sans-serif; font-size: 2.6rem; font-weight: 800; color: var(--teal-accent); margin-bottom: 12px; position: relative; }
+    .problem-num { font-family: 'Sora', sans-serif; font-size: 2.4rem; font-weight: 800; color: var(--teal-accent); margin-bottom: 12px; position: relative; }
     .problem-card p { font-size: 0.85rem; line-height: 1.6; color: var(--text-body); position: relative; }
 
-    /* ── HOW IT WORKS — visual flow ── */
+    /* ── HOW IT WORKS ── */
     .how-section { background: var(--bg); }
     .flow { display: flex; gap: 0; align-items: stretch; margin-top: 8px; }
     .flow-step { flex: 1; position: relative; }
@@ -168,73 +159,78 @@
     .flow-connector { width: 32px; display: flex; align-items: flex-start; padding-top: 34px; flex-shrink: 0; }
     .flow-arrow { color: var(--teal-accent); font-size: 1.2rem; }
 
-    /* ── WHATSAPP — phone mockup ── */
-    .whatsapp-section { background: var(--teal-dark); }
-    .whatsapp-section h2 { color: var(--white); }
-    .whatsapp-section .intro { color: rgba(255,255,255,0.6); }
-    .whatsapp-reasons-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .phone-mockup { position: relative; max-width: 260px; margin: 0 auto; }
-    .phone-shell { background: #0a1a1a; border-radius: 36px; padding: 14px; box-shadow: 0 32px 80px rgba(0,0,0,0.5), 0 0 0 2px rgba(255,255,255,0.08); }
-    .phone-screen { background: #ece5dd; border-radius: 24px; overflow: hidden; min-height: 400px; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
-    .phone-top-bar { background: var(--teal-dark); color: var(--white); padding: 10px 14px; border-radius: 16px 16px 4px 4px; font-size: 0.75rem; font-weight: 600; display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
-    .phone-top-avatar { width: 24px; height: 24px; background: var(--teal-accent); border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; }
-    .chat-bubble { max-width: 80%; border-radius: 12px; padding: 8px 12px; font-size: 0.75rem; line-height: 1.5; }
-    .chat-in { background: var(--white); color: #1a1a1a; border-radius: 2px 12px 12px 12px; align-self: flex-start; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
-    .chat-out { background: #dcf8c6; color: #1a1a1a; border-radius: 12px 2px 12px 12px; align-self: flex-end; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
-    .chat-time { font-size: 0.6rem; color: #8a9a8a; text-align: right; margin-top: 2px; }
-    .chat-voice { display: flex; align-items: center; gap: 8px; background: #dcf8c6; border-radius: 12px 2px 12px 12px; padding: 8px 12px; align-self: flex-end; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
-    .voice-icon { width: 26px; height: 26px; background: var(--teal-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); flex-shrink: 0; }
-    .voice-wave { display: flex; gap: 2px; align-items: center; }
-    .voice-wave span { display: block; width: 2px; background: var(--teal-accent); border-radius: 1px; animation: vwave 0.8s ease-in-out infinite alternate; }
-    .voice-wave span:nth-child(1){height:6px;animation-delay:0s;}
-    .voice-wave span:nth-child(2){height:12px;animation-delay:0.1s;}
-    .voice-wave span:nth-child(3){height:18px;animation-delay:0.2s;}
-    .voice-wave span:nth-child(4){height:10px;animation-delay:0.3s;}
-    .voice-wave span:nth-child(5){height:14px;animation-delay:0.4s;}
-    .voice-wave span:nth-child(6){height:8px;animation-delay:0.5s;}
-    @keyframes vwave { to { transform: scaleY(0.3); opacity: 0.5; } }
-    .chat-result { background: rgba(26,74,71,0.12); border-left: 3px solid var(--teal-accent); border-radius: 2px 12px 12px 12px; padding: 10px 12px; align-self: flex-start; font-size: 0.72rem; color: #1a1a1a; }
-    .chat-result strong { color: var(--teal-dark); display: block; margin-bottom: 3px; font-size: 0.74rem; }
-    .chat-typing { display: flex; align-items: center; gap: 4px; padding: 4px 0; }
-    .typing-dot { width: 6px; height: 6px; background: var(--teal-accent); border-radius: 50%; animation: typing 1.2s ease-in-out infinite; }
-    .typing-dot:nth-child(2){animation-delay:0.2s;}
-    .typing-dot:nth-child(3){animation-delay:0.4s;}
-    @keyframes typing { 0%,100%{transform:translateY(0);opacity:0.4;} 50%{transform:translateY(-4px);opacity:1;} }
+    /* ── ZERO NEW INFRASTRUCTURE ── */
+    .messaging-section { background: var(--teal-dark); }
+    .messaging-section h2 { color: var(--white); }
+    .messaging-section .intro { color: rgba(255,255,255,0.64); }
+    
+    .messaging-reasons-grid.minimal {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .messaging-reasons-grid.minimal .reason-item {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 24px 20px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 14px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .messaging-reasons-grid.minimal .reason-item:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+    .messaging-reasons-grid.minimal .reason-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: rgba(61, 168, 159, 0.2);
+      border: 1px solid rgba(61, 168, 159, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--teal-accent);
+      font-size: 13px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+    .messaging-reasons-grid.minimal h3,
+    .messaging-section .reason-item h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ffffff !important;
+      line-height: 1.35;
+      margin: 0;
+    }
 
-    .reason-item { display: flex; gap: 14px; align-items: flex-start; padding: 16px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: background 0.2s; }
-    .reason-item:hover { background: rgba(255,255,255,0.1); }
-    .reason-icon { width: 36px; height: 36px; border-radius: 8px; background: rgba(61,168,159,0.2); border: 1px solid rgba(61,168,159,0.3); display: flex; align-items: center; justify-content: center; color: var(--teal-accent); flex-shrink: 0; }
-    .reason-text h3 { font-size: 0.88rem; font-weight: 600; color: var(--white); margin-bottom: 3px; }
-    .reason-text p { font-size: 0.78rem; line-height: 1.5; color: rgba(255,255,255,0.5); }
-
-    /* ── ZONE HEAT GRID (replaces literal map -- see note in conversation) ── */
+    /* ── ZONE HEAT GRID ── */
     .map-section { background: var(--white); }
     .map-wrap { display: grid; grid-template-columns: 380px 1fr; gap: 48px; align-items: center; }
     .india-map-img { width: 100%; max-width: 380px; display: block; margin: 0 auto; }
-
-    /* Heat intensity by partnership stage -- hottest (most advanced) to coolest (earliest) --
-       actual colouring now lives on the map states themselves (india-map.svg); this legend
-       just explains what the shading means. */
     .zone-legend { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; margin-bottom: 20px; }
     .zone-legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; color: var(--text-muted); }
     .zone-legend-dot { width: 10px; height: 10px; border-radius: 3px; }
     .zone-legend-dot.tier-1 { background: var(--amber); }
     .zone-legend-dot.tier-2 { background: var(--teal-mid); }
     .zone-legend-dot.tier-3 { background: var(--teal-accent); }
-
     .zone-text-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .zone-text-list li { font-size: 0.85rem; color: var(--text-body); padding-bottom: 10px; border-bottom: 1px solid var(--border); }
     .zone-text-list li:last-child { border-bottom: none; padding-bottom: 0; }
     .zone-text-list strong { color: var(--teal-dark); }
 
-    /* ── VISION ── */
+    /* ── VISION & CLINICAL PREVIEW ── */
     .vision-section { background: var(--teal-dark); }
     .vision-section h2 { color: var(--white); }
     .vision-section .intro { color: rgba(255,255,255,0.6); }
     .vision-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .vision-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 28px; transition: background 0.3s, transform 0.3s; }
     .vision-card:hover { background: rgba(255,255,255,0.09); transform: translateY(-4px); }
-    .vision-n { font-family: 'Sora', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--amber); margin-bottom: 12px; }
+    .vision-n { font-family: 'Sora', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--amber); margin-bottom: 12px; }
     .vision-card h3 { font-size: 0.92rem; font-weight: 600; color: var(--white); margin-bottom: 8px; }
     .vision-card p { font-size: 0.8rem; line-height: 1.6; color: rgba(255,255,255,0.55); }
     .vision-quote { margin-top: 32px; border-left: 3px solid var(--amber); padding: 16px 20px; background: rgba(255,255,255,0.04); border-radius: 0 12px 12px 0; }
@@ -242,6 +238,34 @@
 
     .vision-preview { margin-top: 56px; text-align: center; }
     .vision-preview-label { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber); background: rgba(232,163,61,0.12); border: 1px solid rgba(232,163,61,0.3); border-radius: 20px; padding: 6px 16px; margin-bottom: 24px; }
+
+    /* ── NEUTRALIZED PHONE MOCKUP ── */
+    .phone-mockup { position: relative; max-width: 270px; margin: 0 auto; }
+    .phone-shell { background: #081a18; border-radius: 36px; padding: 14px; box-shadow: 0 32px 80px rgba(0,0,0,0.5), 0 0 0 2px rgba(255,255,255,0.08); }
+    .phone-screen { background: #edf4f3; border-radius: 24px; overflow: hidden; min-height: 410px; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+    .phone-top-bar { background: var(--teal-dark); color: var(--white); padding: 10px 14px; border-radius: 16px 16px 4px 4px; font-size: 0.75rem; font-weight: 600; display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+    .phone-top-avatar { width: 24px; height: 24px; background: var(--teal-accent); border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; color: var(--white); font-weight: 700; }
+    .chat-bubble { max-width: 84%; border-radius: 12px; padding: 9px 12px; font-size: 0.75rem; line-height: 1.5; }
+    .chat-in { background: var(--white); color: var(--text-primary); border-radius: 2px 12px 12px 12px; align-self: flex-start; box-shadow: 0 1px 2px rgba(0,0,0,0.06); }
+    .chat-time { font-size: 0.6rem; color: var(--text-muted); text-align: right; margin-top: 3px; }
+    .chat-voice { display: flex; align-items: center; gap: 8px; background: #d2ebe7; color: var(--teal-dark); border-radius: 12px 2px 12px 12px; padding: 8px 12px; align-self: flex-end; box-shadow: 0 1px 2px rgba(0,0,0,0.06); }
+    .voice-icon { width: 26px; height: 26px; background: var(--teal-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); flex-shrink: 0; }
+    .voice-wave { display: flex; gap: 2px; align-items: center; }
+    .voice-wave span { display: block; width: 2px; background: var(--teal-mid); border-radius: 1px; animation: vwave 0.8s ease-in-out infinite alternate; }
+    .voice-wave span:nth-child(1){height:6px;animation-delay:0s;}
+    .voice-wave span:nth-child(2){height:12px;animation-delay:0.1s;}
+    .voice-wave span:nth-child(3){height:18px;animation-delay:0.2s;}
+    .voice-wave span:nth-child(4){height:10px;animation-delay:0.3s;}
+    .voice-wave span:nth-child(5){height:14px;animation-delay:0.4s;}
+    .voice-wave span:nth-child(6){height:8px;animation-delay:0.5s;}
+    @keyframes vwave { to { transform: scaleY(0.3); opacity: 0.5; } }
+    .chat-result { background: var(--white); border-left: 3px solid var(--teal-accent); border-radius: 2px 12px 12px 12px; padding: 10px 12px; align-self: flex-start; font-size: 0.72rem; color: var(--text-body); box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+    .chat-result strong { color: var(--teal-dark); display: block; margin-bottom: 3px; font-size: 0.76rem; }
+    .chat-typing { display: flex; align-items: center; gap: 4px; padding: 4px 0; }
+    .typing-dot { width: 6px; height: 6px; background: var(--teal-accent); border-radius: 50%; animation: typing 1.2s ease-in-out infinite; }
+    .typing-dot:nth-child(2){animation-delay:0.2s;}
+    .typing-dot:nth-child(3){animation-delay:0.4s;}
+    @keyframes typing { 0%,100%{transform:translateY(0);opacity:0.4;} 50%{transform:translateY(-4px);opacity:1;} }
 
     /* ── TEAM ── */
     .team-section { background: var(--white); }
@@ -265,7 +289,7 @@
     /* ── CTA ── */
     .cta-section { background: linear-gradient(135deg, #0d2e2b 0%, #1a4a47 100%); text-align: center; padding: 96px 48px; }
     .cta-section h2 { color: var(--white); margin-bottom: 14px; }
-    .cta-section p { color: rgba(255,255,255,0.6); font-size: 0.95rem; line-height: 1.7; max-width: 480px; margin: 0 auto 32px; }
+    .cta-section p { color: rgba(255,255,255,0.64); font-size: 0.95rem; line-height: 1.7; max-width: 480px; margin: 0 auto 32px; }
     .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
     /* ── FOOTER ── */
@@ -280,13 +304,10 @@
       .hero-inner { grid-template-columns: 1fr; gap: 48px; }
       h2 { font-size: 1.75rem; }
       .hero h1 { font-size: 2.4rem; }
-      .stat-strip .inner { grid-template-columns: 1fr; gap: 0; }
-      .strip-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 16px 0; }
-      .strip-stat:last-child { border-bottom: none; }
       .problem-grid { grid-template-columns: 1fr 1fr; }
       .flow { flex-direction: column; gap: 12px; }
       .flow-connector { display: none; }
-      .whatsapp-reasons-grid { grid-template-columns: 1fr; }
+      .messaging-reasons-grid.minimal { grid-template-columns: 1fr 1fr; }
       .map-wrap { grid-template-columns: 1fr; }
       .india-map-img { max-width: 260px; }
       .vision-grid { grid-template-columns: 1fr 1fr; }
@@ -298,6 +319,7 @@
     @media (max-width: 600px) {
       .hero h1 { font-size: 1.9rem; }
       .problem-grid { grid-template-columns: 1fr; }
+      .messaging-reasons-grid.minimal { grid-template-columns: 1fr; }
       .vision-grid { grid-template-columns: 1fr; }
       .hero-stats { grid-template-columns: 1fr 1fr; }
       .nav-links .nav-link:not(.nav-link-primary) { display: none; }
@@ -328,8 +350,8 @@
   <div class="hero-inner">
     <div class="hero-left">
       <div class="hero-badge"><span class="hero-badge-dot"></span>Acoustic AI · Respiratory Screening · India</div>
-      <h1>TB. COPD. Asthma.<br>Detected from a <em>cough</em><br>on WhatsApp.</h1>
-      <p class="hero-sub">No app download. Any smartphone. Trained on real Indian OPDs — not a laboratory.</p>
+      <h1>TB. COPD. Asthma.<br>Detected from a <em>cough</em><br>on any smartphone.</h1>
+      <p class="hero-sub">No app download. No specialized hardware. Trained on real Indian OPD conditions - not a laboratory.</p>
       <div class="hero-ctas">
         <a href="mailto:ajay.sharma@respirohealth.ai?subject=Research Site Enquiry" class="btn-primary">Become a Research Site</a>
         <a href="mailto:ajay.sharma@respirohealth.ai?subject=Investor Inquiry" class="btn-secondary">Investor Enquiry</a>
@@ -337,7 +359,7 @@
     </div>
     <div class="hero-visual">
       <div class="waveform-card">
-        <div class="waveform-label">Acoustic spectrogram — what the model sees</div>
+        <div class="waveform-label">Acoustic spectrogram - what the model sees</div>
         <canvas class="spectrogram-canvas" id="spectrogramCanvas"></canvas>
         <div class="waveform-status">
           <div class="status-dot"></div>
@@ -347,15 +369,15 @@
       <div class="hero-stats">
         <div class="hero-stat">
           <div class="hero-stat-num">30K+</div>
-          <div class="hero-stat-label">Target confirmed-diagnosis recordings across 6 zones</div>
+          <div class="hero-stat-label">Target confirmed-diagnosis cohort across 6 zones</div>
         </div>
         <div class="hero-stat">
           <div class="hero-stat-num">500M+</div>
-          <div class="hero-stat-label">Indians already on WhatsApp — zero new infra</div>
+          <div class="hero-stat-label">Reachable via universal voice messaging</div>
         </div>
         <div class="hero-stat">
-          <div class="hero-stat-num">0.764</div>
-          <div class="hero-stat-label">AUC on proof-of-concept public dataset - general illness vs. healthy, not yet TB-specific</div>
+          <div class="hero-stat-num">Validated</div>
+          <div class="hero-stat-label">End-to-end acoustic pipeline verified on retrospective data</div>
         </div>
         <div class="hero-stat">
           <div class="hero-stat-num">6</div>
@@ -366,42 +388,24 @@
   </div>
 </div>
 
-<!-- STAT STRIP -->
-<div class="stat-strip">
-  <div class="inner">
-    <div class="strip-stat reveal d1">
-      <div class="strip-num counter" data-target="2700000" data-format="2.7M+">0</div>
-      <div class="strip-label">Estimated new TB cases in India annually — world's highest burden</div>
-    </div>
-    <div class="strip-stat reveal d2">
-      <div class="strip-num counter" data-target="30000" data-format="30,000">0</div>
-      <div class="strip-label">Target confirmed-diagnosis recordings for full model training</div>
-    </div>
-    <div class="strip-stat reveal d3">
-      <div class="strip-num">0</div>
-      <div class="strip-label">Existing acoustic respiratory AI models trained on real Indian OPD audio</div>
-    </div>
-  </div>
-</div>
-
 <!-- THE PROBLEM -->
 <section class="problem-section">
   <div class="inner">
     <p class="eyebrow reveal">The Problem</p>
     <h2 class="reveal d1">Respiratory disease in India<br>is caught too late.</h2>
-    <p class="intro reveal d2">Acoustic biomarkers in a cough carry real diagnostic signal. No model has ever been validated in the conditions deployment actually requires.</p>
+    <p class="intro reveal d2">Acoustic biomarkers in a cough carry clinically significant diagnostic signal. Yet no screening model has been built for the real conditions of clinical deployment.</p>
     <div class="problem-grid">
       <div class="problem-card reveal d1">
         <div class="problem-num">25%</div>
-        <p>India carries a quarter of the world's TB burden — yet most patients present at an advanced stage.</p>
+        <p>India carries a quarter of the global TB burden - yet patients delay presentation until symptoms become severe and irreversible.</p>
       </div>
       <div class="problem-card reveal d2">
         <div class="problem-num">55M+</div>
-        <p>Indians are estimated to live with COPD — most undiagnosed until the disease is irreversible.</p>
+        <p>Indians live with chronic obstructive airway disease - overwhelmingly undiagnosed until permanent lung damage has occurred.</p>
       </div>
       <div class="problem-card reveal d3">
         <div class="problem-num">Lab ≠ Field</div>
-        <p>Every previous acoustic AI was trained in a lab. Deployed in a real OPD — with noise, WhatsApp compression, consumer microphones — accuracy collapsed.</p>
+        <p>Prior acoustic models trained in clean laboratory settings collapse when exposed to ambient OPD noise, consumer microphones, and network audio compression.</p>
       </div>
     </div>
   </div>
@@ -410,80 +414,61 @@
 <!-- HOW IT WORKS -->
 <section class="how-section">
   <div class="inner">
-    <p class="eyebrow reveal">How It Will Work</p>
-    <h2 class="reveal d1">One cough. An acoustic risk score.</h2>
-    <p class="intro reveal d2">Once trained and validated, Respiro's screening will work entirely through WhatsApp. Every step is designed and validated in the same conditions deployment will require.</p>
+    <p class="eyebrow reveal">How It Works</p>
+    <h2 class="reveal d1">One cough. An objective risk score.</h2>
+    <p class="intro reveal d2">Designed for point-of-first-contact triage through low-bandwidth voice messaging - zero app installation required.</p>
     <div class="flow">
       <div class="flow-step reveal d1">
         <div class="flow-box">
           <div class="flow-num">01</div>
-          <div class="flow-title">Send a cough on WhatsApp</div>
-          <div class="flow-desc">15–20 seconds to a WhatsApp number. Any smartphone. No download. Recorded under the same acoustic conditions as deployment.</div>
+          <div class="flow-title">Capture Cough Audio</div>
+          <div class="flow-desc">A short voluntary recording sent via standard mobile voice messaging. No new software to install.</div>
         </div>
       </div>
       <div class="flow-connector"><div class="flow-arrow">→</div></div>
       <div class="flow-step reveal d2">
         <div class="flow-box">
           <div class="flow-num">02</div>
-          <div class="flow-title">Acoustic risk scoring</div>
-          <div class="flow-desc">The model extracts log-Mel spectrogram features and generates a disease risk score — trained only on molecularly confirmed diagnoses.</div>
+          <div class="flow-title">Acoustic Feature Extraction</div>
+          <div class="flow-desc">Log-Mel spectrogram features are extracted and evaluated against models trained on molecularly and objectively confirmed clinical ground truth.</div>
         </div>
       </div>
       <div class="flow-connector"><div class="flow-arrow">→</div></div>
       <div class="flow-step reveal d3">
         <div class="flow-box">
           <div class="flow-num">03</div>
-          <div class="flow-title">Prioritise for testing</div>
-          <div class="flow-desc">High-risk individuals flagged for confirmatory GeneXpert or spirometry earlier than they would otherwise self-present. A pre-screen only — every decision stays with a physician.</div>
+          <div class="flow-title">Physician Decision Support</div>
+          <div class="flow-desc">Elevated-risk individuals are prioritised for confirmatory diagnostics (GeneXpert or spirometry) earlier in their disease trajectory. Pre-screening only; diagnosis remains strictly with clinicians.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHY WHATSAPP -->
-<section class="whatsapp-section">
+<!-- ZERO NEW INFRASTRUCTURE -->
+<section class="messaging-section">
   <div class="inner">
-    <p class="eyebrow reveal" style="color:var(--teal-accent);">Why WhatsApp</p>
-    <h2 class="reveal d1">The infrastructure is already<br>in every patient's pocket.</h2>
-    <p class="intro reveal d2">Every health-tech company builds a patient app. Patients don't download it. Respiro is built on the channel patients already use.</p>
-    <div class="whatsapp-reasons-grid">
-        <div class="reason-item reveal d1">
-          <div class="reason-icon">
-            <svg class="icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
-          </div>
-          <div class="reason-text">
-            <h3>Already on every phone</h3>
-            <p>500M+ Indians on WhatsApp — no app download, no onboarding, no behaviour change required.</p>
-          </div>
-        </div>
-        <div class="reason-item reveal d2">
-          <div class="reason-icon">
-            <svg class="icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V7l8-4 8 4v14"/><path d="M9 21v-6h6v6"/><path d="M12 10v4M10 12h4"/></svg>
-          </div>
-          <div class="reason-text">
-            <h3>No workflow disruption</h3>
-            <p>Doctors open a dashboard. Coordinators capture recordings in OPD waiting areas. Nothing changes for clinical staff.</p>
-          </div>
-        </div>
-        <div class="reason-item reveal d3">
-          <div class="reason-icon">
-            <svg class="icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v4"/><path d="M9 22h6"/></svg>
-          </div>
-          <div class="reason-text">
-            <h3>Trained in the same conditions</h3>
-            <p>Lab-trained AI collapses in real OPDs. The disease-specific model is being trained on WhatsApp Opus audio captured in real hospital environments, linked to confirmed diagnoses - not simulated in a lab.</p>
-          </div>
-        </div>
-        <div class="reason-item reveal d4">
-          <div class="reason-icon">
-            <svg class="icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.8 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.8-3.8-9s1.3-6.4 3.8-9z"/></svg>
-          </div>
-          <div class="reason-text">
-            <h3>Every geography, every income level</h3>
-            <p>Whether urban metro or remote hill district — if a patient has WhatsApp, they can be pre-screened.</p>
-          </div>
-        </div>
+    <p class="eyebrow reveal" style="color:var(--teal-accent);">Zero New Infrastructure</p>
+    <h2 class="reveal d1">The deployment infrastructure<br>is already in every pocket.</h2>
+    <p class="intro reveal d2">Designed to deploy at national scale without creating a single procurement or operational barrier.</p>
+    
+    <div class="messaging-reasons-grid minimal">
+      <div class="reason-item reveal d1">
+        <div class="reason-icon">✕</div>
+        <h3>No App Download</h3>
+      </div>
+      <div class="reason-item reveal d2">
+        <div class="reason-icon">✕</div>
+        <h3>No Dedicated Hardware</h3>
+      </div>
+      <div class="reason-item reveal d3">
+        <div class="reason-icon">✕</div>
+        <h3>No Upfront CapEx</h3>
+      </div>
+      <div class="reason-item reveal d4">
+        <div class="reason-icon">✕</div>
+        <h3>No High-Speed Data</h3>
+      </div>
     </div>
   </div>
 </section>
@@ -493,7 +478,7 @@
   <div class="inner">
     <p class="eyebrow reveal">Where We're Building</p>
     <h2 class="reveal d1">Multiple zones. One national dataset.</h2>
-    <p class="intro reveal d2">Multi-site data collection active or being activated across India — capturing the full acoustic and demographic diversity of Indian respiratory disease.</p>
+    <p class="intro reveal d2">Multi-site data collection active or being activated across India - capturing the full acoustic and demographic diversity of Indian respiratory disease.</p>
     <div class="map-wrap reveal d3">
       <img class="india-map-img" src="india-map.svg" alt="Map of India with states shaded by Respiro Health's site-development stage" loading="lazy" />
       <div>
@@ -503,14 +488,14 @@
           <div class="zone-legend-item"><div class="zone-legend-dot tier-3"></div>Early outreach</div>
         </div>
         <ul class="zone-text-list">
-          <li><strong>Andhra Pradesh &amp; Telangana</strong> — MoU in Final Stages</li>
-          <li><strong>Uttar Pradesh</strong> — Institutional Discussions</li>
-          <li><strong>Maharashtra</strong> — Multiple Sites in Discussion</li>
-          <li><strong>Delhi &amp; Rajasthan</strong> — Proposal Submitted</li>
-          <li><strong>West Bengal</strong> — Proposal Submitted</li>
-          <li><strong>Punjab &amp; Jammu and Kashmir</strong> — Outreach Active</li>
-          <li><strong>Assam &amp; Meghalaya</strong> — Outreach Active</li>
-          <li><strong>Puducherry</strong> — Outreach Active</li>
+          <li><strong>Andhra Pradesh &amp; Telangana</strong> - MoU in Final Stages</li>
+          <li><strong>Uttar Pradesh</strong> - Institutional Discussions</li>
+          <li><strong>Maharashtra</strong> - Multiple Sites in Discussion</li>
+          <li><strong>Delhi &amp; Rajasthan</strong> - Proposal Submitted</li>
+          <li><strong>West Bengal</strong> - Proposal Submitted</li>
+          <li><strong>Punjab &amp; Jammu and Kashmir</strong> - Outreach Active</li>
+          <li><strong>Assam &amp; Meghalaya</strong> - Outreach Active</li>
+          <li><strong>Karnataka &amp; Tamil Nadu</strong> - Outreach Active</li>
         </ul>
       </div>
     </div>
@@ -522,26 +507,26 @@
   <div class="inner">
     <p class="eyebrow reveal" style="color:var(--teal-accent);">The Vision</p>
     <h2 class="reveal d1">Starting with TB. Scaling across all respiratory disease.</h2>
-    <p class="intro reveal d2">One model. Multiple diseases. One national acoustic dataset — built to generalise across geographies from day one.</p>
+    <p class="intro reveal d2">A single national acoustic dataset and multimodal AI architecture engineered to generalize across clinical phenotypes and geographies.</p>
     <div class="vision-grid">
       <div class="vision-card reveal d1">
         <div class="vision-n">01</div>
         <h3>Starts with TB</h3>
-        <p>India's highest-burden respiratory disease. Our first disease-specific model targets TB screening, trained on molecularly confirmed diagnoses.</p>
+        <p>India's highest-burden infectious respiratory disease. Our initial disease-specific model targets presumptive TB triage anchored to molecular ground truth.</p>
       </div>
       <div class="vision-card reveal d2">
         <div class="vision-n">02</div>
-        <h3>Expands across respiratory disease</h3>
-        <p>COPD, asthma, bronchitis, lower respiratory infections — multi-disease classification from the same cough recording.</p>
+        <h3>Differential Airway Triage</h3>
+        <p>Simultaneous risk stratification for COPD, asthma, and acute lower respiratory conditions from the same audio capture.</p>
       </div>
       <div class="vision-card reveal d3">
         <div class="vision-n">03</div>
-        <h3>Scales geographically</h3>
-        <p>Six epidemiological zones — not one hospital's patient population. Built for national generalisability from day one.</p>
+        <h3>National Generalisability</h3>
+        <p>Recruited across six distinct epidemiological zones to ensure models perform robustly across regional acoustic and demographic variance.</p>
       </div>
     </div>
     <div class="vision-quote reveal">
-      <p>We are not building a screening tool for one hospital. We are building the acoustic respiratory AI infrastructure for India.</p>
+      <p>We are not building a screening tool for a single clinic. We are building the acoustic respiratory intelligence layer for India.</p>
     </div>
 
     <div class="vision-preview reveal">
@@ -551,9 +536,9 @@
           <div class="phone-screen">
             <div class="phone-top-bar">
               <div class="phone-top-avatar">RH</div>
-              Respiro Health · Screening
+              Respiro Clinical Pre-Screen
             </div>
-            <div class="chat-bubble chat-in">Hello! Please send a 15-second recording of your cough.<div class="chat-time">10:02</div></div>
+            <div class="chat-bubble chat-in">Hello! Please record a 15-second voluntary cough.<div class="chat-time">10:02</div></div>
             <div class="chat-voice">
               <div class="voice-icon">
                 <svg class="icon-svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v4"/><path d="M9 22h6"/></svg>
@@ -561,7 +546,7 @@
               <div class="voice-wave">
                 <span></span><span></span><span></span><span></span><span></span><span></span>
               </div>
-              <div style="font-size:0.7rem;color:#555;margin-left:4px;">0:17</div>
+              <div style="font-size:0.7rem;color:var(--teal-dark);margin-left:4px;font-weight:600;">0:17</div>
             </div>
             <div style="align-self:flex-end;"><div class="chat-time">10:03</div></div>
             <div class="chat-typing">
@@ -571,7 +556,7 @@
             </div>
             <div class="chat-bubble chat-in chat-result">
               <strong>Acoustic Pre-Screen Complete</strong>
-              Risk indicators detected. Please visit a pulmonologist for further evaluation.<div class="chat-time">10:03</div>
+              Elevated risk indicators detected. Prioritised for physician evaluation and confirmatory testing.<div class="chat-time">10:03</div>
             </div>
           </div>
         </div>
@@ -592,7 +577,7 @@
         <div>
           <div class="team-name">Ajay Sharma</div>
           <div class="team-role">Founder & CEO</div>
-          <div class="team-bio">15+ years of software and technology experience. Built Respiro's entire technical stack independently - data pipelines, AWS infrastructure, WhatsApp integration, and coordinator application.</div>
+          <div class="team-bio">15+ years of software and technology experience. Built Respiro's entire technical stack independently - data pipelines, AWS infrastructure, messaging integration, and coordinator application.</div>
         </div>
       </div>
       <div class="team-card reveal d2">
@@ -618,7 +603,7 @@
           <svg class="icon-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V7l8-4 8 4v14"/><path d="M9 21v-6h6v6"/><path d="M12 10v4M10 12h4"/></svg>
         </div>
         <h3>Hospitals & Clinics</h3>
-        <p>Chest and pulmonary OPDs as research sites. We fund and staff everything — you get named co-authorship and priority model access.</p>
+        <p>Chest and pulmonary OPDs as research sites. We fund and staff everything - you get named co-authorship and priority model access.</p>
       </div>
       <div class="collab-card reveal d2">
         <div class="collab-icon">
@@ -649,8 +634,8 @@
 <section class="cta-section">
   <div class="inner" style="max-width:640px;">
     <p class="eyebrow reveal" style="color:var(--teal-accent);text-align:center;">Get Involved</p>
-    <h2 class="reveal d1" style="text-align:center;">India's respiratory disease burden<br>is ready for this. Are you?</h2>
-    <p class="reveal d2">Whether you run a chest OPD, lead a hospital department, invest in health-tech, or want to understand the research — write to us.</p>
+    <h2 class="reveal d1" style="text-align:center;">India's respiratory disease burden<br>demands earlier detection.</h2>
+    <p class="reveal d2">Whether you lead a chest OPD, oversee a hospital department, invest in clinical deep-tech, or want to explore research collaboration - connect with us.</p>
     <div class="cta-btns reveal d3">
       <a href="contact.html" class="btn-primary">Get In Touch</a>
       <a href="research.html" class="btn-secondary">Our Research</a>
@@ -678,7 +663,7 @@
   "url": "https://respirohealth.ai",
   "contactPoint": { "@type": "ContactPoint", "email": "ajay.sharma@respirohealth.ai", "contactType": "Partnerships" },
   "areaServed": "IN",
-  "description": "WhatsApp-native acoustic AI model that screens for tuberculosis, COPD, and other respiratory diseases from a cough recording."
+  "description": "A zero-infrastructure acoustic AI model that screens for tuberculosis, COPD, and other respiratory diseases from a cough recording."
 }
 </script>
 
@@ -704,9 +689,7 @@
   // Hero immediate
   document.querySelectorAll('.hero .reveal, .hero .reveal-left, .hero .reveal-right').forEach(el => el.classList.add('visible'));
 
-  // Illustrative acoustic spectrogram -- a plausible cough-shaped time/frequency
-  // heatmap (3 bursts, energy concentrated in low-mid frequency bands), not real
-  // audio data. Colour ramps teal-dark -> teal-accent -> amber to match the brand.
+  // Illustrative acoustic spectrogram
   (function drawSpectrogram() {
     const canvas = document.getElementById('spectrogramCanvas');
     if (!canvas) return;
@@ -766,38 +749,6 @@
       resizeTimer = setTimeout(render, 150);
     });
   })();
-
-  // Animated count-up for stat-strip numbers
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function animateCounter(el) {
-    const target = parseFloat(el.getAttribute('data-target'));
-    const format = el.getAttribute('data-format');
-    if (prefersReducedMotion) { el.textContent = format; return; }
-    const duration = 1400;
-    let startTime = null;
-    function step(ts) {
-      if (!startTime) startTime = ts;
-      const progress = Math.min((ts - startTime) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const current = Math.floor(eased * target);
-      el.textContent = current.toLocaleString('en-IN');
-      if (progress < 1) requestAnimationFrame(step);
-      else el.textContent = format;
-    }
-    requestAnimationFrame(step);
-  }
-  const statStrip = document.querySelector('.stat-strip');
-  if (statStrip) {
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.querySelectorAll('.counter').forEach(animateCounter);
-          counterObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.3 });
-    counterObserver.observe(statStrip);
-  }
 </script>
 
 </body>
